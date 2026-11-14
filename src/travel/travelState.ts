@@ -130,6 +130,7 @@ function heard(state: TravelState, text: string): TravelState {
   if (state.scene === "seat") {
     const seat = seatFromWords(state, words);
     if (seat) {
+      if (seat === state.seat && /\bbook\b/.test(words)) return { ...state, scene: "hold" };
       const picked = pickSeat(state, seat);
       return picked === state ? say(state, { from: "worker", text: `${seat} is taken. Try another one.` }) : picked;
     }

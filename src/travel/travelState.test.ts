@@ -64,6 +64,10 @@ describe("the trip moves forward by talking or tapping", () => {
     );
     const ticket = apply(seatScene, { type: "said", text: "Book it" });
     expect(ticket.scene).toBe("hold");
+    const tappedAgain = apply(seatScene, { type: "said", text: "Book seat 12C" });
+    expect(tappedAgain.scene).toBe("hold");
+    expect(tappedAgain.seat).toBe("12C");
+    expect(apply(seatScene, { type: "said", text: "Book seat 20C" }).scene).toBe("seat");
     const held = apply(ticket, { type: "held" });
     expect(held.isConfirming).toBe(true);
     const booked = apply(held, { type: "booked", reference: "KQ7MTR" });
