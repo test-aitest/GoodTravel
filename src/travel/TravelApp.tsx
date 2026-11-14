@@ -288,7 +288,7 @@ function useLive(state: TravelState, dispatch: (action: TravelAction) => void, i
       close = followJob(started.jobId, (frame) => {
         if (frame.kind !== "event") return;
         const event = frame.event;
-        if (event.type === "job.created") trailTo.current({ id: "run", text: event.run.kind === "replay" ? "Replaying saved steps on Hinata's computer" : "Learning Hikari Travel on Hinata's computer" });
+        if (event.type === "job.created") trailTo.current({ id: "run", text: event.run.kind === "replay" ? "Replaying saved steps on your computer" : "Learning Hikari Travel on your computer" });
         if (event.type === "step.decided") rungs.set(event.stepId, event.rung);
         if (event.type === "step.done") trailTo.current({ id: event.stepId, text: trailText(event.stepId, event.tookMs, rungs.get(event.stepId), event.detail) });
         if (event.type === "trip.options") trailTo.current({ id: "total", text: `Ready in ${((Date.now() - begun) / 1000).toFixed(2)} s` });

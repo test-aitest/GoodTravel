@@ -28,6 +28,13 @@ describe("the trip moves forward by talking or tapping", () => {
     expect(arrived.pick).toBe("ka-712");
   });
 
+  test("the worker says the rides were read on your computer, without naming the client", () => {
+    const ride = apply(initialTravelState, { type: "destinationPicked", destination: "singapore" }, { type: "optionsRead", options: playbackOptions.singapore });
+    const line = ride.lines.at(-1)?.text ?? "";
+    expect(line).toContain("read just now on your computer");
+    expect(line).not.toContain("Hinata");
+  });
+
   test("the earlier or later one, or its name, picks a ride and opens its seats with the worker's suggestion", () => {
     const ride = apply(initialTravelState, { type: "destinationPicked", destination: "singapore" }, { type: "optionsRead", options: playbackOptions.singapore });
     const later = apply(ride, { type: "said", text: "the later one" });

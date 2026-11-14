@@ -71,7 +71,7 @@ function earliestArrival(options: readonly TripOption[]) {
 
 function rideLine(options: readonly TripOption[], pick: TripOption) {
   const kind = pick.kind === "rail" ? "trains" : "flights";
-  return `${options.length} ${kind} on ${tripDay}, read just now on Hinata's computer. I'd take ${pick.name}: it gets you there first.`;
+  return `${options.length} ${kind} on ${tripDay}, read just now on your computer. I'd take ${pick.name}: it gets you there first.`;
 }
 
 function seatLine(suggestion: SeatSuggestion) {
