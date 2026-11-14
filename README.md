@@ -29,12 +29,6 @@ GoodTravel runs on the same engine as ClientOps, a console where an operations l
 - **Rename repair.** When a page changes, only the broken step climbs a ladder: saved script, then find again by role and name in the page tree, then Claude, then the person. The fixed steps are saved as a new version.
 - **Cross-client refusal.** Asking one client's worker to use another client's login is refused and written to an audit log.
 
-![The worker stops before writing: 12 stock changes wait for the person's OK, with the live page and each step in Activity](docs/images/stock-approval.jpg)
-
-![The next run replays the saved steps with no AI, ready in 0.2 s](docs/images/stock-replay-no-ai.jpg)
-
-![Using another client's login is refused and recorded in the audit log](docs/images/cross-client-refusal.png)
-
 ## Architecture
 
 ```mermaid
