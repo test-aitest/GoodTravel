@@ -102,8 +102,9 @@ function setSpeaking(isSpeaking: boolean) {
   for (const listener of speakingListeners) listener(isSpeaking);
 }
 
-function playToEnd(audio: HTMLMediaElement) {
+function playToEnd(audio: HTMLMediaElement, signal?: AbortSignal) {
   return new Promise<boolean>((resolve) => {
+    signal?.addEventListener("abort", () => audio.pause(), { once: true });
     audio.addEventListener("ended", () => resolve(true), { once: true });
     audio.addEventListener("pause", () => resolve(true), { once: true });
     audio.addEventListener("error", () => resolve(false), { once: true });
@@ -156,14 +157,14 @@ function speakInBrowser(text: string) {
   });
 }
 
-export function speakFile(url: string): Promise<"file" | "skipped"> {
+export function speakFile(url: string, signal?: AbortSignal): Promise<"file" | "skipped"> {
   const mine = generation;
   const turn = queue.then(async () => {
-    if (mine !== generation || typeof Audio === "undefined") return "skipped" as const;
+    if (mine !== generation || signal?.aborted || typeof Audio === "undefined") return "skipped" as const;
     const audio = new Audio(url);
     playing = audio;
     setSpeaking(true);
-    await playToEnd(audio);
+    await playToEnd(audio, signal);
     setSpeaking(false);
     return "file" as const;
   });
@@ -171,15 +172,15 @@ export function speakFile(url: string): Promise<"file" | "skipped"> {
   return turn;
 }
 
-export function playMedia(element: HTMLMediaElement): Promise<"media" | "skipped"> {
+export function playMedia(element: HTMLMediaElement, signal?: AbortSignal): Promise<"media" | "skipped"> {
   const mine = generation;
   const turn = queue.then(async () => {
-    if (mine !== generation) return "skipped" as const;
+    if (mine !== generation || signal?.aborted) return "skipped" as const;
     playing = element;
     element.currentTime = 0;
     element.muted = false;
     setSpeaking(true);
-    const played = await playToEnd(element);
+    const played = await playToEnd(element, signal);
     setSpeaking(false);
     return played ? ("media" as const) : ("skipped" as const);
   });

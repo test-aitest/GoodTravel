@@ -1,7 +1,10 @@
 "use client";
 
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
 import Image from "next/image";
 import { useEffect, useRef, useState, type CSSProperties } from "react";
+import { motionAllowed } from "@/components/Motion";
 import { Label } from "./Script";
 import { playMedia, speakFile } from "./voice";
 
@@ -11,6 +14,11 @@ export function GuideVideo({ name, poster, place, isActive, onDone, style }: { n
     finished.current = onDone;
   });
   const video = useRef<HTMLVideoElement>(null);
+  const liveDot = useRef<HTMLSpanElement>(null);
+  useGSAP(() => {
+    if (!motionAllowed()) return;
+    gsap.to(liveDot.current, { opacity: 0.2, duration: 0.8, ease: "sine.inOut", repeat: -1, yoyo: true });
+  }, []);
   const [hasVideo, setHasVideo] = useState(true);
   useEffect(() => {
     const element = video.current;
@@ -18,11 +26,12 @@ export function GuideVideo({ name, poster, place, isActive, onDone, style }: { n
       if (element && !element.paused) element.pause();
       return;
     }
-    if (hasVideo && element) {
-      void playMedia(element).then(() => finished.current?.());
-      return;
-    }
-    void speakFile(`/travel/guide/${name}.mp3`).then(() => finished.current?.());
+    const calledOff = new AbortController();
+    const turn = hasVideo && element ? playMedia(element, calledOff.signal) : speakFile(`/travel/guide/${name}.mp3`, calledOff.signal);
+    void turn.then(() => {
+      if (!calledOff.signal.aborted) finished.current?.();
+    });
+    return () => calledOff.abort();
   }, [isActive, hasVideo, name]);
 
   return (
@@ -35,7 +44,7 @@ export function GuideVideo({ name, poster, place, isActive, onDone, style }: { n
         <Image src={poster} alt="" fill sizes="300px" style={{ objectFit: "cover" }} />
       )}
       <span style={{ position: "absolute", left: 14, top: 12, display: "flex", alignItems: "center", gap: 8 }}>
-        <span style={{ width: 8, height: 8, borderRadius: 4, background: "#22C55E", boxShadow: "0 0 0 5px rgba(34,197,94,0.3)" }} />
+        <span ref={liveDot} data-live-dot="" style={{ width: 8, height: 8, borderRadius: 4, background: "#22C55E", boxShadow: "0 0 0 5px rgba(34,197,94,0.3)" }} />
         <Label style={{ color: "#F8FAFC", textShadow: "0 2px 8px rgba(2,6,23,0.6)" }}>{`Live from ${place}`}</Label>
       </span>
     </div>

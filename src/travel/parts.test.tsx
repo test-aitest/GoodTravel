@@ -1,8 +1,11 @@
 import { afterEach, describe, expect, mock, test } from "bun:test";
+import { StrictMode } from "react";
 import { act, cleanup, fireEvent, render, screen } from "@testing-library/react";
 import { playbackOptions, playbackSeats } from "./travelData";
+import { GuideVideo } from "./GuideVideo";
 import { HoldTicket } from "./HoldTicket";
 import { firstVisibleRow, SeatMap } from "./SeatMap";
+import { TopBar } from "./TravelApp";
 import { bestVoice } from "./voice";
 
 afterEach(cleanup);
@@ -45,6 +48,54 @@ describe("HoldTicket", () => {
     fireEvent.keyDown(hold, { key: " " });
     await act(() => new Promise((resolve) => setTimeout(resolve, 120)));
     expect(onConfirm).toHaveBeenCalledTimes(1);
+  });
+});
+
+describe("the city guide", () => {
+  test("talks once when the city opens, even when React starts it twice, and then says it is done", async () => {
+    const realPlay = HTMLMediaElement.prototype.play;
+    const plays = mock(function (this: HTMLMediaElement) {
+      setTimeout(() => this.dispatchEvent(new Event("ended")), 5);
+      return Promise.resolve();
+    });
+    HTMLMediaElement.prototype.play = plays;
+    const done = mock(() => {});
+    try {
+      render(
+        <StrictMode>
+          <GuideVideo name="singapore-detail" poster="/travel/guide/singapore-guide.jpg" place="Singapore" isActive onDone={done} />
+        </StrictMode>,
+      );
+      await act(async () => {
+        await new Promise((resolve) => setTimeout(resolve, 60));
+      });
+      expect(plays).toHaveBeenCalledTimes(1);
+      expect(done).toHaveBeenCalledTimes(1);
+    } finally {
+      HTMLMediaElement.prototype.play = realPlay;
+    }
+  });
+
+  test("the live dot on the guide's card blinks", async () => {
+    const { container } = render(<GuideVideo name="singapore-detail" poster="/travel/guide/singapore-guide.jpg" place="Singapore" isActive={false} />);
+    const dot = container.querySelector<HTMLElement>("[data-live-dot]");
+    expect(dot).not.toBeNull();
+    const seen = new Set<string>();
+    for (let tick = 0; tick < 8; tick += 1) {
+      await act(async () => {
+        await new Promise((resolve) => setTimeout(resolve, 120));
+      });
+      seen.add(getComputedStyle(dot!).opacity);
+    }
+    expect(seen.size).toBeGreaterThan(2);
+  });
+});
+
+describe("the top bar", () => {
+  test("shows only the trip, not the engine's name", () => {
+    render(<TopBar right="Tokyo → Singapore · Sat 21 Nov" />);
+    expect(screen.getByText("Tokyo → Singapore · Sat 21 Nov")).toBeDefined();
+    expect(screen.queryByText(/clientops/i)).toBeNull();
   });
 });
 

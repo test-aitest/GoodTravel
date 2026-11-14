@@ -111,20 +111,20 @@ export function duration(depart: string, arrive: string) {
   return `${Math.floor(total / 60)} h ${String(total % 60).padStart(2, "0")}`;
 }
 
-export const highlights: Record<DestinationId, readonly { name: string; crop: string }[]> = {
+export const highlights: Record<DestinationId, readonly { name: string; photo: string }[]> = {
   kyoto: [
-    { name: "Kiyomizu-dera", crop: "78% 40%" },
-    { name: "Higashiyama views", crop: "20% 60%" },
-    { name: "Autumn maples", crop: "40% 85%" },
+    { name: "Old streets", photo: "/travel/photos/spots/kyoto-old-streets.jpg" },
+    { name: "Autumn leaves", photo: "/travel/photos/spots/kyoto-autumn.jpg" },
+    { name: "Lanterns at night", photo: "/travel/photos/spots/kyoto-lanterns.jpg" },
   ],
   seoul: [
-    { name: "Gyeongbokgung", crop: "50% 45%" },
-    { name: "Palace courtyard", crop: "50% 95%" },
-    { name: "Bugaksan ridge", crop: "10% 50%" },
+    { name: "Gwanghwamun Gate", photo: "/travel/photos/spots/seoul-gate.jpg" },
+    { name: "Street food", photo: "/travel/photos/spots/seoul-street-food.jpg" },
+    { name: "Bukchon Hanok", photo: "/travel/photos/spots/seoul-bukchon.jpg" },
   ],
   singapore: [
-    { name: "Marina Bay", crop: "60% 40%" },
-    { name: "ArtScience Museum", crop: "10% 70%" },
-    { name: "Bay at night", crop: "50% 95%" },
+    { name: "Gardens by the Bay", photo: "/travel/photos/spots/singapore-gardens.jpg" },
+    { name: "Hawker centres", photo: "/travel/photos/spots/singapore-hawker.jpg" },
+    { name: "Bay at night", photo: "/travel/photos/spots/singapore-bay-night.jpg" },
   ],
 };

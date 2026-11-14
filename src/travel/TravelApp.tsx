@@ -42,13 +42,8 @@ function Backdrop({ photo, video, blur = 0, dim = 0.3 }: { photo: string; video?
   );
 }
 
-function TopBar({ right }: { right: string }) {
-  return (
-    <>
-      <span style={{ position: "absolute", left: 40, top: 32, fontSize: 13, fontWeight: 600, letterSpacing: "0.06em", zIndex: 5 }}>CLIENTOPS / TRAVEL</span>
-      <Label style={{ position: "absolute", right: 40, top: 32, zIndex: 5 }}>{right}</Label>
-    </>
-  );
+export function TopBar({ right }: { right: string }) {
+  return <Label style={{ position: "absolute", right: 40, top: 32, zIndex: 5 }}>{right}</Label>;
 }
 
 function Headline({ children, style }: { children: ReactNode; style?: CSSProperties }) {
@@ -135,7 +130,7 @@ function Ride({ state, insight, isGuideDone, onGuideDone, onPick }: { state: Tra
       <ul aria-label={`Highlights of ${destination.name}`} style={{ position: "absolute", left: "23vw", top: 520, margin: 0, padding: 0, listStyle: "none", display: "flex", gap: 10, zIndex: 3 }}>
         {highlights[destination.id].map((spot) => (
           <li key={spot.name} data-card="" style={{ position: "relative", width: 104, height: 120, borderRadius: 12, overflow: "hidden", boxShadow: "0 16px 30px rgba(2,6,23,0.45)" }}>
-            <Image src={destination.photo} alt="" fill sizes="104px" style={{ objectFit: "cover", objectPosition: spot.crop, transform: "scale(1.6)" }} />
+            <Image src={spot.photo} alt="" fill sizes="104px" style={{ objectFit: "cover" }} />
             <Label style={{ position: "absolute", left: 8, right: 8, bottom: 8, fontSize: 9, letterSpacing: "0.14em", color: "#F8FAFC", textShadow: "0 2px 8px rgba(2,6,23,0.8)" }}>{spot.name}</Label>
           </li>
         ))}
