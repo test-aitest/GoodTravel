@@ -10,7 +10,7 @@ Built for Agent Forge Tokyo (2026-11-14). The code and internal docs use the eng
 
 | | |
 |---|---|
-| ![Singapore, Kyoto and Seoul as photos; Mei, the Singapore guide, talks when you hover her city](docs/images/travel-guide.jpg) | **1. Where to, and a local guide.** The cities are photos, ordered by a knowledge graph of past trips (month, purpose, habits). Hover a city and its guide starts to talk, lip-synced. |
+| ![Hovering Singapore, Kyoto and Seoul: Mei, Aoi and Jun each introduce their city, lip-synced](docs/media/city-guides.gif) | **1. Where to, and a local guide.** The cities are photos, ordered by a knowledge graph of past trips (month, purpose, habits). Hover a city and its guide starts to talk, lip-synced. [Watch with sound (MP4, 19 s)](docs/media/city-guides.mp4) |
 | ![Singapore: the guide at Marina Bay and the two flights the worker found](docs/images/travel-flights.jpg) | **2. Live search, then a pick.** “I need to be in Singapore next Saturday.” The worker reads the travel site on the client's Daytona computer while the guide talks, then suggests the flight that arrives first. |
 | ![Zoomed seat map with 12C picked, and the whole plane beside it](docs/images/travel-seat.jpg) | **3. A seat from habits.** The seat map opens zoomed in on the suggestion: 12C, exit row, aisle, more legroom. Say or tap another seat to change it. |
 | ![The ticket TYO to SIN, held for 10 minutes, with the HOLD button](docs/images/travel-hold.jpg) | **4. Press and hold to book.** Nothing is booked until you hold the ticket. The hold is an AgentField approval that resumes the worker. |
