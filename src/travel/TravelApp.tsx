@@ -127,7 +127,7 @@ function Ride({ state, insight, isGuideDone, onGuideDone, onPick }: { state: Tra
     <>
       <Backdrop photo={destination.photo} dim={0.34} />
       <GuideVideo key={destination.id} name={`${destination.id}-detail`} poster={`/travel/guide/${destination.id}-guide.jpg`} place={destination.name} isActive onDone={onGuideDone} style={{ left: "23vw", top: 120, width: 260, height: 380, rotate: "-3deg", zIndex: 3 }} />
-      <ul aria-label={`Highlights of ${destination.name}`} style={{ position: "absolute", left: "23vw", top: 520, margin: 0, padding: 0, listStyle: "none", display: "flex", gap: 10, zIndex: 3 }}>
+      <ul aria-label={`Highlights of ${destination.name}`} style={{ position: "absolute", left: "calc(23vw - 128px)", top: 120, margin: 0, padding: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: 10, zIndex: 3 }}>
         {highlights[destination.id].map((spot) => (
           <li key={spot.name} data-card="" style={{ position: "relative", width: 104, height: 120, borderRadius: 12, overflow: "hidden", boxShadow: "0 16px 30px rgba(2,6,23,0.45)" }}>
             <Image src={spot.photo} alt="" fill sizes="104px" style={{ objectFit: "cover" }} />
@@ -143,7 +143,7 @@ function Ride({ state, insight, isGuideDone, onGuideDone, onPick }: { state: Tra
         </a>
       ) : null}
       <TopBar right={`${tripFrom} → ${destination.name} · Sat 21 Nov`} />
-      <Headline style={{ left: 36, bottom: 120 }}>{destination.name}</Headline>
+      <Headline style={{ left: 36, bottom: "clamp(32px, calc(100vh - 664px), 120px)" }}>{destination.name}</Headline>
       <div style={{ position: "absolute", right: "6vw", top: 110, display: "flex", alignItems: "flex-start", gap: 28, zIndex: 3 }}>
         {options.map((option, index) => (
           <RideCard key={option.id} option={option} isPick={option.id === state.pick} tilt={index % 2 === 0 ? -4 : 5} onPick={() => onPick(option.id)} />
@@ -558,7 +558,6 @@ export function TravelApp({ mode: fallbackMode }: { mode: TravelMode }) {
     <main ref={stage} style={{ position: "fixed", inset: 0, overflow: "hidden", background: "#020617", color: "#F8FAFC", fontFamily: "Inter, system-ui, sans-serif" }}>
       <div key={sceneKey} data-scene="" style={{ position: "absolute", inset: 0 }}>
         {scene}
-        {isOpening && !isTalking ? <button type="button" aria-label="Begin" onClick={() => setOpening(false)} style={{ all: "unset", cursor: "pointer", position: "absolute", inset: 0, zIndex: 10 }} /> : null}
       </div>
       {isTalking ? (
         <div style={{ position: "absolute", inset: 0, background: "rgba(2,6,23,0.72)", backdropFilter: "blur(14px)", zIndex: 20 }}>
