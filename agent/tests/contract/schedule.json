@@ -1,0 +1,44 @@
+{
+  "schedulesFile": {
+    "version": 1,
+    "clients": {
+      "kumo": { "isOn": true, "time": "07:30", "timeZone": "Asia/Tokyo", "updatedAt": "2026-11-14T00:40:00.000Z" },
+      "hinata": { "isOn": false, "time": "18:00", "timeZone": "Asia/Tokyo", "updatedAt": "2026-11-13T09:00:00.000Z" }
+    }
+  },
+  "expected": {
+    "kumo": { "isOn": true, "time": "07:30", "timeZone": "Asia/Tokyo" },
+    "hinata": { "isOn": false, "time": "18:00", "timeZone": "Asia/Tokyo" },
+    "sora": { "isOn": false, "time": "18:00", "timeZone": "Asia/Tokyo" }
+  },
+  "runRecord": {
+    "version": 1,
+    "clientId": "kumo",
+    "slot": "2026-11-14T09:00:00Z",
+    "timeZone": "Asia/Tokyo",
+    "claimedAt": "2026-11-14T09:00:12Z",
+    "status": "started",
+    "jobId": "exec_20261114_090012_kumo"
+  },
+  "runFileName": "20261114T0900Z.json",
+  "skippedRecord": {
+    "version": 1,
+    "clientId": "kumo",
+    "slot": "2026-11-15T09:00:00Z",
+    "timeZone": "Asia/Tokyo",
+    "claimedAt": "2026-11-15T09:00:08Z",
+    "status": "skipped",
+    "reason": "waiting-for-approval",
+    "waitingJobId": "exec_20261114_090012_kumo"
+  },
+  "skippedFileName": "20261115T0900Z.json",
+  "reply": {
+    "clientId": "kumo",
+    "schedule": { "isOn": true, "time": "18:00", "timeZone": "Asia/Tokyo" },
+    "text": "Runs daily at 18:00",
+    "runs": [
+      { "status": "started", "slot": "2026-11-14T09:00:00Z", "timeZone": "Asia/Tokyo", "jobId": "exec_20261114_090012_kumo" },
+      { "status": "skipped", "slot": "2026-11-15T09:00:00Z", "timeZone": "Asia/Tokyo", "reason": "waiting-for-approval", "waitingJobId": "exec_20261114_090012_kumo" }
+    ]
+  }
+}

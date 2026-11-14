@@ -1,0 +1,280 @@
+{
+  "description": "Store admin with the renameButton switch on: the save button reads Update inventory instead of Save changes.",
+  "observed": {
+    "date": "2026-11-14",
+    "lightpanda": "1.0.4",
+    "binary": "lightpanda-aarch64-macos",
+    "server": "lightpanda serve --host 127.0.0.1 --port 9222",
+    "sites": "bun sandbox/sites/server.ts (supplier 127.0.0.1:3001, store 127.0.0.1:3002), client kumo, day 1"
+  },
+  "trimmed": [
+    "calls[].request/response keep only method, params and result or error",
+    "redacted: the text of the two sign-in LP.fillNode calls is null (it was the login); the response is real",
+    "LP.getInteractiveElements: elements keeps the buttons only"
+  ],
+  "switches": {
+    "renameButton": true
+  },
+  "calls": [
+    {
+      "request": {
+        "method": "Target.createBrowserContext",
+        "params": {}
+      },
+      "response": {
+        "result": {
+          "browserContextId": "BID-1"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "Target.createTarget",
+        "params": {
+          "url": "about:blank",
+          "browserContextId": "BID-1"
+        }
+      },
+      "response": {
+        "result": {
+          "targetId": "FID-0000000001"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "Target.attachToTarget",
+        "params": {
+          "targetId": "FID-0000000001",
+          "flatten": true
+        }
+      },
+      "response": {
+        "result": {
+          "sessionId": "SID-1"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "Page.enable",
+        "params": {}
+      },
+      "response": {
+        "result": {}
+      }
+    },
+    {
+      "request": {
+        "method": "Page.navigate",
+        "params": {
+          "url": "http://127.0.0.1:3002/login"
+        }
+      },
+      "response": {
+        "result": {
+          "frameId": "FID-0000000001",
+          "loaderId": "LID-0000000001"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "LP.waitUntil",
+        "params": {
+          "until": "load"
+        }
+      },
+      "response": {
+        "result": {}
+      }
+    },
+    {
+      "request": {
+        "method": "LP.getInteractiveElements",
+        "params": {}
+      },
+      "response": {
+        "result": {
+          "elements": [
+            {
+              "backendNodeId": 1,
+              "tagName": "input",
+              "role": "textbox",
+              "name": "Username",
+              "type": "native",
+              "tabIndex": 0,
+              "inputType": "text",
+              "value": "",
+              "elementName": "username"
+            },
+            {
+              "backendNodeId": 2,
+              "tagName": "input",
+              "role": "textbox",
+              "name": "Password",
+              "type": "native",
+              "tabIndex": 0,
+              "inputType": "password",
+              "value": "",
+              "elementName": "password"
+            },
+            {
+              "backendNodeId": 3,
+              "tagName": "button",
+              "role": "button",
+              "name": "Sign in",
+              "type": "native",
+              "tabIndex": 0,
+              "class": "btn-save"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "LP.fillNode",
+        "params": {
+          "backendNodeId": 1,
+          "text": null
+        }
+      },
+      "response": {
+        "result": []
+      },
+      "redacted": [
+        "text"
+      ]
+    },
+    {
+      "request": {
+        "method": "LP.fillNode",
+        "params": {
+          "backendNodeId": 2,
+          "text": null
+        }
+      },
+      "response": {
+        "result": []
+      },
+      "redacted": [
+        "text"
+      ]
+    },
+    {
+      "request": {
+        "method": "LP.clickNode",
+        "params": {
+          "backendNodeId": 3
+        }
+      },
+      "response": {
+        "result": []
+      }
+    },
+    {
+      "request": {
+        "method": "LP.waitForSelector",
+        "params": {
+          "selector": "form[action=\"/inventory\"]"
+        }
+      },
+      "response": {
+        "result": {
+          "backendNodeId": 4
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "Target.getTargetInfo",
+        "params": {
+          "targetId": "FID-0000000001"
+        }
+      },
+      "response": {
+        "result": {
+          "targetInfo": {
+            "url": "http://127.0.0.1:3002/inventory",
+            "title": "Inventory - Kumo Coffee - Store Admin",
+            "targetId": "FID-0000000001",
+            "attached": true,
+            "type": "page",
+            "canAccessOpener": false,
+            "browserContextId": "BID-1"
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "LP.getSemanticTree",
+        "params": {
+          "format": "text",
+          "interactiveOnly": true
+        }
+      },
+      "response": {
+        "result": {
+          "semanticTree": "5 RootWebArea 'Inventory - Kumo Coffee - Store Admin'\n 12 navigation 'Store'\n 22 [i] button 'Sign out'\n 24 heading 'Inventory'\n 30 columnheader 'SKU'\n 32 columnheader 'Product'\n 34 columnheader 'Available'\n 43 [i] spinbutton 'Available for Ethiopia Guji 200g' value='18'\n 50 [i] spinbutton 'Available for Ethiopia Guji 500g' value='12'\n 57 [i] spinbutton 'Available for Ethiopia Yirgacheffe 200g' value='20'\n 64 [i] spinbutton 'Available for Ethiopia Yirgacheffe 500g' value='7'\n 71 [i] spinbutton 'Available for Colombia Huila 200g' value='0'\n 78 [i] spinbutton 'Available for Colombia Huila 500g' value='10'\n 85 [i] spinbutton 'Available for Kenya Nyeri 200g' value='9'\n 92 [i] spinbutton 'Available for Kenya Nyeri 500g' value='5'\n 99 [i] spinbutton 'Available for Guatemala Antigua 200g' value='22'\n 106 [i] spinbutton 'Available for Guatemala Antigua 500g' value='4'\n 113 [i] spinbutton 'Available for Brazil Cerrado 200g' value='35'\n 120 [i] spinbutton 'Available for Brazil Cerrado 500g' value='7'\n 127 [i] spinbutton 'Available for Costa Rica Tarrazu 200g' value='16'\n 134 [i] spinbutton 'Available for Costa Rica Tarrazu 500g' value='6'\n 141 [i] spinbutton 'Available for Peru Cajamarca 200g' value='19'\n 148 [i] spinbutton 'Available for Peru Cajamarca 500g' value='8'\n 155 [i] spinbutton 'Available for Sumatra Mandheling 200g' value='14'\n 162 [i] spinbutton 'Available for Sumatra Mandheling 500g' value='3'\n 169 [i] spinbutton 'Available for Rwanda Nyamasheke 200g' value='9'\n 176 [i] spinbutton 'Available for Rwanda Nyamasheke 500g' value='4'\n 183 [i] spinbutton 'Available for Honduras Marcala 200g' value='13'\n 190 [i] spinbutton 'Available for Honduras Marcala 500g' value='6'\n 197 [i] spinbutton 'Available for Panama Boquete 200g' value='2'\n 204 [i] spinbutton 'Available for Panama Boquete 500g' value='2'\n 211 [i] spinbutton 'Available for House Blend 200g' value='52'\n 218 [i] spinbutton 'Available for House Blend 500g' value='18'\n 225 [i] spinbutton 'Available for Espresso Blend 200g' value='30'\n 232 [i] spinbutton 'Available for Espresso Blend 500g' value='25'\n 239 [i] spinbutton 'Available for Decaf Colombia 200g' value='12'\n 246 [i] spinbutton 'Available for Decaf Colombia 500g' value='5'\n 253 [i] spinbutton 'Available for Drip Bags Ethiopia Guji x10' value='25'\n 260 [i] spinbutton 'Available for Drip Bags Colombia Huila x10' value='20'\n 267 [i] spinbutton 'Available for Drip Bags Kenya Nyeri x10' value='14'\n 274 [i] spinbutton 'Available for Drip Bags Guatemala Antigua x10' value='15'\n 281 [i] spinbutton 'Available for Drip Bags House Blend x10' value='48'\n 288 [i] spinbutton 'Available for Drip Bags Decaf Colombia x10' value='10'\n 295 [i] spinbutton 'Available for Paper Filters x100' value='45'\n 302 [i] spinbutton 'Available for Ceramic Dripper' value='9'\n 309 [i] spinbutton 'Available for Glass Server 600ml' value='11'\n 316 [i] spinbutton 'Available for Hand Grinder' value='3'\n 323 [i] spinbutton 'Available for Storage Canister' value='17'\n 330 [i] spinbutton 'Available for Gift Box 2 x 200g' value='8'\n 332 [i] link 'Discard'\n 333 [i] button 'Update inventory'\n"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "LP.getInteractiveElements",
+        "params": {}
+      },
+      "response": {
+        "result": {
+          "elements": [
+            {
+              "backendNodeId": 22,
+              "tagName": "button",
+              "role": "button",
+              "name": "Sign out",
+              "type": "native",
+              "tabIndex": 0,
+              "class": "signout"
+            },
+            {
+              "backendNodeId": 333,
+              "tagName": "button",
+              "role": "button",
+              "name": "Update inventory",
+              "type": "native",
+              "tabIndex": 0,
+              "class": "btn-save",
+              "elementName": "action"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "Target.closeTarget",
+        "params": {
+          "targetId": "FID-0000000001"
+        }
+      },
+      "response": {
+        "result": {
+          "success": true
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "Target.disposeBrowserContext",
+        "params": {
+          "browserContextId": "BID-1"
+        }
+      },
+      "response": {
+        "result": {}
+      }
+    }
+  ]
+}

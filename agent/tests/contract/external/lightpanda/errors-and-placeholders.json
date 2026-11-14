@@ -1,0 +1,231 @@
+{
+  "description": "Store admin sign-in page: errors for an unknown node and a missing node id, and LP.fillNode with a $LP_* placeholder (CDP does not resolve it, the field holds the literal text; the server ran with LP_STORE_USERNAME set).",
+  "observed": {
+    "date": "2026-11-14",
+    "lightpanda": "1.0.4",
+    "binary": "lightpanda-aarch64-macos",
+    "server": "lightpanda serve --host 127.0.0.1 --port 9222",
+    "sites": "bun sandbox/sites/server.ts (supplier 127.0.0.1:3001, store 127.0.0.1:3002), client kumo, day 1"
+  },
+  "trimmed": [
+    "calls[].request/response keep only method, params and result or error"
+  ],
+  "calls": [
+    {
+      "request": {
+        "method": "Target.createBrowserContext",
+        "params": {}
+      },
+      "response": {
+        "result": {
+          "browserContextId": "BID-1"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "Target.createTarget",
+        "params": {
+          "url": "about:blank",
+          "browserContextId": "BID-1"
+        }
+      },
+      "response": {
+        "result": {
+          "targetId": "FID-0000000001"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "Target.attachToTarget",
+        "params": {
+          "targetId": "FID-0000000001",
+          "flatten": true
+        }
+      },
+      "response": {
+        "result": {
+          "sessionId": "SID-1"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "Page.enable",
+        "params": {}
+      },
+      "response": {
+        "result": {}
+      }
+    },
+    {
+      "request": {
+        "method": "Page.navigate",
+        "params": {
+          "url": "http://127.0.0.1:3002/login"
+        }
+      },
+      "response": {
+        "result": {
+          "frameId": "FID-0000000001",
+          "loaderId": "LID-0000000001"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "LP.waitUntil",
+        "params": {
+          "until": "load"
+        }
+      },
+      "response": {
+        "result": {}
+      }
+    },
+    {
+      "request": {
+        "method": "LP.getInteractiveElements",
+        "params": {}
+      },
+      "response": {
+        "result": {
+          "elements": [
+            {
+              "backendNodeId": 1,
+              "tagName": "input",
+              "role": "textbox",
+              "name": "Username",
+              "type": "native",
+              "tabIndex": 0,
+              "inputType": "text",
+              "value": "",
+              "elementName": "username"
+            },
+            {
+              "backendNodeId": 2,
+              "tagName": "input",
+              "role": "textbox",
+              "name": "Password",
+              "type": "native",
+              "tabIndex": 0,
+              "inputType": "password",
+              "value": "",
+              "elementName": "password"
+            },
+            {
+              "backendNodeId": 3,
+              "tagName": "button",
+              "role": "button",
+              "name": "Sign in",
+              "type": "native",
+              "tabIndex": 0,
+              "class": "btn-save"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "LP.fillNode",
+        "params": {
+          "backendNodeId": 99999,
+          "text": "6"
+        }
+      },
+      "response": {
+        "error": {
+          "code": -31998,
+          "message": "InvalidNodeId"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "LP.clickNode",
+        "params": {}
+      },
+      "response": {
+        "error": {
+          "code": -31998,
+          "message": "InvalidParam"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "LP.getSemanticTree",
+        "params": {
+          "format": "text",
+          "backendNodeId": 99999
+        }
+      },
+      "response": {
+        "error": {
+          "code": -31998,
+          "message": "InvalidNodeId"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "LP.fillNode",
+        "params": {
+          "backendNodeId": 1,
+          "text": "$LP_STORE_USERNAME"
+        }
+      },
+      "response": {
+        "result": []
+      }
+    },
+    {
+      "request": {
+        "method": "LP.getNodeDetails",
+        "params": {
+          "backendNodeId": 1
+        }
+      },
+      "response": {
+        "result": {
+          "nodeDetails": {
+            "backendNodeId": 1,
+            "tagName": "input",
+            "role": "textbox",
+            "name": "Username",
+            "isInteractive": true,
+            "value": "$LP_STORE_USERNAME",
+            "inputType": "text",
+            "selector": "input[name=\"username\"]"
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "Target.closeTarget",
+        "params": {
+          "targetId": "FID-0000000001"
+        }
+      },
+      "response": {
+        "result": {
+          "success": true
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "Target.disposeBrowserContext",
+        "params": {
+          "browserContextId": "BID-1"
+        }
+      },
+      "response": {
+        "result": {}
+      }
+    }
+  ]
+}

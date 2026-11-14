@@ -1,0 +1,9 @@
+{
+  "code": "A11Y_UNAVAILABLE",
+  "message": "accessibility bus is not available: start computer use first",
+  "method": "GET",
+  "path": "/computeruse/a11y/tree",
+  "source": "DAYTONA_DAEMON",
+  "statusCode": 503,
+  "timestamp": "2026-11-14T10:00:00Z"
+}

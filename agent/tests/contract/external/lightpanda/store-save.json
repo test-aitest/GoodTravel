@@ -1,0 +1,687 @@
+{
+  "description": "Store admin: sign in, read the inventory form, fill Available for KC-ETH-200 with 6 (was 18), read it back, press Save changes, wait for the status line and read the whole form again.",
+  "observed": {
+    "date": "2026-11-14",
+    "lightpanda": "1.0.4",
+    "binary": "lightpanda-aarch64-macos",
+    "server": "lightpanda serve --host 127.0.0.1 --port 9222",
+    "sites": "bun sandbox/sites/server.ts (supplier 127.0.0.1:3001, store 127.0.0.1:3002), client kumo, day 1"
+  },
+  "trimmed": [
+    "calls[].request/response keep only method, params and result or error",
+    "redacted: the text of the two sign-in LP.fillNode calls is null (it was the login); the response is real",
+    "LP.getSemanticTree {interactiveOnly: true} (JSON): semanticTree.children keeps the first 8 and the last 2 of 52",
+    "LP.getInteractiveElements: elements keeps buttons, links and the KC-ETH-200 and KC-ETH-500 inputs (46 on the page)",
+    "LP.detectForms: each form keeps its first 2 fields (42 on the inventory form)"
+  ],
+  "calls": [
+    {
+      "request": {
+        "method": "Target.createBrowserContext",
+        "params": {}
+      },
+      "response": {
+        "result": {
+          "browserContextId": "BID-1"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "Target.createTarget",
+        "params": {
+          "url": "about:blank",
+          "browserContextId": "BID-1"
+        }
+      },
+      "response": {
+        "result": {
+          "targetId": "FID-0000000001"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "Target.attachToTarget",
+        "params": {
+          "targetId": "FID-0000000001",
+          "flatten": true
+        }
+      },
+      "response": {
+        "result": {
+          "sessionId": "SID-1"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "Page.enable",
+        "params": {}
+      },
+      "response": {
+        "result": {}
+      }
+    },
+    {
+      "request": {
+        "method": "Page.navigate",
+        "params": {
+          "url": "http://127.0.0.1:3002/login"
+        }
+      },
+      "response": {
+        "result": {
+          "frameId": "FID-0000000001",
+          "loaderId": "LID-0000000001"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "LP.waitUntil",
+        "params": {
+          "until": "load"
+        }
+      },
+      "response": {
+        "result": {}
+      }
+    },
+    {
+      "request": {
+        "method": "LP.getInteractiveElements",
+        "params": {}
+      },
+      "response": {
+        "result": {
+          "elements": [
+            {
+              "backendNodeId": 1,
+              "tagName": "input",
+              "role": "textbox",
+              "name": "Username",
+              "type": "native",
+              "tabIndex": 0,
+              "inputType": "text",
+              "value": "",
+              "elementName": "username"
+            },
+            {
+              "backendNodeId": 2,
+              "tagName": "input",
+              "role": "textbox",
+              "name": "Password",
+              "type": "native",
+              "tabIndex": 0,
+              "inputType": "password",
+              "value": "",
+              "elementName": "password"
+            },
+            {
+              "backendNodeId": 3,
+              "tagName": "button",
+              "role": "button",
+              "name": "Sign in",
+              "type": "native",
+              "tabIndex": 0,
+              "class": "btn-save"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "LP.fillNode",
+        "params": {
+          "backendNodeId": 1,
+          "text": null
+        }
+      },
+      "response": {
+        "result": []
+      },
+      "redacted": [
+        "text"
+      ]
+    },
+    {
+      "request": {
+        "method": "LP.fillNode",
+        "params": {
+          "backendNodeId": 2,
+          "text": null
+        }
+      },
+      "response": {
+        "result": []
+      },
+      "redacted": [
+        "text"
+      ]
+    },
+    {
+      "request": {
+        "method": "LP.clickNode",
+        "params": {
+          "backendNodeId": 3
+        }
+      },
+      "response": {
+        "result": []
+      }
+    },
+    {
+      "request": {
+        "method": "LP.waitForSelector",
+        "params": {
+          "selector": "form[action=\"/inventory\"]"
+        }
+      },
+      "response": {
+        "result": {
+          "backendNodeId": 4
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "Target.getTargetInfo",
+        "params": {
+          "targetId": "FID-0000000001"
+        }
+      },
+      "response": {
+        "result": {
+          "targetInfo": {
+            "url": "http://127.0.0.1:3002/inventory",
+            "title": "Inventory - Kumo Coffee - Store Admin",
+            "targetId": "FID-0000000001",
+            "attached": true,
+            "type": "page",
+            "canAccessOpener": false,
+            "browserContextId": "BID-1"
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "LP.getSemanticTree",
+        "params": {
+          "format": "text",
+          "interactiveOnly": true
+        }
+      },
+      "response": {
+        "result": {
+          "semanticTree": "5 RootWebArea 'Inventory - Kumo Coffee - Store Admin'\n 12 navigation 'Store'\n 22 [i] button 'Sign out'\n 24 heading 'Inventory'\n 30 columnheader 'SKU'\n 32 columnheader 'Product'\n 34 columnheader 'Available'\n 43 [i] spinbutton 'Available for Ethiopia Guji 200g' value='18'\n 50 [i] spinbutton 'Available for Ethiopia Guji 500g' value='12'\n 57 [i] spinbutton 'Available for Ethiopia Yirgacheffe 200g' value='20'\n 64 [i] spinbutton 'Available for Ethiopia Yirgacheffe 500g' value='7'\n 71 [i] spinbutton 'Available for Colombia Huila 200g' value='0'\n 78 [i] spinbutton 'Available for Colombia Huila 500g' value='10'\n 85 [i] spinbutton 'Available for Kenya Nyeri 200g' value='9'\n 92 [i] spinbutton 'Available for Kenya Nyeri 500g' value='5'\n 99 [i] spinbutton 'Available for Guatemala Antigua 200g' value='22'\n 106 [i] spinbutton 'Available for Guatemala Antigua 500g' value='4'\n 113 [i] spinbutton 'Available for Brazil Cerrado 200g' value='35'\n 120 [i] spinbutton 'Available for Brazil Cerrado 500g' value='7'\n 127 [i] spinbutton 'Available for Costa Rica Tarrazu 200g' value='16'\n 134 [i] spinbutton 'Available for Costa Rica Tarrazu 500g' value='6'\n 141 [i] spinbutton 'Available for Peru Cajamarca 200g' value='19'\n 148 [i] spinbutton 'Available for Peru Cajamarca 500g' value='8'\n 155 [i] spinbutton 'Available for Sumatra Mandheling 200g' value='14'\n 162 [i] spinbutton 'Available for Sumatra Mandheling 500g' value='3'\n 169 [i] spinbutton 'Available for Rwanda Nyamasheke 200g' value='9'\n 176 [i] spinbutton 'Available for Rwanda Nyamasheke 500g' value='4'\n 183 [i] spinbutton 'Available for Honduras Marcala 200g' value='13'\n 190 [i] spinbutton 'Available for Honduras Marcala 500g' value='6'\n 197 [i] spinbutton 'Available for Panama Boquete 200g' value='2'\n 204 [i] spinbutton 'Available for Panama Boquete 500g' value='2'\n 211 [i] spinbutton 'Available for House Blend 200g' value='52'\n 218 [i] spinbutton 'Available for House Blend 500g' value='18'\n 225 [i] spinbutton 'Available for Espresso Blend 200g' value='30'\n 232 [i] spinbutton 'Available for Espresso Blend 500g' value='25'\n 239 [i] spinbutton 'Available for Decaf Colombia 200g' value='12'\n 246 [i] spinbutton 'Available for Decaf Colombia 500g' value='5'\n 253 [i] spinbutton 'Available for Drip Bags Ethiopia Guji x10' value='25'\n 260 [i] spinbutton 'Available for Drip Bags Colombia Huila x10' value='20'\n 267 [i] spinbutton 'Available for Drip Bags Kenya Nyeri x10' value='14'\n 274 [i] spinbutton 'Available for Drip Bags Guatemala Antigua x10' value='15'\n 281 [i] spinbutton 'Available for Drip Bags House Blend x10' value='48'\n 288 [i] spinbutton 'Available for Drip Bags Decaf Colombia x10' value='10'\n 295 [i] spinbutton 'Available for Paper Filters x100' value='45'\n 302 [i] spinbutton 'Available for Ceramic Dripper' value='9'\n 309 [i] spinbutton 'Available for Glass Server 600ml' value='11'\n 316 [i] spinbutton 'Available for Hand Grinder' value='3'\n 323 [i] spinbutton 'Available for Storage Canister' value='17'\n 330 [i] spinbutton 'Available for Gift Box 2 x 200g' value='8'\n 332 [i] link 'Discard'\n 333 [i] button 'Save changes'\n"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "LP.getSemanticTree",
+        "params": {
+          "interactiveOnly": true
+        }
+      },
+      "response": {
+        "result": {
+          "semanticTree": {
+            "nodeId": "5",
+            "backendDOMNodeId": 5,
+            "nodeName": "root",
+            "xpath": "",
+            "nodeType": 9,
+            "children": [
+              {
+                "nodeId": "12",
+                "backendDOMNodeId": 12,
+                "nodeName": "nav",
+                "xpath": "/html[1]/body[1]/div[1]/aside[1]/nav[1]",
+                "nodeType": 1,
+                "isInteractive": false,
+                "role": "navigation",
+                "name": "Store",
+                "attributes": {
+                  "class": "nav",
+                  "aria-label": "Store"
+                },
+                "children": []
+              },
+              {
+                "nodeId": "22",
+                "backendDOMNodeId": 22,
+                "nodeName": "button",
+                "xpath": "/html[1]/body[1]/div[1]/aside[1]/form[1]/button[1]",
+                "nodeType": 1,
+                "isInteractive": true,
+                "role": "button",
+                "name": "Sign out",
+                "attributes": {
+                  "class": "signout"
+                },
+                "children": []
+              },
+              {
+                "nodeId": "24",
+                "backendDOMNodeId": 24,
+                "nodeName": "h1",
+                "xpath": "/html[1]/body[1]/div[1]/main[1]/h1[1]",
+                "nodeType": 1,
+                "isInteractive": false,
+                "role": "heading",
+                "name": "Inventory",
+                "attributes": {
+                  "class": "page-title"
+                },
+                "children": []
+              },
+              {
+                "nodeId": "30",
+                "backendDOMNodeId": 30,
+                "nodeName": "th",
+                "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/thead[1]/tr[1]/th[1]",
+                "nodeType": 1,
+                "isInteractive": false,
+                "role": "columnheader",
+                "name": "SKU",
+                "children": []
+              },
+              {
+                "nodeId": "32",
+                "backendDOMNodeId": 32,
+                "nodeName": "th",
+                "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/thead[1]/tr[1]/th[2]",
+                "nodeType": 1,
+                "isInteractive": false,
+                "role": "columnheader",
+                "name": "Product",
+                "children": []
+              },
+              {
+                "nodeId": "34",
+                "backendDOMNodeId": 34,
+                "nodeName": "th",
+                "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/thead[1]/tr[1]/th[3]",
+                "nodeType": 1,
+                "isInteractive": false,
+                "role": "columnheader",
+                "name": "Available",
+                "children": []
+              },
+              {
+                "nodeId": "43",
+                "backendDOMNodeId": 43,
+                "nodeName": "input",
+                "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[1]/td[3]/input[1]",
+                "nodeType": 1,
+                "isInteractive": true,
+                "role": "spinbutton",
+                "name": "Available for Ethiopia Guji 200g",
+                "value": "18",
+                "attributes": {
+                  "class": "qty",
+                  "type": "number",
+                  "min": "0",
+                  "step": "1",
+                  "name": "available-KC-ETH-200",
+                  "value": "18",
+                  "aria-label": "Available for Ethiopia Guji 200g"
+                },
+                "children": []
+              },
+              {
+                "nodeId": "50",
+                "backendDOMNodeId": 50,
+                "nodeName": "input",
+                "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[2]/td[3]/input[1]",
+                "nodeType": 1,
+                "isInteractive": true,
+                "role": "spinbutton",
+                "name": "Available for Ethiopia Guji 500g",
+                "value": "12",
+                "attributes": {
+                  "class": "qty",
+                  "type": "number",
+                  "min": "0",
+                  "step": "1",
+                  "name": "available-KC-ETH-500",
+                  "value": "12",
+                  "aria-label": "Available for Ethiopia Guji 500g"
+                },
+                "children": []
+              },
+              {
+                "nodeId": "332",
+                "backendDOMNodeId": 332,
+                "nodeName": "a",
+                "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/div[1]/a[1]",
+                "nodeType": 1,
+                "isInteractive": true,
+                "role": "link",
+                "name": "Discard",
+                "attributes": {
+                  "class": "discard",
+                  "href": "/inventory"
+                },
+                "children": []
+              },
+              {
+                "nodeId": "333",
+                "backendDOMNodeId": 333,
+                "nodeName": "button",
+                "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/div[1]/button[1]",
+                "nodeType": 1,
+                "isInteractive": true,
+                "role": "button",
+                "name": "Save changes",
+                "attributes": {
+                  "class": "btn-save",
+                  "type": "submit",
+                  "name": "action",
+                  "value": "save"
+                },
+                "children": []
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "LP.getInteractiveElements",
+        "params": {}
+      },
+      "response": {
+        "result": {
+          "elements": [
+            {
+              "backendNodeId": 22,
+              "tagName": "button",
+              "role": "button",
+              "name": "Sign out",
+              "type": "native",
+              "tabIndex": 0,
+              "class": "signout"
+            },
+            {
+              "backendNodeId": 43,
+              "tagName": "input",
+              "role": "spinbutton",
+              "name": "Available for Ethiopia Guji 200g",
+              "type": "native",
+              "tabIndex": 0,
+              "class": "qty",
+              "inputType": "number",
+              "value": "18",
+              "elementName": "available-KC-ETH-200"
+            },
+            {
+              "backendNodeId": 50,
+              "tagName": "input",
+              "role": "spinbutton",
+              "name": "Available for Ethiopia Guji 500g",
+              "type": "native",
+              "tabIndex": 0,
+              "class": "qty",
+              "inputType": "number",
+              "value": "12",
+              "elementName": "available-KC-ETH-500"
+            },
+            {
+              "backendNodeId": 332,
+              "tagName": "a",
+              "role": "link",
+              "name": "Discard",
+              "type": "native",
+              "tabIndex": 0,
+              "class": "discard",
+              "href": "http://127.0.0.1:3002/inventory"
+            },
+            {
+              "backendNodeId": 333,
+              "tagName": "button",
+              "role": "button",
+              "name": "Save changes",
+              "type": "native",
+              "tabIndex": 0,
+              "class": "btn-save",
+              "elementName": "action"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "LP.detectForms",
+        "params": {}
+      },
+      "response": {
+        "result": {
+          "forms": [
+            {
+              "backendNodeId": 4,
+              "action": "/inventory",
+              "method": "post",
+              "fields": [
+                {
+                  "backendNodeId": 43,
+                  "tagName": "input",
+                  "name": "available-KC-ETH-200",
+                  "inputType": "number",
+                  "required": false,
+                  "disabled": false,
+                  "value": "18"
+                },
+                {
+                  "backendNodeId": 50,
+                  "tagName": "input",
+                  "name": "available-KC-ETH-500",
+                  "inputType": "number",
+                  "required": false,
+                  "disabled": false,
+                  "value": "12"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "LP.getNodeDetails",
+        "params": {
+          "backendNodeId": 43
+        }
+      },
+      "response": {
+        "result": {
+          "nodeDetails": {
+            "backendNodeId": 43,
+            "tagName": "input",
+            "role": "spinbutton",
+            "name": "Available for Ethiopia Guji 200g",
+            "isInteractive": true,
+            "value": "18",
+            "inputType": "number",
+            "class": "qty",
+            "selector": "input[name=\"available-KC-ETH-200\"]"
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "LP.getNodeDetails",
+        "params": {
+          "backendNodeId": 333
+        }
+      },
+      "response": {
+        "result": {
+          "nodeDetails": {
+            "backendNodeId": 333,
+            "tagName": "button",
+            "role": "button",
+            "name": "Save changes",
+            "isInteractive": true,
+            "class": "btn-save",
+            "selector": "button[name=\"action\"]"
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "LP.fillNode",
+        "params": {
+          "backendNodeId": 43,
+          "text": "6"
+        }
+      },
+      "response": {
+        "result": []
+      }
+    },
+    {
+      "request": {
+        "method": "LP.getNodeDetails",
+        "params": {
+          "backendNodeId": 43
+        }
+      },
+      "response": {
+        "result": {
+          "nodeDetails": {
+            "backendNodeId": 43,
+            "tagName": "input",
+            "role": "spinbutton",
+            "name": "Available for Ethiopia Guji 200g",
+            "isInteractive": true,
+            "value": "6",
+            "inputType": "number",
+            "class": "qty",
+            "selector": "input[name=\"available-KC-ETH-200\"]"
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "LP.getSemanticTree",
+        "params": {
+          "format": "text",
+          "interactiveOnly": true
+        }
+      },
+      "response": {
+        "result": {
+          "semanticTree": "5 RootWebArea 'Inventory - Kumo Coffee - Store Admin'\n 12 navigation 'Store'\n 22 [i] button 'Sign out'\n 24 heading 'Inventory'\n 30 columnheader 'SKU'\n 32 columnheader 'Product'\n 34 columnheader 'Available'\n 43 [i] spinbutton 'Available for Ethiopia Guji 200g' value='6'\n 50 [i] spinbutton 'Available for Ethiopia Guji 500g' value='12'\n 57 [i] spinbutton 'Available for Ethiopia Yirgacheffe 200g' value='20'\n 64 [i] spinbutton 'Available for Ethiopia Yirgacheffe 500g' value='7'\n 71 [i] spinbutton 'Available for Colombia Huila 200g' value='0'\n 78 [i] spinbutton 'Available for Colombia Huila 500g' value='10'\n 85 [i] spinbutton 'Available for Kenya Nyeri 200g' value='9'\n 92 [i] spinbutton 'Available for Kenya Nyeri 500g' value='5'\n 99 [i] spinbutton 'Available for Guatemala Antigua 200g' value='22'\n 106 [i] spinbutton 'Available for Guatemala Antigua 500g' value='4'\n 113 [i] spinbutton 'Available for Brazil Cerrado 200g' value='35'\n 120 [i] spinbutton 'Available for Brazil Cerrado 500g' value='7'\n 127 [i] spinbutton 'Available for Costa Rica Tarrazu 200g' value='16'\n 134 [i] spinbutton 'Available for Costa Rica Tarrazu 500g' value='6'\n 141 [i] spinbutton 'Available for Peru Cajamarca 200g' value='19'\n 148 [i] spinbutton 'Available for Peru Cajamarca 500g' value='8'\n 155 [i] spinbutton 'Available for Sumatra Mandheling 200g' value='14'\n 162 [i] spinbutton 'Available for Sumatra Mandheling 500g' value='3'\n 169 [i] spinbutton 'Available for Rwanda Nyamasheke 200g' value='9'\n 176 [i] spinbutton 'Available for Rwanda Nyamasheke 500g' value='4'\n 183 [i] spinbutton 'Available for Honduras Marcala 200g' value='13'\n 190 [i] spinbutton 'Available for Honduras Marcala 500g' value='6'\n 197 [i] spinbutton 'Available for Panama Boquete 200g' value='2'\n 204 [i] spinbutton 'Available for Panama Boquete 500g' value='2'\n 211 [i] spinbutton 'Available for House Blend 200g' value='52'\n 218 [i] spinbutton 'Available for House Blend 500g' value='18'\n 225 [i] spinbutton 'Available for Espresso Blend 200g' value='30'\n 232 [i] spinbutton 'Available for Espresso Blend 500g' value='25'\n 239 [i] spinbutton 'Available for Decaf Colombia 200g' value='12'\n 246 [i] spinbutton 'Available for Decaf Colombia 500g' value='5'\n 253 [i] spinbutton 'Available for Drip Bags Ethiopia Guji x10' value='25'\n 260 [i] spinbutton 'Available for Drip Bags Colombia Huila x10' value='20'\n 267 [i] spinbutton 'Available for Drip Bags Kenya Nyeri x10' value='14'\n 274 [i] spinbutton 'Available for Drip Bags Guatemala Antigua x10' value='15'\n 281 [i] spinbutton 'Available for Drip Bags House Blend x10' value='48'\n 288 [i] spinbutton 'Available for Drip Bags Decaf Colombia x10' value='10'\n 295 [i] spinbutton 'Available for Paper Filters x100' value='45'\n 302 [i] spinbutton 'Available for Ceramic Dripper' value='9'\n 309 [i] spinbutton 'Available for Glass Server 600ml' value='11'\n 316 [i] spinbutton 'Available for Hand Grinder' value='3'\n 323 [i] spinbutton 'Available for Storage Canister' value='17'\n 330 [i] spinbutton 'Available for Gift Box 2 x 200g' value='8'\n 332 [i] link 'Discard'\n 333 [i] button 'Save changes'\n"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "LP.clickNode",
+        "params": {
+          "backendNodeId": 333
+        }
+      },
+      "response": {
+        "result": []
+      }
+    },
+    {
+      "request": {
+        "method": "LP.waitForSelector",
+        "params": {
+          "selector": "[role=\"status\"]"
+        }
+      },
+      "response": {
+        "result": {
+          "backendNodeId": 338
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "Target.getTargetInfo",
+        "params": {
+          "targetId": "FID-0000000001"
+        }
+      },
+      "response": {
+        "result": {
+          "targetInfo": {
+            "url": "http://127.0.0.1:3002/inventory?saved=1",
+            "title": "Inventory - Kumo Coffee - Store Admin",
+            "targetId": "FID-0000000001",
+            "attached": true,
+            "type": "page",
+            "canAccessOpener": false,
+            "browserContextId": "BID-1"
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "LP.getSemanticTree",
+        "params": {
+          "format": "text",
+          "backendNodeId": 338
+        }
+      },
+      "response": {
+        "result": {
+          "semanticTree": "338 status\n 339 'Saved. 1 product updated.'\n"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "LP.getSemanticTree",
+        "params": {
+          "format": "text",
+          "interactiveOnly": true
+        }
+      },
+      "response": {
+        "result": {
+          "semanticTree": "340 RootWebArea 'Inventory - Kumo Coffee - Store Admin'\n 347 navigation 'Store'\n 357 [i] button 'Sign out'\n 359 heading 'Inventory'\n 366 columnheader 'SKU'\n 368 columnheader 'Product'\n 370 columnheader 'Available'\n 379 [i] spinbutton 'Available for Ethiopia Guji 200g' value='6'\n 386 [i] spinbutton 'Available for Ethiopia Guji 500g' value='12'\n 393 [i] spinbutton 'Available for Ethiopia Yirgacheffe 200g' value='20'\n 400 [i] spinbutton 'Available for Ethiopia Yirgacheffe 500g' value='7'\n 407 [i] spinbutton 'Available for Colombia Huila 200g' value='0'\n 414 [i] spinbutton 'Available for Colombia Huila 500g' value='10'\n 421 [i] spinbutton 'Available for Kenya Nyeri 200g' value='9'\n 428 [i] spinbutton 'Available for Kenya Nyeri 500g' value='5'\n 435 [i] spinbutton 'Available for Guatemala Antigua 200g' value='22'\n 442 [i] spinbutton 'Available for Guatemala Antigua 500g' value='4'\n 449 [i] spinbutton 'Available for Brazil Cerrado 200g' value='35'\n 456 [i] spinbutton 'Available for Brazil Cerrado 500g' value='7'\n 463 [i] spinbutton 'Available for Costa Rica Tarrazu 200g' value='16'\n 470 [i] spinbutton 'Available for Costa Rica Tarrazu 500g' value='6'\n 477 [i] spinbutton 'Available for Peru Cajamarca 200g' value='19'\n 484 [i] spinbutton 'Available for Peru Cajamarca 500g' value='8'\n 491 [i] spinbutton 'Available for Sumatra Mandheling 200g' value='14'\n 498 [i] spinbutton 'Available for Sumatra Mandheling 500g' value='3'\n 505 [i] spinbutton 'Available for Rwanda Nyamasheke 200g' value='9'\n 512 [i] spinbutton 'Available for Rwanda Nyamasheke 500g' value='4'\n 519 [i] spinbutton 'Available for Honduras Marcala 200g' value='13'\n 526 [i] spinbutton 'Available for Honduras Marcala 500g' value='6'\n 533 [i] spinbutton 'Available for Panama Boquete 200g' value='2'\n 540 [i] spinbutton 'Available for Panama Boquete 500g' value='2'\n 547 [i] spinbutton 'Available for House Blend 200g' value='52'\n 554 [i] spinbutton 'Available for House Blend 500g' value='18'\n 561 [i] spinbutton 'Available for Espresso Blend 200g' value='30'\n 568 [i] spinbutton 'Available for Espresso Blend 500g' value='25'\n 575 [i] spinbutton 'Available for Decaf Colombia 200g' value='12'\n 582 [i] spinbutton 'Available for Decaf Colombia 500g' value='5'\n 589 [i] spinbutton 'Available for Drip Bags Ethiopia Guji x10' value='25'\n 596 [i] spinbutton 'Available for Drip Bags Colombia Huila x10' value='20'\n 603 [i] spinbutton 'Available for Drip Bags Kenya Nyeri x10' value='14'\n 610 [i] spinbutton 'Available for Drip Bags Guatemala Antigua x10' value='15'\n 617 [i] spinbutton 'Available for Drip Bags House Blend x10' value='48'\n 624 [i] spinbutton 'Available for Drip Bags Decaf Colombia x10' value='10'\n 631 [i] spinbutton 'Available for Paper Filters x100' value='45'\n 638 [i] spinbutton 'Available for Ceramic Dripper' value='9'\n 645 [i] spinbutton 'Available for Glass Server 600ml' value='11'\n 652 [i] spinbutton 'Available for Hand Grinder' value='3'\n 659 [i] spinbutton 'Available for Storage Canister' value='17'\n 666 [i] spinbutton 'Available for Gift Box 2 x 200g' value='8'\n 668 [i] link 'Discard'\n 669 [i] button 'Save changes'\n"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "Target.closeTarget",
+        "params": {
+          "targetId": "FID-0000000001"
+        }
+      },
+      "response": {
+        "result": {
+          "success": true
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "Target.disposeBrowserContext",
+        "params": {
+          "browserContextId": "BID-1"
+        }
+      },
+      "response": {
+        "result": {}
+      }
+    }
+  ]
+}

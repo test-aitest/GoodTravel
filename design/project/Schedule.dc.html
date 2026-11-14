@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>ClientOps 時間割とリスク</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+.d{font-family:Figtree,"Hiragino Sans","Noto Sans JP",-apple-system,"Segoe UI",sans-serif;font-size:14.5px;line-height:1.7;color:#0d0d0d;background:#fff;padding:56px 24px 72px;box-sizing:border-box;-webkit-font-smoothing:antialiased}
+.w{max-width:1100px;margin:0 auto;display:flex;flex-direction:column;gap:40px}
+.sec{display:flex;flex-direction:column;gap:14px}
+.h2{margin:0;font-size:20px;font-weight:700}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.tr{border:1px solid rgba(0,0,0,.09);border-radius:16px;overflow:hidden}
+.th{padding:14px 18px;background:#fafafa;border-bottom:1px solid rgba(0,0,0,.07);display:flex;flex-direction:column;gap:2px}
+.it{display:grid;grid-template-columns:104px minmax(0,1fr);gap:12px;padding:10px 18px;border-bottom:1px solid rgba(0,0,0,.06);font-size:14px}
+.it:last-child{border-bottom:0}
+.tm{font-variant-numeric:tabular-nums;font-weight:600;white-space:nowrap}
+.hl{background:#fffbea}
+.box{border:1px solid rgba(0,0,0,.09);border-radius:14px;overflow-x:auto}
+.t{width:100%;border-collapse:collapse;font-size:14px}
+.t th{text-align:left;font-weight:600;color:#5c5c5c;font-size:12.5px;padding:10px 16px;border-bottom:1px solid rgba(0,0,0,.1);background:#fafafa;white-space:nowrap}
+.t td{padding:11px 16px;border-bottom:1px solid rgba(0,0,0,.06);vertical-align:top}
+.t tr:last-child td{border-bottom:0}
+ol{margin:0;padding-left:22px}
+li{margin:3px 0}
+</style>
+</helmet>
+<div class="d">
+<div class="w">
+
+  <div style="display: flex; flex-direction: column; gap: 8px">
+    <h1 style="margin: 0; font-size: 30px; font-weight: 700">時間割とリスク</h1>
+    <p style="margin: 0; color: #474747; max-width: 74ch">事前に製品として作り込み、会場では手直しと議論に使う（A）。持ち込みが認められなかった場合だけ B に切り替える。どちらでも 17:10 に機能を止め、通し練習と予備の録画に回す。</p>
+  </div>
+
+  <div class="sec">
+    <h2 class="h2">時間割</h2>
+    <div class="two">
+      <section class="tr" aria-label="Track A">
+        <div class="th"><span style="font-weight: 700">A · 作り込んで持ち込む（基本）</span><span style="font-size: 13px; color: #5c5c5c">P0–P1 を前日と朝に終え、会場では本物の環境をつなぐ</span></div>
+        <div class="it"><span class="tm">11/13 夜</span><span>画面8枚と計画の確認（あなた）</span></div>
+        <div class="it"><span class="tm">9:00–12:30</span><span>P0 準備 → P1 画面 → P2 のうちデモサイトと実行器</span></div>
+        <div class="it"><span class="tm">14:00–15:30</span><span>説明を聞く。主催に持ち込みを最終確認。クレジットを受け取り、本番の鍵で P0 を確かめ直す</span></div>
+        <div class="it"><span class="tm">15:30–16:20</span><span>P2 を本物の環境で最後まで通す</span></div>
+        <div class="it"><span class="tm">16:20–16:50</span><span>P3 覚えて再実行、実測</span></div>
+        <div class="it"><span class="tm">16:50–17:10</span><span>P4 修復。間に合わなければ P5 の「断る」だけ</span></div>
+        <div class="it hl"><span class="tm">17:10–17:25</span><span>機能を止める。通し2回、予備の録画</span></div>
+        <div class="it"><span class="tm">17:25</span><span>提出（締切 17:30）、17:40 デモ</span></div>
+      </section>
+      <section class="tr" aria-label="Track B">
+        <div class="th"><span style="font-weight: 700">B · 持ち込めなかった場合の予備</span><span style="font-size: 13px; color: #5c5c5c">前日はコードを書かず、鍵・台本・この計画だけ用意する</span></div>
+        <div class="it"><span class="tm">前日〜朝</span><span>アカウントと鍵、デモの台本、デモ用サイトの中身（文章とデータ）</span></div>
+        <div class="it"><span class="tm">14:00–15:30</span><span>鍵が使えることだけ確かめる（コードは書かない）</span></div>
+        <div class="it"><span class="tm">15:30–15:50</span><span>ai-chat テンプレートから「New job」「Working」の2画面</span></div>
+        <div class="it"><span class="tm">15:50–16:40</span><span>P2 を最小で：在庫を読む → 差分 → 承認 → 保存</span></div>
+        <div class="it"><span class="tm">16:40–17:05</span><span>P3 覚えて再実行、実測</span></div>
+        <div class="it hl"><span class="tm">17:05–17:25</span><span>機能を止める。通し、予備の録画</span></div>
+        <div class="it"><span class="tm">17:25</span><span>提出。P4・P5・Setup 画面は口頭と画面設計で見せる</span></div>
+      </section>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h2 class="h2">今夜から明朝にお願いしたいこと</h2>
+    <ol>
+      <li>Daytona と Anthropic（Claude）の API キーを用意する。キーは本人が .env.local に入れる。AgentField は手元で動かすので不要</li>
+      <li>Screens の8枚を確認する。直したい所はキャンバスに直接コメント</li>
+      <li>1人で出るか、チームで出るかを決める</li>
+    </ol>
+  </div>
+
+  <div class="sec">
+    <h2 class="h2">リスクと代わりの手</h2>
+    <div class="box"><table class="t">
+      <thead><tr><th>起こりうること</th><th>いつ気づくか</th><th>代わりの手</th></tr></thead>
+      <tbody>
+        <tr><td>Daytona の契約によって、サンドボックスから外へ通信できない</td><td>P0</td><td>外への通信（Claude）はサーバーから。デモ用サイトはサンドボックスの中で動かす</td></tr>
+        <tr><td>Lightpanda がサンドボックスで動かない</td><td>P0</td><td>実行器はそのまま、ブラウザだけ Chromium に差し替える</td></tr>
+        <tr><td>Lightpanda は画面を描かないので、そのままでは「画面」を映せない</td><td>設計済み</td><td>右の画面は、サンドボックス内のサイトを署名付きURLで表示する</td></tr>
+        <tr><td>PandaScript が対象のサイトで動かない</td><td>P3</td><td>要素ツリーの道だけで再実行する。少し遅くなるが AI は使わない</td></tr>
+        <tr><td>Claude の返す次の一手が、決めた形にならない</td><td>P0</td><td>返答の形を検査し、外れたら1回だけ聞き直す。それでもだめなら止めて人に聞く</td></tr>
+        <tr><td>AgentField 経由で claude-opus-5-5 が通らない</td><td>P0</td><td>はしごの Claude の段だけ、Anthropic の SDK で直接呼ぶ。流れ図への記録は AgentField に残す</td></tr>
+        <tr><td>effort medium で手順の選び間違いが出る</td><td>運用中</td><td>その顧客やサイトだけ effort を high に上げる（呼び出しごとの設定なので1か所の変更）。書き込み前の承認と全行の読み直しがあるので、間違いは保存されない</td></tr>
+        <tr><td>承認の受け口に署名の鍵を設定し忘れる（AgentField は 503 を返す）</td><td>P0</td><td>鍵を設定し、承認を1回通しておく。署名は本文の HMAC-SHA256 を X-Webhook-Signature に付ける（公式チュートリアルで確認済み）</td></tr>
+        <tr><td>TypeScript 7 と Next.js 16 のビルドが合わない</td><td>P0</td><td>Next のビルド中の型検査を外し、型は TypeScript 7 で別に確かめる</td></tr>
+        <tr><td>2時間で足りない</td><td>16:50</td><td>削る順は P5 → P4 → Setup 画面。予備の録画で見せる</td></tr>
+        <tr><td>会場の回線が遅い</td><td>14:00</td><td>テザリングを用意。予備の録画</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1800}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

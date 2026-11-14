@@ -1,0 +1,211 @@
+{
+  "choice": {
+    "returns": {
+      "type": "MultimodalResponse",
+      "text": "{\"element_id\":\"e12\",\"action\":\"click\",\"confident\":true}",
+      "usage": {
+        "prompt_tokens": 5200,
+        "completion_tokens": 640,
+        "total_tokens": 5840,
+        "cache_read_tokens": 0,
+        "cache_creation_tokens": 0
+      },
+      "cost_usd": 0.0336,
+      "cost_source": "litellm",
+      "model": "claude-opus-5-5",
+      "finish_reason": "stop",
+      "refusal": null,
+      "provider_specific_fields": {
+        "citations": null,
+        "thinking_blocks": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EsQBCkgIARABGAIiQClientOpsSampleSignatureNotReal"
+          }
+        ]
+      }
+    },
+    "cost_tracker_entry": {
+      "source": "llm",
+      "provider": "anthropic",
+      "model": "claude-opus-5-5",
+      "harness": null,
+      "reasoner": null,
+      "input_tokens": 5200,
+      "output_tokens": 640,
+      "cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_tokens": 5840,
+      "cost_usd": 0.0336,
+      "cost_source": "litellm",
+      "routing_provider": "anthropic"
+    }
+  },
+  "none": {
+    "returns": {
+      "type": "MultimodalResponse",
+      "text": "{\"element_id\":null,\"action\":\"none\",\"confident\":true}",
+      "usage": {
+        "prompt_tokens": 900,
+        "completion_tokens": 420,
+        "total_tokens": 1320,
+        "cache_read_tokens": 0,
+        "cache_creation_tokens": 0
+      },
+      "cost_usd": 0.012,
+      "cost_source": "litellm",
+      "model": "claude-opus-5-5",
+      "finish_reason": "stop",
+      "refusal": null,
+      "provider_specific_fields": {
+        "citations": null,
+        "thinking_blocks": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EsQBCkgIARABGAIiQClientOpsSampleSignatureNotReal"
+          }
+        ]
+      }
+    },
+    "cost_tracker_entry": {
+      "source": "llm",
+      "provider": "anthropic",
+      "model": "claude-opus-5-5",
+      "harness": null,
+      "reasoner": null,
+      "input_tokens": 900,
+      "output_tokens": 420,
+      "cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_tokens": 1320,
+      "cost_usd": 0.012,
+      "cost_source": "litellm",
+      "routing_provider": "anthropic"
+    }
+  },
+  "refusal": {
+    "returns": {
+      "type": "MultimodalResponse",
+      "text": "",
+      "usage": {
+        "prompt_tokens": 5200,
+        "completion_tokens": 0,
+        "total_tokens": 5200,
+        "cache_read_tokens": 0,
+        "cache_creation_tokens": 0
+      },
+      "cost_usd": 0.0208,
+      "cost_source": "litellm",
+      "model": "claude-opus-5-5",
+      "finish_reason": "content_filter",
+      "refusal": "This request was declined because it could enable cyber harm.",
+      "provider_specific_fields": {
+        "citations": null,
+        "thinking_blocks": null,
+        "stop_reason": "refusal",
+        "stop_details": {
+          "type": "refusal",
+          "category": "cyber",
+          "explanation": "This request was declined because it could enable cyber harm."
+        }
+      }
+    },
+    "cost_tracker_entry": {
+      "source": "llm",
+      "provider": "anthropic",
+      "model": "claude-opus-5-5",
+      "harness": null,
+      "reasoner": null,
+      "input_tokens": 5200,
+      "output_tokens": 0,
+      "cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_tokens": 5200,
+      "cost_usd": 0.0208,
+      "cost_source": "litellm",
+      "routing_provider": "anthropic"
+    }
+  },
+  "max_tokens": {
+    "returns": {
+      "type": "MultimodalResponse",
+      "text": "{\"element_id\":\"e1",
+      "usage": {
+        "prompt_tokens": 5200,
+        "completion_tokens": 16000,
+        "total_tokens": 21200,
+        "cache_read_tokens": 0,
+        "cache_creation_tokens": 0
+      },
+      "cost_usd": 0.3408,
+      "cost_source": "litellm",
+      "model": "claude-opus-5-5",
+      "finish_reason": "length",
+      "refusal": null,
+      "provider_specific_fields": {
+        "citations": null,
+        "thinking_blocks": [
+          {
+            "type": "thinking",
+            "thinking": "",
+            "signature": "EsQBCkgIARABGAIiQClientOpsSampleSignatureNotReal"
+          }
+        ]
+      }
+    },
+    "cost_tracker_entry": {
+      "source": "llm",
+      "provider": "anthropic",
+      "model": "claude-opus-5-5",
+      "harness": null,
+      "reasoner": null,
+      "input_tokens": 5200,
+      "output_tokens": 16000,
+      "cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_tokens": 21200,
+      "cost_usd": 0.3408,
+      "cost_source": "litellm",
+      "routing_provider": "anthropic"
+    }
+  },
+  "choice_without_thinking": {
+    "returns": {
+      "type": "MultimodalResponse",
+      "text": "{\"element_id\":\"d\",\"action\":\"click\",\"confident\":true}",
+      "usage": {
+        "prompt_tokens": 701,
+        "completion_tokens": 21,
+        "total_tokens": 722,
+        "cache_read_tokens": 0,
+        "cache_creation_tokens": 0
+      },
+      "cost_usd": 0.003224,
+      "cost_source": "litellm",
+      "model": "claude-opus-5-5",
+      "finish_reason": "stop",
+      "refusal": null,
+      "provider_specific_fields": {
+        "citations": null,
+        "thinking_blocks": null
+      }
+    },
+    "cost_tracker_entry": {
+      "source": "llm",
+      "provider": "anthropic",
+      "model": "claude-opus-5-5",
+      "harness": null,
+      "reasoner": null,
+      "input_tokens": 701,
+      "output_tokens": 21,
+      "cache_read_tokens": 0,
+      "cache_creation_tokens": 0,
+      "total_tokens": 722,
+      "cost_usd": 0.003224,
+      "cost_source": "litellm",
+      "routing_provider": "anthropic"
+    }
+  }
+}

@@ -1,0 +1,141 @@
+{
+ "observed": {
+  "date": "2026-11-14",
+  "lightpanda": "1.0.4",
+  "url": "http://127.0.0.1:3002/login",
+  "title": "Sign in - Store Admin"
+ },
+ "jsonTree": {
+  "nodeId": "1",
+  "backendDOMNodeId": 1,
+  "nodeName": "root",
+  "xpath": "",
+  "nodeType": 9,
+  "children": [
+   {
+    "nodeId": "5",
+    "backendDOMNodeId": 5,
+    "nodeName": "form",
+    "xpath": "/html[1]/body[1]/main[1]/form[1]",
+    "nodeType": 1,
+    "isInteractive": false,
+    "role": "form",
+    "attributes": {
+     "class": "login-box",
+     "method": "post",
+     "action": "/login"
+    },
+    "children": [
+     {
+      "nodeId": "6",
+      "backendDOMNodeId": 6,
+      "nodeName": "h1",
+      "xpath": "/html[1]/body[1]/main[1]/form[1]/h1[1]",
+      "nodeType": 1,
+      "isInteractive": false,
+      "role": "heading",
+      "name": "Store Admin",
+      "attributes": {
+       "class": "page-title"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "8",
+      "backendDOMNodeId": 8,
+      "nodeName": "p",
+      "xpath": "/html[1]/body[1]/main[1]/form[1]/p[1]",
+      "nodeType": 1,
+      "isInteractive": false,
+      "role": "paragraph",
+      "attributes": {
+       "class": "hint"
+      },
+      "children": [
+       {
+        "nodeId": "9",
+        "backendDOMNodeId": 9,
+        "nodeName": "text",
+        "xpath": "/html[1]/body[1]/main[1]/form[1]/p[1]/text()[1]",
+        "nodeType": 3,
+        "nodeValue": "Sign in to manage your store.",
+        "children": []
+       }
+      ]
+     },
+     {
+      "nodeId": "11",
+      "backendDOMNodeId": 11,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/main[1]/form[1]/label[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Username",
+      "children": []
+     },
+     {
+      "nodeId": "12",
+      "backendDOMNodeId": 12,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/main[1]/form[1]/label[1]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "textbox",
+      "name": "Username",
+      "value": "",
+      "attributes": {
+       "name": "username",
+       "autocomplete": "username",
+       "required": ""
+      },
+      "children": []
+     },
+     {
+      "nodeId": "14",
+      "backendDOMNodeId": 14,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/main[1]/form[1]/label[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Password",
+      "children": []
+     },
+     {
+      "nodeId": "15",
+      "backendDOMNodeId": 15,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/main[1]/form[1]/label[2]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "textbox",
+      "name": "Password",
+      "value": "",
+      "attributes": {
+       "name": "password",
+       "type": "password",
+       "autocomplete": "current-password",
+       "required": ""
+      },
+      "children": []
+     },
+     {
+      "nodeId": "16",
+      "backendDOMNodeId": 16,
+      "nodeName": "button",
+      "xpath": "/html[1]/body[1]/main[1]/form[1]/button[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "button",
+      "name": "Sign in",
+      "attributes": {
+       "class": "btn-save",
+       "type": "submit"
+      },
+      "children": []
+     }
+    ]
+   }
+  ]
+ },
+ "text": "1 RootWebArea 'Sign in - Store Admin'\n 5 form\n  6 heading 'Store Admin'\n  8 paragraph\n   9 'Sign in to manage your store.'\n  11 'Username'\n  12 [i] textbox 'Username'\n  14 'Password'\n  15 [i] textbox 'Password'\n  16 [i] button 'Sign in'\n",
+ "interactiveText": "1 RootWebArea 'Sign in - Store Admin'\n 6 heading 'Store Admin'\n 12 [i] textbox 'Username'\n 15 [i] textbox 'Password'\n 16 [i] button 'Sign in'\n",
+ "html": "<!DOCTYPE html>\n<html lang=\"en\"><head>\n<meta charset=\"utf-8\">\n<title>Sign in - Store Admin</title>\n<style>\nbody{margin:0;font-family:system-ui,-apple-system,\"Segoe UI\",Arial,sans-serif;font-size:13px;color:#1f2328;background:#fbfbfa}\n.shell{display:grid;grid-template-columns:180px minmax(0,1fr);min-height:100vh}\n.sidebar{background:#2b2b2b;color:#e8e8e8;padding:16px 12px;display:flex;flex-direction:column;gap:10px}\n.store-name{color:#fff;font-weight:700;font-size:15px}\n.nav{display:flex;flex-direction:column;gap:8px}\n.nav-current{color:#fff;font-weight:700}\n.signout{margin-top:auto;font:inherit;color:#e8e8e8;background:transparent;border:1px solid #666;border-radius:4px;padding:4px 8px;cursor:pointer}\n.main{padding:20px 24px;display:flex;flex-direction:column;gap:12px;max-width:820px}\n.page-title{margin:0;font-size:18px}\n.inventory-table{width:100%;border-collapse:collapse;background:#fff;border:1px solid #e3e3e3}\n.inventory-table th{background:#f6f6f6;text-align:left;padding:6px 8px;font-weight:600}\n.inventory-table td{padding:5px 8px;border-top:1px solid #eee}\n.qty{width:72px;font:inherit;padding:3px 5px;text-align:right;border:1px solid #c9c9c9;border-radius:3px}\n.save-bar{display:flex;gap:10px;align-items:center;padding:10px 0}\n.btn-save{font:inherit;font-weight:600;padding:6px 16px;border-radius:4px;border:1px solid #2f6fb0;background:#2f6fb0;color:#fff;cursor:pointer}\n.btn-other{font:inherit;font-weight:600;padding:6px 16px;border-radius:4px;border:1px solid #2f6fb0;background:#fff;color:#2f6fb0;cursor:pointer}\n.discard{color:#57606a}\n.notice{margin:0;padding:8px 10px;border-radius:4px;background:#e7f4ea;border:1px solid #9fd1ab;color:#1e5b2c}\n.error{margin:0;padding:8px 10px;border-radius:4px;background:#fdecea;border:1px solid #e0a39e;color:#8a1c14}\n.login-page{min-height:100vh;display:flex;align-items:center;justify-content:center}\n.login-box{display:flex;flex-direction:column;gap:12px;width:300px;padding:24px;background:#fff;border:1px solid #e3e3e3;border-radius:6px}\n.field{display:flex;flex-direction:column;gap:4px}\n.field input{font:inherit;padding:6px;border:1px solid #c9c9c9;border-radius:3px}\n.hint{margin:0;color:#57606a}\n</style>\n</head>\n<body>\n<main class=\"login-page\">\n<form class=\"login-box\" method=\"post\" action=\"/login\">\n<h1 class=\"page-title\">Store Admin</h1>\n<p class=\"hint\">Sign in to manage your store.</p>\n\n<label class=\"field\">Username<input name=\"username\" autocomplete=\"username\" required></label>\n<label class=\"field\">Password<input name=\"password\" type=\"password\" autocomplete=\"current-password\" required></label>\n<button class=\"btn-save\" type=\"submit\">Sign in</button>\n</form>\n</main>\n\n\n</body></html>"
+}

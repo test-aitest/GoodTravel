@@ -1,0 +1,16 @@
+{
+  "execution_id": "exec_20261113_164757_rx0wzfpk",
+  "run_id": "run_20261113_164757_xl176unw",
+  "agent_node_id": "clientops",
+  "instance_id": "b16514a8f922480b8ac94f8bb1658440",
+  "status": "succeeded",
+  "result": {
+    "clientId": "kumo",
+    "status": "done",
+    "steps": 3
+  },
+  "started_at": "2026-11-13T16:47:57Z",
+  "completed_at": "2026-11-13T16:47:57Z",
+  "duration_ms": 331,
+  "webhook_registered": false
+}

@@ -1,0 +1,27 @@
+{
+  "id": "8e2c4a17-3b5d-4f69-a0c1-7d9e2b4f6a83",
+  "organizationId": "c0a8e7f2-4b1d-4f3e-8a9c-6d2b5e1f0a73",
+  "general": false,
+  "name": "clientops-computer-1",
+  "state": "active",
+  "size": 0.31,
+  "entrypoint": null,
+  "cpu": 1,
+  "gpu": 0,
+  "mem": 1,
+  "disk": 3,
+  "errorReason": null,
+  "createdAt": "2026-11-14T03:00:00Z",
+  "updatedAt": "2026-11-14T03:02:41Z",
+  "lastUsedAt": null,
+  "buildInfo": {
+    "dockerfileContent": "FROM debian:trixie-20261104-slim\nENTRYPOINT [\"sleep\", \"infinity\"]\n",
+    "contextHashes": [
+      "4f1c2b7e9a0d3c5e8b6a1f2d7c9e0b3a"
+    ],
+    "createdAt": "2026-11-14T03:00:00Z",
+    "updatedAt": "2026-11-14T03:02:41Z",
+    "snapshotRef": "daytona-snapshots/clientops-computer-1:0b8d7f3c"
+  },
+  "sourceSandboxId": null
+}

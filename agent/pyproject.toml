@@ -1,0 +1,21 @@
+[project]
+name = "clientops-agent"
+version = "0.1.0"
+description = "ClientOps operations agent on AgentField"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+    "agentfield>=0.1.145",
+    "anthropic>=2.8.0",
+    "daytona>=0.231.1",
+    "pyobjc-framework-applicationservices>=13.0 ; sys_platform == 'darwin'",
+]
+
+[dependency-groups]
+dev = [
+    "pyobjc-framework-cocoa>=13.0 ; sys_platform == 'darwin'",
+    "pytest>=9.2.0",
+]
+
+[tool.pytest]
+pythonpath = ["."]
+testpaths = ["tests"]

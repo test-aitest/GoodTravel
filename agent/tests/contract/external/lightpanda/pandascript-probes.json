@@ -1,0 +1,97 @@
+{
+  "description": "Small PandaScript probes: what click, fill, waitForSelector and extract return, page.login with given selectors, which semantic-tree functions exist on a page, and the exit code and stderr for a thrown check, a failed step, an unset placeholder, a syntax error and a missing file.",
+  "observed": {
+    "date": "2026-11-14",
+    "lightpanda": "1.0.4",
+    "binary": "lightpanda-aarch64-macos",
+    "sites": "bun sandbox/sites/server.ts (store 127.0.0.1:3002), client kumo, day 1, reset before each run",
+    "command": "lightpanda run <probe>.js"
+  },
+  "probes": [
+    {
+      "name": "probe-fill",
+      "script": "const page = new Page();\nawait page.goto(\"http://127.0.0.1:3002/login\");\npage.fill(\"input[name=\\\"username\\\"]\", \"$LP_STORE_USERNAME\");\npage.fill(\"input[name=\\\"password\\\"]\", \"$LP_STORE_PASSWORD\");\nconst clicked = page.click(\"form[action=\\\"/login\\\"] button[type=\\\"submit\\\"]\");\nconst afterClickUrl = page.evaluate(\"location.href\");\nconst waited = page.waitForSelector(\"form[action=\\\"/inventory\\\"]\");\nconst field = \"input[name=\\\"available-KC-ETH-200\\\"]\";\nconst before = page.extract({ attr: { selector: field, attr: \"value\" }, matches: [field] });\nconst filled = page.fill(field, \"6\");\nconst after = page.extract({ attr: { selector: field, attr: \"value\" } });\nconst property = page.evaluate(`document.querySelector(${JSON.stringify(field)}).value`);\nconst label = page.extract({ save: \"button[name=\\\"action\\\"][value=\\\"save\\\"]\" });\nconst none = (() => { try { return page.extract({ matches: [\"button.nope\"] }); } catch (error) { return String(error); } })();\nconsole.log(\"console line\");\nconsole.warn(\"warn line\");\nreturn { clicked, afterClickUrl, waited, before, filled, after, property, propertyType: typeof property, label, none };\n",
+      "envKeys": [
+        "LP_STORE_USERNAME",
+        "LP_STORE_PASSWORD"
+      ],
+      "exitCode": 0,
+      "stdout": "console line\n{\"clicked\":\"Clicked element (selector: form[action=\\\"/login\\\"] button[type=\\\"submit\\\"]). Page url: http://127.0.0.1:3002/inventory, HTTP 200 OK, title: Inventory - Kumo Coffee - Store Admin\",\"afterClickUrl\":\"http://127.0.0.1:3002/inventory\",\"waited\":\"Element found. backendNodeId: 1\",\"before\":{\"attr\":\"18\",\"matches\":[\"\"]},\"filled\":\"Filled element (selector: input[name=\\\"available-KC-ETH-200\\\"]) with \\\"6\\\". Page url: http://127.0.0.1:3002/inventory, HTTP 200 OK, title: Inventory - Kumo Coffee - Store Admin\",\"after\":{\"attr\":\"18\"},\"property\":\"6\",\"propertyType\":\"string\",\"label\":{\"save\":\"Save changes\"},\"none\":{\"matches\":[]}}\n",
+      "stderr": "warn line\n"
+    },
+    {
+      "name": "probe-login",
+      "script": "const page = new Page();\nawait page.goto(\"http://127.0.0.1:3002/login\");\nconst decided = page.login({ username: \"$LP_STORE_USERNAME\", password: \"$LP_STORE_PASSWORD\", usernameSelector: \"input[name=\\\"username\\\"]\", passwordSelector: \"input[name=\\\"password\\\"]\", submitSelector: \"form[action=\\\"/login\\\"] button[type=\\\"submit\\\"]\" });\nreturn { decided, url: page.evaluate(\"location.href\") };\n",
+      "envKeys": [
+        "LP_STORE_USERNAME",
+        "LP_STORE_PASSWORD"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"decided\":{\"submitted\":true,\"loggedIn\":false,\"usernameSelector\":\"input[name=\\\"username\\\"]\",\"passwordSelector\":\"input[name=\\\"password\\\"]\",\"submitSelector\":\"form[action=\\\"/login\\\"] button[type=\\\"submit\\\"]\",\"pressedEnter\":false,\"calls\":0,\"reason\":\"filled the fields given, without asking the model\"},\"url\":\"http://127.0.0.1:3002/inventory\"}\n",
+      "stderr": ""
+    },
+    {
+      "name": "probe-tree",
+      "script": "const page = new Page();\nawait page.goto(\"http://127.0.0.1:3002/login\");\nconst results = {};\nfor (const name of [\"tree\", \"findElement\", \"nodeDetails\", \"interactiveElements\", \"markdown\", \"detectForms\"]) {\n  try {\n    results[name] = typeof page[name] === \"function\" ? String(page[name]({})) : `typeof ${typeof page[name]}`;\n  } catch (error) {\n    results[name] = `threw ${String(error)}`;\n  }\n}\nreturn results;\n",
+      "envKeys": [
+        "LP_STORE_USERNAME",
+        "LP_STORE_PASSWORD"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"tree\":\"typeof undefined\",\"findElement\":\"typeof undefined\",\"nodeDetails\":\"typeof undefined\",\"interactiveElements\":\"typeof undefined\",\"markdown\":\"typeof undefined\",\"detectForms\":\"typeof undefined\"}\n",
+      "stderr": ""
+    },
+    {
+      "name": "probe-throw",
+      "script": "const page = new Page();\nawait page.goto(\"http://127.0.0.1:3002/login\");\nconst filled = page.fill(\"input[name=\\\"username\\\"]\", \"$LP_STORE_USERNAME\");\nconsole.log(filled);\nthrow new Error(\"check failed: example\");\n",
+      "envKeys": [
+        "LP_STORE_USERNAME",
+        "LP_STORE_PASSWORD"
+      ],
+      "exitCode": 1,
+      "stdout": "Filled element (selector: input[name=\"username\"]) with \"$LP_STORE_USERNAME\". Page url: http://127.0.0.1:3002/login, HTTP 200 OK, title: Sign in - Store Admin\n",
+      "stderr": "\u001b[1m\u001b[31mError: check failed: example\u001b[0m\n"
+    },
+    {
+      "name": "probe-missing",
+      "script": "const page = new Page();\nawait page.goto(\"http://127.0.0.1:3002/login\");\npage.click(\"button.does-not-exist\");\nreturn \"unreachable\";\n",
+      "envKeys": [
+        "LP_STORE_USERNAME",
+        "LP_STORE_PASSWORD"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": "\u001b[1m\u001b[31mError: click failed: NodeNotFound: the selector or backendNodeId matched nothing on the current page. Re-inspect the page (tree/interactiveElements) for fresh node ids, or omit backendNodeId to target the document root.\u001b[0m\n"
+    },
+    {
+      "name": "probe-unset",
+      "script": "const page = new Page();\nawait page.goto(\"http://127.0.0.1:3002/login\");\nconst filled = page.fill(\"input[name=\\\"username\\\"]\", \"$LP_NOT_SET\");\nreturn filled;\n",
+      "envKeys": [
+        "LP_STORE_USERNAME",
+        "LP_STORE_PASSWORD"
+      ],
+      "exitCode": 0,
+      "stdout": "Filled element (selector: input[name=\"username\"]) with \"$LP_NOT_SET\". Page url: http://127.0.0.1:3002/login, HTTP 200 OK, title: Sign in - Store Admin\n",
+      "stderr": ""
+    },
+    {
+      "name": "probe-syntax",
+      "script": "const x = ;\n",
+      "envKeys": [
+        "LP_STORE_USERNAME",
+        "LP_STORE_PASSWORD"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": "\u001b[1m\u001b[31mError: SyntaxError: Unexpected token ';'\u001b[0m\n"
+    },
+    {
+      "name": "missing-file",
+      "script": null,
+      "envKeys": [],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": "\u001b[1m\u001b[31mError: Failed to read script 'does-not-exist.js': FileNotFound\u001b[0m\n"
+    }
+  ]
+}

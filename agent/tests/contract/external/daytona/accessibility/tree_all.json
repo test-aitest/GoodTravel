@@ -1,0 +1,214 @@
+{
+  "root": {
+    "id": ":1.0:/org/a11y/atspi/accessible/root",
+    "role": "desktop frame",
+    "name": "main",
+    "states": [
+      "enabled",
+      "sensitive",
+      "showing",
+      "visible"
+    ],
+    "actions": [],
+    "bounds": {
+      "x": 0,
+      "y": 0,
+      "width": 1024,
+      "height": 768
+    },
+    "children": [
+      {
+        "id": ":1.12:/org/a11y/atspi/accessible/root",
+        "role": "application",
+        "name": "xfce4-panel",
+        "states": [],
+        "actions": [],
+        "children": [
+          {
+            "id": ":1.12:/org/a11y/atspi/accessible/1",
+            "role": "frame",
+            "name": "xfce4-panel",
+            "states": [
+              "enabled",
+              "sensitive",
+              "showing",
+              "visible"
+            ],
+            "actions": [],
+            "bounds": {
+              "x": 0,
+              "y": 0,
+              "width": 1024,
+              "height": 28
+            },
+            "children": [
+              {
+                "id": ":1.12:/org/a11y/atspi/accessible/2",
+                "role": "push button",
+                "name": "Applications",
+                "states": [
+                  "enabled",
+                  "sensitive",
+                  "showing",
+                  "visible",
+                  "focusable"
+                ],
+                "actions": [
+                  "click",
+                  "press",
+                  "release"
+                ],
+                "bounds": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 120,
+                  "height": 28
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": ":1.31:/org/a11y/atspi/accessible/root",
+        "role": "application",
+        "name": "zenity",
+        "states": [],
+        "actions": [],
+        "children": [
+          {
+            "id": ":1.31:/org/a11y/atspi/accessible/1",
+            "role": "dialog",
+            "name": "Kumo inventory",
+            "states": [
+              "enabled",
+              "sensitive",
+              "showing",
+              "visible",
+              "active",
+              "modal"
+            ],
+            "actions": [],
+            "bounds": {
+              "x": 352,
+              "y": 260,
+              "width": 320,
+              "height": 180
+            },
+            "children": [
+              {
+                "id": ":1.31:/org/a11y/atspi/accessible/2",
+                "role": "filler",
+                "name": "",
+                "states": [
+                  "enabled",
+                  "sensitive",
+                  "showing",
+                  "visible"
+                ],
+                "actions": [],
+                "bounds": {
+                  "x": 352,
+                  "y": 260,
+                  "width": 320,
+                  "height": 180
+                },
+                "children": [
+                  {
+                    "id": ":1.31:/org/a11y/atspi/accessible/3",
+                    "role": "label",
+                    "name": "Available for Ethiopia Guji 200g",
+                    "states": [
+                      "enabled",
+                      "sensitive",
+                      "showing",
+                      "visible"
+                    ],
+                    "actions": [],
+                    "bounds": {
+                      "x": 364,
+                      "y": 300,
+                      "width": 220,
+                      "height": 20
+                    }
+                  },
+                  {
+                    "id": ":1.31:/org/a11y/atspi/accessible/4",
+                    "role": "entry",
+                    "name": "Available for Ethiopia Guji 200g",
+                    "states": [
+                      "enabled",
+                      "sensitive",
+                      "showing",
+                      "visible",
+                      "editable",
+                      "focusable",
+                      "focused",
+                      "single line"
+                    ],
+                    "actions": [
+                      "activate"
+                    ],
+                    "bounds": {
+                      "x": 364,
+                      "y": 324,
+                      "width": 296,
+                      "height": 30
+                    }
+                  },
+                  {
+                    "id": ":1.31:/org/a11y/atspi/accessible/5",
+                    "role": "push button",
+                    "name": "Cancel",
+                    "states": [
+                      "enabled",
+                      "sensitive",
+                      "showing",
+                      "visible",
+                      "focusable"
+                    ],
+                    "actions": [
+                      "click",
+                      "press",
+                      "release"
+                    ],
+                    "bounds": {
+                      "x": 452,
+                      "y": 396,
+                      "width": 100,
+                      "height": 32
+                    }
+                  },
+                  {
+                    "id": ":1.31:/org/a11y/atspi/accessible/6",
+                    "role": "push button",
+                    "name": "OK",
+                    "states": [
+                      "enabled",
+                      "sensitive",
+                      "showing",
+                      "visible",
+                      "focusable"
+                    ],
+                    "actions": [
+                      "click",
+                      "press",
+                      "release"
+                    ],
+                    "bounds": {
+                      "x": 560,
+                      "y": 396,
+                      "width": 100,
+                      "height": 32
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "truncated": false
+}

@@ -1,0 +1,34 @@
+{
+  "400": {
+    "type": "error",
+    "error": {
+      "type": "invalid_request_error",
+      "message": "tool_choice: type \"tool\" and \"any\" are not supported for this model."
+    },
+    "request_id": "req_011ClientOpsSample400"
+  },
+  "401": {
+    "type": "error",
+    "error": {
+      "type": "authentication_error",
+      "message": "invalid x-api-key"
+    },
+    "request_id": "req_011ClientOpsSample401"
+  },
+  "429": {
+    "type": "error",
+    "error": {
+      "type": "rate_limit_error",
+      "message": "This request would exceed the rate limit for your organization. Please try again later."
+    },
+    "request_id": "req_011ClientOpsSample429"
+  },
+  "529": {
+    "type": "error",
+    "error": {
+      "type": "overloaded_error",
+      "message": "Overloaded"
+    },
+    "request_id": "req_011ClientOpsSample529"
+  }
+}

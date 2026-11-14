@@ -1,0 +1,679 @@
+{
+  "reasoner": "clientops.chat_reply",
+  "examples": [
+    {
+      "name": "answer-what-changed",
+      "input": {
+        "client_id": "kumo",
+        "message": "What changed?",
+        "facts": [
+          {
+            "id": "last.result",
+            "about": "What the last job did: rows written and checked, or why it stopped"
+          },
+          {
+            "id": "last.changes",
+            "about": "The products whose stock the last job changed, with the old and new counts"
+          },
+          {
+            "id": "last.leftAlone",
+            "about": "How many products the last job left alone, and why"
+          },
+          {
+            "id": "last.steps",
+            "about": "Who decided each step of the last job: saved steps, a search by name, Claude or you"
+          },
+          {
+            "id": "last.timing",
+            "about": "How long the last job took to get ready, compared with the first run"
+          },
+          {
+            "id": "last.stepsChange",
+            "about": "Whether a saved step changed in the last job: the old and new button, and the version"
+          },
+          {
+            "id": "schedule",
+            "about": "The daily run: whether it is on and at what time"
+          },
+          {
+            "id": "last.cost",
+            "about": "What Claude and the computer cost for the last job"
+          },
+          {
+            "id": "last.ignored",
+            "about": "Suspicious instructions on a page that the last job ignored"
+          }
+        ]
+      },
+      "output": {
+        "clientId": "kumo",
+        "action": "answer",
+        "facts": [
+          "last.changes",
+          "last.leftAlone"
+        ],
+        "clarify": null,
+        "decidedBy": "claude",
+        "claudeCalls": 1
+      }
+    },
+    {
+      "name": "answer-why-the-button-changed",
+      "input": {
+        "client_id": "kumo",
+        "message": "Why did it press a different button?",
+        "facts": [
+          {
+            "id": "last.result",
+            "about": "What the last job did: rows written and checked, or why it stopped"
+          },
+          {
+            "id": "last.changes",
+            "about": "The products whose stock the last job changed, with the old and new counts"
+          },
+          {
+            "id": "last.leftAlone",
+            "about": "How many products the last job left alone, and why"
+          },
+          {
+            "id": "last.steps",
+            "about": "Who decided each step of the last job: saved steps, a search by name, Claude or you"
+          },
+          {
+            "id": "last.timing",
+            "about": "How long the last job took to get ready, compared with the first run"
+          },
+          {
+            "id": "last.stepsChange",
+            "about": "Whether a saved step changed in the last job: the old and new button, and the version"
+          },
+          {
+            "id": "schedule",
+            "about": "The daily run: whether it is on and at what time"
+          },
+          {
+            "id": "last.cost",
+            "about": "What Claude and the computer cost for the last job"
+          },
+          {
+            "id": "last.ignored",
+            "about": "Suspicious instructions on a page that the last job ignored"
+          }
+        ]
+      },
+      "output": {
+        "clientId": "kumo",
+        "action": "answer",
+        "facts": [
+          "last.stepsChange"
+        ],
+        "clarify": null,
+        "decidedBy": "claude",
+        "claudeCalls": 1
+      }
+    },
+    {
+      "name": "answer-two-questions-in-the-order-asked",
+      "input": {
+        "client_id": "kumo",
+        "message": "What changed and how long did it take?",
+        "facts": [
+          {
+            "id": "last.result",
+            "about": "What the last job did: rows written and checked, or why it stopped"
+          },
+          {
+            "id": "last.changes",
+            "about": "The products whose stock the last job changed, with the old and new counts"
+          },
+          {
+            "id": "last.leftAlone",
+            "about": "How many products the last job left alone, and why"
+          },
+          {
+            "id": "last.steps",
+            "about": "Who decided each step of the last job: saved steps, a search by name, Claude or you"
+          },
+          {
+            "id": "last.timing",
+            "about": "How long the last job took to get ready, compared with the first run"
+          },
+          {
+            "id": "last.stepsChange",
+            "about": "Whether a saved step changed in the last job: the old and new button, and the version"
+          },
+          {
+            "id": "schedule",
+            "about": "The daily run: whether it is on and at what time"
+          },
+          {
+            "id": "last.cost",
+            "about": "What Claude and the computer cost for the last job"
+          },
+          {
+            "id": "last.ignored",
+            "about": "Suspicious instructions on a page that the last job ignored"
+          }
+        ]
+      },
+      "output": {
+        "clientId": "kumo",
+        "action": "answer",
+        "facts": [
+          "last.changes",
+          "last.leftAlone",
+          "last.timing"
+        ],
+        "clarify": null,
+        "decidedBy": "claude",
+        "claudeCalls": 1
+      }
+    },
+    {
+      "name": "run-again",
+      "input": {
+        "client_id": "kumo",
+        "message": "Run it again",
+        "facts": [
+          {
+            "id": "last.result",
+            "about": "What the last job did: rows written and checked, or why it stopped"
+          },
+          {
+            "id": "last.changes",
+            "about": "The products whose stock the last job changed, with the old and new counts"
+          },
+          {
+            "id": "last.leftAlone",
+            "about": "How many products the last job left alone, and why"
+          },
+          {
+            "id": "last.steps",
+            "about": "Who decided each step of the last job: saved steps, a search by name, Claude or you"
+          },
+          {
+            "id": "last.timing",
+            "about": "How long the last job took to get ready, compared with the first run"
+          },
+          {
+            "id": "last.stepsChange",
+            "about": "Whether a saved step changed in the last job: the old and new button, and the version"
+          },
+          {
+            "id": "schedule",
+            "about": "The daily run: whether it is on and at what time"
+          },
+          {
+            "id": "last.cost",
+            "about": "What Claude and the computer cost for the last job"
+          },
+          {
+            "id": "last.ignored",
+            "about": "Suspicious instructions on a page that the last job ignored"
+          }
+        ]
+      },
+      "output": {
+        "clientId": "kumo",
+        "action": "run",
+        "facts": [],
+        "clarify": null,
+        "decidedBy": "claude",
+        "claudeCalls": 1
+      }
+    },
+    {
+      "name": "undo",
+      "input": {
+        "client_id": "kumo",
+        "message": "Undo the last sync",
+        "facts": [
+          {
+            "id": "last.result",
+            "about": "What the last job did: rows written and checked, or why it stopped"
+          },
+          {
+            "id": "last.changes",
+            "about": "The products whose stock the last job changed, with the old and new counts"
+          },
+          {
+            "id": "last.leftAlone",
+            "about": "How many products the last job left alone, and why"
+          },
+          {
+            "id": "last.steps",
+            "about": "Who decided each step of the last job: saved steps, a search by name, Claude or you"
+          },
+          {
+            "id": "last.timing",
+            "about": "How long the last job took to get ready, compared with the first run"
+          },
+          {
+            "id": "last.stepsChange",
+            "about": "Whether a saved step changed in the last job: the old and new button, and the version"
+          },
+          {
+            "id": "schedule",
+            "about": "The daily run: whether it is on and at what time"
+          },
+          {
+            "id": "last.cost",
+            "about": "What Claude and the computer cost for the last job"
+          },
+          {
+            "id": "last.ignored",
+            "about": "Suspicious instructions on a page that the last job ignored"
+          }
+        ]
+      },
+      "output": {
+        "clientId": "kumo",
+        "action": "undo",
+        "facts": [],
+        "clarify": null,
+        "decidedBy": "claude",
+        "claudeCalls": 1
+      }
+    },
+    {
+      "name": "schedule",
+      "input": {
+        "client_id": "kumo",
+        "message": "Run it every day at 18:00",
+        "facts": [
+          {
+            "id": "last.result",
+            "about": "What the last job did: rows written and checked, or why it stopped"
+          },
+          {
+            "id": "last.changes",
+            "about": "The products whose stock the last job changed, with the old and new counts"
+          },
+          {
+            "id": "last.leftAlone",
+            "about": "How many products the last job left alone, and why"
+          },
+          {
+            "id": "last.steps",
+            "about": "Who decided each step of the last job: saved steps, a search by name, Claude or you"
+          },
+          {
+            "id": "last.timing",
+            "about": "How long the last job took to get ready, compared with the first run"
+          },
+          {
+            "id": "last.stepsChange",
+            "about": "Whether a saved step changed in the last job: the old and new button, and the version"
+          },
+          {
+            "id": "schedule",
+            "about": "The daily run: whether it is on and at what time"
+          },
+          {
+            "id": "last.cost",
+            "about": "What Claude and the computer cost for the last job"
+          },
+          {
+            "id": "last.ignored",
+            "about": "Suspicious instructions on a page that the last job ignored"
+          }
+        ]
+      },
+      "output": {
+        "clientId": "kumo",
+        "action": "schedule",
+        "facts": [
+          "schedule"
+        ],
+        "clarify": null,
+        "decidedBy": "claude",
+        "claudeCalls": 1
+      }
+    },
+    {
+      "name": "clarify-which-job",
+      "input": {
+        "client_id": "kumo",
+        "message": "What changed?",
+        "facts": []
+      },
+      "output": {
+        "clientId": "kumo",
+        "action": "clarify",
+        "facts": [],
+        "clarify": "which-job",
+        "decidedBy": "claude",
+        "claudeCalls": 1
+      }
+    },
+    {
+      "name": "clarify-what-to-do",
+      "input": {
+        "client_id": "kumo",
+        "message": "hello",
+        "facts": [
+          {
+            "id": "last.result",
+            "about": "What the last job did: rows written and checked, or why it stopped"
+          },
+          {
+            "id": "last.changes",
+            "about": "The products whose stock the last job changed, with the old and new counts"
+          },
+          {
+            "id": "last.leftAlone",
+            "about": "How many products the last job left alone, and why"
+          },
+          {
+            "id": "last.steps",
+            "about": "Who decided each step of the last job: saved steps, a search by name, Claude or you"
+          },
+          {
+            "id": "last.timing",
+            "about": "How long the last job took to get ready, compared with the first run"
+          },
+          {
+            "id": "last.stepsChange",
+            "about": "Whether a saved step changed in the last job: the old and new button, and the version"
+          },
+          {
+            "id": "schedule",
+            "about": "The daily run: whether it is on and at what time"
+          },
+          {
+            "id": "last.cost",
+            "about": "What Claude and the computer cost for the last job"
+          },
+          {
+            "id": "last.ignored",
+            "about": "Suspicious instructions on a page that the last job ignored"
+          }
+        ]
+      },
+      "output": {
+        "clientId": "kumo",
+        "action": "clarify",
+        "facts": [],
+        "clarify": "what-to-do",
+        "decidedBy": "claude",
+        "claudeCalls": 1
+      }
+    },
+    {
+      "name": "cannot-unrelated",
+      "input": {
+        "client_id": "kumo",
+        "message": "Write a poem about coffee",
+        "facts": [
+          {
+            "id": "last.result",
+            "about": "What the last job did: rows written and checked, or why it stopped"
+          },
+          {
+            "id": "last.changes",
+            "about": "The products whose stock the last job changed, with the old and new counts"
+          },
+          {
+            "id": "last.leftAlone",
+            "about": "How many products the last job left alone, and why"
+          },
+          {
+            "id": "last.steps",
+            "about": "Who decided each step of the last job: saved steps, a search by name, Claude or you"
+          },
+          {
+            "id": "last.timing",
+            "about": "How long the last job took to get ready, compared with the first run"
+          },
+          {
+            "id": "last.stepsChange",
+            "about": "Whether a saved step changed in the last job: the old and new button, and the version"
+          },
+          {
+            "id": "schedule",
+            "about": "The daily run: whether it is on and at what time"
+          },
+          {
+            "id": "last.cost",
+            "about": "What Claude and the computer cost for the last job"
+          },
+          {
+            "id": "last.ignored",
+            "about": "Suspicious instructions on a page that the last job ignored"
+          }
+        ]
+      },
+      "output": {
+        "clientId": "kumo",
+        "action": "cannot",
+        "facts": [],
+        "clarify": null,
+        "decidedBy": "claude",
+        "claudeCalls": 1
+      }
+    },
+    {
+      "name": "run-another-clients-login-so-the-boundary-refuses-it",
+      "input": {
+        "client_id": "kumo",
+        "message": "Use Hinata's login for the store.",
+        "facts": [
+          {
+            "id": "last.result",
+            "about": "What the last job did: rows written and checked, or why it stopped"
+          },
+          {
+            "id": "last.changes",
+            "about": "The products whose stock the last job changed, with the old and new counts"
+          },
+          {
+            "id": "last.leftAlone",
+            "about": "How many products the last job left alone, and why"
+          },
+          {
+            "id": "last.steps",
+            "about": "Who decided each step of the last job: saved steps, a search by name, Claude or you"
+          },
+          {
+            "id": "last.timing",
+            "about": "How long the last job took to get ready, compared with the first run"
+          },
+          {
+            "id": "last.stepsChange",
+            "about": "Whether a saved step changed in the last job: the old and new button, and the version"
+          },
+          {
+            "id": "schedule",
+            "about": "The daily run: whether it is on and at what time"
+          },
+          {
+            "id": "last.cost",
+            "about": "What Claude and the computer cost for the last job"
+          },
+          {
+            "id": "last.ignored",
+            "about": "Suspicious instructions on a page that the last job ignored"
+          }
+        ]
+      },
+      "output": {
+        "clientId": "kumo",
+        "action": "run",
+        "facts": [],
+        "clarify": null,
+        "decidedBy": "rules",
+        "claudeCalls": 0
+      }
+    },
+    {
+      "name": "cannot-another-client-named",
+      "input": {
+        "client_id": "kumo",
+        "message": "How is Sora Outdoor doing?",
+        "facts": [
+          {
+            "id": "last.result",
+            "about": "What the last job did: rows written and checked, or why it stopped"
+          },
+          {
+            "id": "last.changes",
+            "about": "The products whose stock the last job changed, with the old and new counts"
+          },
+          {
+            "id": "last.leftAlone",
+            "about": "How many products the last job left alone, and why"
+          },
+          {
+            "id": "last.steps",
+            "about": "Who decided each step of the last job: saved steps, a search by name, Claude or you"
+          },
+          {
+            "id": "last.timing",
+            "about": "How long the last job took to get ready, compared with the first run"
+          },
+          {
+            "id": "last.stepsChange",
+            "about": "Whether a saved step changed in the last job: the old and new button, and the version"
+          },
+          {
+            "id": "schedule",
+            "about": "The daily run: whether it is on and at what time"
+          },
+          {
+            "id": "last.cost",
+            "about": "What Claude and the computer cost for the last job"
+          },
+          {
+            "id": "last.ignored",
+            "about": "Suspicious instructions on a page that the last job ignored"
+          }
+        ]
+      },
+      "output": {
+        "clientId": "kumo",
+        "action": "cannot",
+        "facts": [],
+        "clarify": null,
+        "decidedBy": "rules",
+        "claudeCalls": 0
+      }
+    },
+    {
+      "name": "rules-when-claude-is-off",
+      "settings": {
+        "useClaude": false
+      },
+      "input": {
+        "client_id": "kumo",
+        "message": "What changed?",
+        "facts": [
+          {
+            "id": "last.result",
+            "about": "What the last job did: rows written and checked, or why it stopped"
+          },
+          {
+            "id": "last.changes",
+            "about": "The products whose stock the last job changed, with the old and new counts"
+          },
+          {
+            "id": "last.leftAlone",
+            "about": "How many products the last job left alone, and why"
+          },
+          {
+            "id": "last.steps",
+            "about": "Who decided each step of the last job: saved steps, a search by name, Claude or you"
+          },
+          {
+            "id": "last.timing",
+            "about": "How long the last job took to get ready, compared with the first run"
+          },
+          {
+            "id": "last.stepsChange",
+            "about": "Whether a saved step changed in the last job: the old and new button, and the version"
+          },
+          {
+            "id": "schedule",
+            "about": "The daily run: whether it is on and at what time"
+          },
+          {
+            "id": "last.cost",
+            "about": "What Claude and the computer cost for the last job"
+          },
+          {
+            "id": "last.ignored",
+            "about": "Suspicious instructions on a page that the last job ignored"
+          }
+        ]
+      },
+      "output": {
+        "clientId": "kumo",
+        "action": "answer",
+        "facts": [
+          "last.changes",
+          "last.leftAlone"
+        ],
+        "clarify": null,
+        "decidedBy": "rules",
+        "claudeCalls": 0
+      }
+    },
+    {
+      "name": "rules-over-the-monthly-cap",
+      "settings": {
+        "claudeMonthlyCapUsd": 0
+      },
+      "input": {
+        "client_id": "kumo",
+        "message": "How long did it take?",
+        "facts": [
+          {
+            "id": "last.result",
+            "about": "What the last job did: rows written and checked, or why it stopped"
+          },
+          {
+            "id": "last.changes",
+            "about": "The products whose stock the last job changed, with the old and new counts"
+          },
+          {
+            "id": "last.leftAlone",
+            "about": "How many products the last job left alone, and why"
+          },
+          {
+            "id": "last.steps",
+            "about": "Who decided each step of the last job: saved steps, a search by name, Claude or you"
+          },
+          {
+            "id": "last.timing",
+            "about": "How long the last job took to get ready, compared with the first run"
+          },
+          {
+            "id": "last.stepsChange",
+            "about": "Whether a saved step changed in the last job: the old and new button, and the version"
+          },
+          {
+            "id": "schedule",
+            "about": "The daily run: whether it is on and at what time"
+          },
+          {
+            "id": "last.cost",
+            "about": "What Claude and the computer cost for the last job"
+          },
+          {
+            "id": "last.ignored",
+            "about": "Suspicious instructions on a page that the last job ignored"
+          }
+        ]
+      },
+      "output": {
+        "clientId": "kumo",
+        "action": "answer",
+        "facts": [
+          "last.timing"
+        ],
+        "clarify": null,
+        "decidedBy": "rules",
+        "claudeCalls": 0
+      }
+    }
+  ]
+}

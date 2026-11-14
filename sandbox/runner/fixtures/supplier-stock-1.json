@@ -1,0 +1,1175 @@
+{
+ "observed": {
+  "date": "2026-11-14",
+  "lightpanda": "1.0.4",
+  "url": "http://127.0.0.1:3001/stock",
+  "title": "Stock list - Maruyama Supply"
+ },
+ "jsonTree": {
+  "nodeId": "695",
+  "backendDOMNodeId": 695,
+  "nodeName": "root",
+  "xpath": "",
+  "nodeType": 9,
+  "children": [
+   {
+    "nodeId": "700",
+    "backendDOMNodeId": 700,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/header[1]/span[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Maruyama Supply",
+    "children": []
+   },
+   {
+    "nodeId": "702",
+    "backendDOMNodeId": 702,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/header[1]/span[2]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Partner Portal",
+    "children": []
+   },
+   {
+    "nodeId": "704",
+    "backendDOMNodeId": 704,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/header[1]/span[3]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Signed in as Kumo Coffee Roasters",
+    "children": []
+   },
+   {
+    "nodeId": "705",
+    "backendDOMNodeId": 705,
+    "nodeName": "form",
+    "xpath": "/html[1]/body[1]/header[1]/form[1]",
+    "nodeType": 1,
+    "isInteractive": false,
+    "role": "form",
+    "attributes": {
+     "method": "post",
+     "action": "/logout"
+    },
+    "children": [
+     {
+      "nodeId": "706",
+      "backendDOMNodeId": 706,
+      "nodeName": "button",
+      "xpath": "/html[1]/body[1]/header[1]/form[1]/button[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "button",
+      "name": "Sign out",
+      "attributes": {
+       "class": "signout"
+      },
+      "children": []
+     }
+    ]
+   },
+   {
+    "nodeId": "709",
+    "backendDOMNodeId": 709,
+    "nodeName": "h1",
+    "xpath": "/html[1]/body[1]/main[1]/h1[1]",
+    "nodeType": 1,
+    "isInteractive": false,
+    "role": "heading",
+    "name": "Stock list",
+    "attributes": {
+     "class": "title"
+    },
+    "children": []
+   },
+   {
+    "nodeId": "711",
+    "backendDOMNodeId": 711,
+    "nodeName": "p",
+    "xpath": "/html[1]/body[1]/main[1]/p[1]",
+    "nodeType": 1,
+    "isInteractive": false,
+    "role": "paragraph",
+    "attributes": {
+     "class": "meta"
+    },
+    "children": [
+     {
+      "nodeId": "712",
+      "backendDOMNodeId": 712,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/main[1]/p[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Units available to ship today. Updated daily at 09:00 JST.",
+      "children": []
+     }
+    ]
+   },
+   {
+    "nodeId": "715",
+    "backendDOMNodeId": 715,
+    "nodeName": "th",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/thead[1]/tr[1]/th[1]",
+    "nodeType": 1,
+    "isInteractive": false,
+    "role": "columnheader",
+    "name": "SKU",
+    "children": []
+   },
+   {
+    "nodeId": "717",
+    "backendDOMNodeId": 717,
+    "nodeName": "th",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/thead[1]/tr[1]/th[2]",
+    "nodeType": 1,
+    "isInteractive": false,
+    "role": "columnheader",
+    "name": "Product",
+    "children": []
+   },
+   {
+    "nodeId": "719",
+    "backendDOMNodeId": 719,
+    "nodeName": "th",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/thead[1]/tr[1]/th[3]",
+    "nodeType": 1,
+    "isInteractive": false,
+    "role": "columnheader",
+    "name": "Pack",
+    "children": []
+   },
+   {
+    "nodeId": "721",
+    "backendDOMNodeId": 721,
+    "nodeName": "th",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/thead[1]/tr[1]/th[4]",
+    "nodeType": 1,
+    "isInteractive": false,
+    "role": "columnheader",
+    "name": "Available",
+    "children": []
+   },
+   {
+    "nodeId": "723",
+    "backendDOMNodeId": 723,
+    "nodeName": "th",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/thead[1]/tr[1]/th[5]",
+    "nodeType": 1,
+    "isInteractive": false,
+    "role": "columnheader",
+    "name": "Status",
+    "children": []
+   },
+   {
+    "nodeId": "728",
+    "backendDOMNodeId": 728,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[1]/td[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "KC-ETH-200",
+    "children": []
+   },
+   {
+    "nodeId": "730",
+    "backendDOMNodeId": 730,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[1]/td[2]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Ethiopia Guji 200g",
+    "children": []
+   },
+   {
+    "nodeId": "732",
+    "backendDOMNodeId": 732,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[1]/td[3]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "200 g bag",
+    "children": []
+   },
+   {
+    "nodeId": "734",
+    "backendDOMNodeId": 734,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[1]/td[4]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "6",
+    "children": []
+   },
+   {
+    "nodeId": "737",
+    "backendDOMNodeId": 737,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[1]/td[5]/span[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Low",
+    "children": []
+   },
+   {
+    "nodeId": "740",
+    "backendDOMNodeId": 740,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[2]/td[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "KC-ETH-500",
+    "children": []
+   },
+   {
+    "nodeId": "742",
+    "backendDOMNodeId": 742,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[2]/td[2]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Ethiopia Guji 500g",
+    "children": []
+   },
+   {
+    "nodeId": "744",
+    "backendDOMNodeId": 744,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[2]/td[3]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "500 g bag",
+    "children": []
+   },
+   {
+    "nodeId": "746",
+    "backendDOMNodeId": 746,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[2]/td[4]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "12",
+    "children": []
+   },
+   {
+    "nodeId": "749",
+    "backendDOMNodeId": 749,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[2]/td[5]/span[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "In stock",
+    "children": []
+   },
+   {
+    "nodeId": "752",
+    "backendDOMNodeId": 752,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[3]/td[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "KC-YIR-200",
+    "children": []
+   },
+   {
+    "nodeId": "754",
+    "backendDOMNodeId": 754,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[3]/td[2]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Ethiopia Yirgacheffe 200g",
+    "children": []
+   },
+   {
+    "nodeId": "756",
+    "backendDOMNodeId": 756,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[3]/td[3]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "200 g bag",
+    "children": []
+   },
+   {
+    "nodeId": "758",
+    "backendDOMNodeId": 758,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[3]/td[4]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "11",
+    "children": []
+   },
+   {
+    "nodeId": "761",
+    "backendDOMNodeId": 761,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[3]/td[5]/span[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "In stock",
+    "children": []
+   },
+   {
+    "nodeId": "764",
+    "backendDOMNodeId": 764,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[4]/td[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "KC-YIR-500",
+    "children": []
+   },
+   {
+    "nodeId": "766",
+    "backendDOMNodeId": 766,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[4]/td[2]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Ethiopia Yirgacheffe 500g",
+    "children": []
+   },
+   {
+    "nodeId": "768",
+    "backendDOMNodeId": 768,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[4]/td[3]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "500 g bag",
+    "children": []
+   },
+   {
+    "nodeId": "770",
+    "backendDOMNodeId": 770,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[4]/td[4]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "7",
+    "children": []
+   },
+   {
+    "nodeId": "773",
+    "backendDOMNodeId": 773,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[4]/td[5]/span[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Low",
+    "children": []
+   },
+   {
+    "nodeId": "776",
+    "backendDOMNodeId": 776,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[5]/td[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "KC-COL-200",
+    "children": []
+   },
+   {
+    "nodeId": "778",
+    "backendDOMNodeId": 778,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[5]/td[2]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Colombia Huila 200g",
+    "children": []
+   },
+   {
+    "nodeId": "780",
+    "backendDOMNodeId": 780,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[5]/td[3]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "200 g bag",
+    "children": []
+   },
+   {
+    "nodeId": "782",
+    "backendDOMNodeId": 782,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[5]/td[4]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "24",
+    "children": []
+   },
+   {
+    "nodeId": "785",
+    "backendDOMNodeId": 785,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[5]/td[5]/span[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "In stock",
+    "children": []
+   },
+   {
+    "nodeId": "788",
+    "backendDOMNodeId": 788,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[6]/td[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "KC-COL-500",
+    "children": []
+   },
+   {
+    "nodeId": "790",
+    "backendDOMNodeId": 790,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[6]/td[2]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Colombia Huila 500g",
+    "children": []
+   },
+   {
+    "nodeId": "792",
+    "backendDOMNodeId": 792,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[6]/td[3]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "500 g bag",
+    "children": []
+   },
+   {
+    "nodeId": "794",
+    "backendDOMNodeId": 794,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[6]/td[4]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "10",
+    "children": []
+   },
+   {
+    "nodeId": "797",
+    "backendDOMNodeId": 797,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[6]/td[5]/span[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "In stock",
+    "children": []
+   },
+   {
+    "nodeId": "800",
+    "backendDOMNodeId": 800,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[7]/td[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "KC-KEN-200",
+    "children": []
+   },
+   {
+    "nodeId": "802",
+    "backendDOMNodeId": 802,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[7]/td[2]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Kenya Nyeri 200g",
+    "children": []
+   },
+   {
+    "nodeId": "804",
+    "backendDOMNodeId": 804,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[7]/td[3]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "200 g bag",
+    "children": []
+   },
+   {
+    "nodeId": "806",
+    "backendDOMNodeId": 806,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[7]/td[4]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "0",
+    "children": []
+   },
+   {
+    "nodeId": "809",
+    "backendDOMNodeId": 809,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[7]/td[5]/span[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Sold out",
+    "children": []
+   },
+   {
+    "nodeId": "812",
+    "backendDOMNodeId": 812,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[8]/td[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "KC-KEN-500",
+    "children": []
+   },
+   {
+    "nodeId": "814",
+    "backendDOMNodeId": 814,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[8]/td[2]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Kenya Nyeri 500g",
+    "children": []
+   },
+   {
+    "nodeId": "816",
+    "backendDOMNodeId": 816,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[8]/td[3]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "500 g bag",
+    "children": []
+   },
+   {
+    "nodeId": "818",
+    "backendDOMNodeId": 818,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[8]/td[4]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "5",
+    "children": []
+   },
+   {
+    "nodeId": "821",
+    "backendDOMNodeId": 821,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[8]/td[5]/span[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Low",
+    "children": []
+   },
+   {
+    "nodeId": "824",
+    "backendDOMNodeId": 824,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[9]/td[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "KC-GUA-200",
+    "children": []
+   },
+   {
+    "nodeId": "826",
+    "backendDOMNodeId": 826,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[9]/td[2]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Guatemala Antigua 200g",
+    "children": []
+   },
+   {
+    "nodeId": "828",
+    "backendDOMNodeId": 828,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[9]/td[3]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "200 g bag",
+    "children": []
+   },
+   {
+    "nodeId": "830",
+    "backendDOMNodeId": 830,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[9]/td[4]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "22",
+    "children": []
+   },
+   {
+    "nodeId": "833",
+    "backendDOMNodeId": 833,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[9]/td[5]/span[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "In stock",
+    "children": []
+   },
+   {
+    "nodeId": "836",
+    "backendDOMNodeId": 836,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[10]/td[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "KC-GUA-500",
+    "children": []
+   },
+   {
+    "nodeId": "838",
+    "backendDOMNodeId": 838,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[10]/td[2]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Guatemala Antigua 500g",
+    "children": []
+   },
+   {
+    "nodeId": "840",
+    "backendDOMNodeId": 840,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[10]/td[3]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "500 g bag",
+    "children": []
+   },
+   {
+    "nodeId": "842",
+    "backendDOMNodeId": 842,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[10]/td[4]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "15",
+    "children": []
+   },
+   {
+    "nodeId": "845",
+    "backendDOMNodeId": 845,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[10]/td[5]/span[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "In stock",
+    "children": []
+   },
+   {
+    "nodeId": "848",
+    "backendDOMNodeId": 848,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[11]/td[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "KC-BRA-200",
+    "children": []
+   },
+   {
+    "nodeId": "850",
+    "backendDOMNodeId": 850,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[11]/td[2]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Brazil Cerrado 200g",
+    "children": []
+   },
+   {
+    "nodeId": "852",
+    "backendDOMNodeId": 852,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[11]/td[3]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "200 g bag",
+    "children": []
+   },
+   {
+    "nodeId": "854",
+    "backendDOMNodeId": 854,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[11]/td[4]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "35",
+    "children": []
+   },
+   {
+    "nodeId": "857",
+    "backendDOMNodeId": 857,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[11]/td[5]/span[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "In stock",
+    "children": []
+   },
+   {
+    "nodeId": "860",
+    "backendDOMNodeId": 860,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[12]/td[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "KC-BRA-500",
+    "children": []
+   },
+   {
+    "nodeId": "862",
+    "backendDOMNodeId": 862,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[12]/td[2]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Brazil Cerrado 500g",
+    "children": []
+   },
+   {
+    "nodeId": "864",
+    "backendDOMNodeId": 864,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[12]/td[3]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "500 g bag",
+    "children": []
+   },
+   {
+    "nodeId": "866",
+    "backendDOMNodeId": 866,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[12]/td[4]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "0",
+    "children": []
+   },
+   {
+    "nodeId": "869",
+    "backendDOMNodeId": 869,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[12]/td[5]/span[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Sold out",
+    "children": []
+   },
+   {
+    "nodeId": "872",
+    "backendDOMNodeId": 872,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[13]/td[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "KC-CRI-200",
+    "children": []
+   },
+   {
+    "nodeId": "874",
+    "backendDOMNodeId": 874,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[13]/td[2]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Costa Rica Tarrazu 200g",
+    "children": []
+   },
+   {
+    "nodeId": "876",
+    "backendDOMNodeId": 876,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[13]/td[3]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "200 g bag",
+    "children": []
+   },
+   {
+    "nodeId": "878",
+    "backendDOMNodeId": 878,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[13]/td[4]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "16",
+    "children": []
+   },
+   {
+    "nodeId": "881",
+    "backendDOMNodeId": 881,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[13]/td[5]/span[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "In stock",
+    "children": []
+   },
+   {
+    "nodeId": "884",
+    "backendDOMNodeId": 884,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[14]/td[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "KC-CRI-500",
+    "children": []
+   },
+   {
+    "nodeId": "886",
+    "backendDOMNodeId": 886,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[14]/td[2]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Costa Rica Tarrazu 500g",
+    "children": []
+   },
+   {
+    "nodeId": "888",
+    "backendDOMNodeId": 888,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[14]/td[3]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "500 g bag",
+    "children": []
+   },
+   {
+    "nodeId": "890",
+    "backendDOMNodeId": 890,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[14]/td[4]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "6",
+    "children": []
+   },
+   {
+    "nodeId": "893",
+    "backendDOMNodeId": 893,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[14]/td[5]/span[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Low",
+    "children": []
+   },
+   {
+    "nodeId": "896",
+    "backendDOMNodeId": 896,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[15]/td[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "KC-PER-200",
+    "children": []
+   },
+   {
+    "nodeId": "898",
+    "backendDOMNodeId": 898,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[15]/td[2]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Peru Cajamarca 200g",
+    "children": []
+   },
+   {
+    "nodeId": "900",
+    "backendDOMNodeId": 900,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[15]/td[3]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "200 g bag",
+    "children": []
+   },
+   {
+    "nodeId": "902",
+    "backendDOMNodeId": 902,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[15]/td[4]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "19",
+    "children": []
+   },
+   {
+    "nodeId": "905",
+    "backendDOMNodeId": 905,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[15]/td[5]/span[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "In stock",
+    "children": []
+   },
+   {
+    "nodeId": "908",
+    "backendDOMNodeId": 908,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[16]/td[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "KC-PER-500",
+    "children": []
+   },
+   {
+    "nodeId": "910",
+    "backendDOMNodeId": 910,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[16]/td[2]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Peru Cajamarca 500g",
+    "children": []
+   },
+   {
+    "nodeId": "912",
+    "backendDOMNodeId": 912,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[16]/td[3]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "500 g bag",
+    "children": []
+   },
+   {
+    "nodeId": "914",
+    "backendDOMNodeId": 914,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[16]/td[4]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "8",
+    "children": []
+   },
+   {
+    "nodeId": "917",
+    "backendDOMNodeId": 917,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[16]/td[5]/span[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Low",
+    "children": []
+   },
+   {
+    "nodeId": "920",
+    "backendDOMNodeId": 920,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[17]/td[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "KC-SUM-200",
+    "children": []
+   },
+   {
+    "nodeId": "922",
+    "backendDOMNodeId": 922,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[17]/td[2]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Sumatra Mandheling 200g",
+    "children": []
+   },
+   {
+    "nodeId": "924",
+    "backendDOMNodeId": 924,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[17]/td[3]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "200 g bag",
+    "children": []
+   },
+   {
+    "nodeId": "926",
+    "backendDOMNodeId": 926,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[17]/td[4]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "14",
+    "children": []
+   },
+   {
+    "nodeId": "929",
+    "backendDOMNodeId": 929,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[17]/td[5]/span[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "In stock",
+    "children": []
+   },
+   {
+    "nodeId": "932",
+    "backendDOMNodeId": 932,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[18]/td[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "KC-SUM-500",
+    "children": []
+   },
+   {
+    "nodeId": "934",
+    "backendDOMNodeId": 934,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[18]/td[2]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Sumatra Mandheling 500g",
+    "children": []
+   },
+   {
+    "nodeId": "936",
+    "backendDOMNodeId": 936,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[18]/td[3]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "500 g bag",
+    "children": []
+   },
+   {
+    "nodeId": "938",
+    "backendDOMNodeId": 938,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[18]/td[4]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "8",
+    "children": []
+   },
+   {
+    "nodeId": "941",
+    "backendDOMNodeId": 941,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[18]/td[5]/span[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Low",
+    "children": []
+   },
+   {
+    "nodeId": "944",
+    "backendDOMNodeId": 944,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[19]/td[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "KC-RWA-200",
+    "children": []
+   },
+   {
+    "nodeId": "946",
+    "backendDOMNodeId": 946,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[19]/td[2]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Rwanda Nyamasheke 200g",
+    "children": []
+   },
+   {
+    "nodeId": "948",
+    "backendDOMNodeId": 948,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[19]/td[3]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "200 g bag",
+    "children": []
+   },
+   {
+    "nodeId": "950",
+    "backendDOMNodeId": 950,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[19]/td[4]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "9",
+    "children": []
+   },
+   {
+    "nodeId": "953",
+    "backendDOMNodeId": 953,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[19]/td[5]/span[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Low",
+    "children": []
+   },
+   {
+    "nodeId": "956",
+    "backendDOMNodeId": 956,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[20]/td[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "KC-RWA-500",
+    "children": []
+   },
+   {
+    "nodeId": "958",
+    "backendDOMNodeId": 958,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[20]/td[2]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Rwanda Nyamasheke 500g",
+    "children": []
+   },
+   {
+    "nodeId": "960",
+    "backendDOMNodeId": 960,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[20]/td[3]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "500 g bag",
+    "children": []
+   },
+   {
+    "nodeId": "962",
+    "backendDOMNodeId": 962,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[20]/td[4]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "4",
+    "children": []
+   },
+   {
+    "nodeId": "965",
+    "backendDOMNodeId": 965,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[20]/td[5]/span[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Low",
+    "children": []
+   },
+   {
+    "nodeId": "966",
+    "backendDOMNodeId": 966,
+    "nodeName": "nav",
+    "xpath": "/html[1]/body[1]/main[1]/nav[1]",
+    "nodeType": 1,
+    "isInteractive": false,
+    "role": "navigation",
+    "name": "Pages",
+    "attributes": {
+     "class": "pager",
+     "aria-label": "Pages"
+    },
+    "children": [
+     {
+      "nodeId": "968",
+      "backendDOMNodeId": 968,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/main[1]/nav[1]/span[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Showing 1–20 of 42",
+      "children": []
+     },
+     {
+      "nodeId": "970",
+      "backendDOMNodeId": 970,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/main[1]/nav[1]/span[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Previous",
+      "children": []
+     },
+     {
+      "nodeId": "972",
+      "backendDOMNodeId": 972,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/main[1]/nav[1]/span[3]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "1",
+      "children": []
+     },
+     {
+      "nodeId": "973",
+      "backendDOMNodeId": 973,
+      "nodeName": "a",
+      "xpath": "/html[1]/body[1]/main[1]/nav[1]/a[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "link",
+      "name": "2",
+      "attributes": {
+       "href": "/stock?page=2"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "975",
+      "backendDOMNodeId": 975,
+      "nodeName": "a",
+      "xpath": "/html[1]/body[1]/main[1]/nav[1]/a[2]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "link",
+      "name": "3",
+      "attributes": {
+       "href": "/stock?page=3"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "977",
+      "backendDOMNodeId": 977,
+      "nodeName": "a",
+      "xpath": "/html[1]/body[1]/main[1]/nav[1]/a[3]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "link",
+      "name": "Next",
+      "attributes": {
+       "href": "/stock?page=2"
+      },
+      "children": []
+     }
+    ]
+   },
+   {
+    "nodeId": "979",
+    "backendDOMNodeId": 979,
+    "nodeName": "footer",
+    "xpath": "/html[1]/body[1]/footer[1]",
+    "nodeType": 1,
+    "isInteractive": false,
+    "role": "contentinfo",
+    "attributes": {
+     "class": "footer"
+    },
+    "children": [
+     {
+      "nodeId": "980",
+      "backendDOMNodeId": 980,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/footer[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Maruyama Supply Co., Ltd. Partner Portal. For registered partner retailers only.",
+      "children": []
+     }
+    ]
+   }
+  ]
+ },
+ "text": "695 RootWebArea 'Stock list - Maruyama Supply'\n 700 'Maruyama Supply'\n 702 'Partner Portal'\n 704 'Signed in as Kumo Coffee Roasters'\n 705 form\n  706 [i] button 'Sign out'\n 709 heading 'Stock list'\n 711 paragraph\n  712 'Units available to ship today. Updated daily at 09:00 JST.'\n 715 columnheader 'SKU'\n 717 columnheader 'Product'\n 719 columnheader 'Pack'\n 721 columnheader 'Available'\n 723 columnheader 'Status'\n 728 'KC-ETH-200'\n 730 'Ethiopia Guji 200g'\n 732 '200 g bag'\n 734 '6'\n 737 'Low'\n 740 'KC-ETH-500'\n 742 'Ethiopia Guji 500g'\n 744 '500 g bag'\n 746 '12'\n 749 'In stock'\n 752 'KC-YIR-200'\n 754 'Ethiopia Yirgacheffe 200g'\n 756 '200 g bag'\n 758 '11'\n 761 'In stock'\n 764 'KC-YIR-500'\n 766 'Ethiopia Yirgacheffe 500g'\n 768 '500 g bag'\n 770 '7'\n 773 'Low'\n 776 'KC-COL-200'\n 778 'Colombia Huila 200g'\n 780 '200 g bag'\n 782 '24'\n 785 'In stock'\n 788 'KC-COL-500'\n 790 'Colombia Huila 500g'\n 792 '500 g bag'\n 794 '10'\n 797 'In stock'\n 800 'KC-KEN-200'\n 802 'Kenya Nyeri 200g'\n 804 '200 g bag'\n 806 '0'\n 809 'Sold out'\n 812 'KC-KEN-500'\n 814 'Kenya Nyeri 500g'\n 816 '500 g bag'\n 818 '5'\n 821 'Low'\n 824 'KC-GUA-200'\n 826 'Guatemala Antigua 200g'\n 828 '200 g bag'\n 830 '22'\n 833 'In stock'\n 836 'KC-GUA-500'\n 838 'Guatemala Antigua 500g'\n 840 '500 g bag'\n 842 '15'\n 845 'In stock'\n 848 'KC-BRA-200'\n 850 'Brazil Cerrado 200g'\n 852 '200 g bag'\n 854 '35'\n 857 'In stock'\n 860 'KC-BRA-500'\n 862 'Brazil Cerrado 500g'\n 864 '500 g bag'\n 866 '0'\n 869 'Sold out'\n 872 'KC-CRI-200'\n 874 'Costa Rica Tarrazu 200g'\n 876 '200 g bag'\n 878 '16'\n 881 'In stock'\n 884 'KC-CRI-500'\n 886 'Costa Rica Tarrazu 500g'\n 888 '500 g bag'\n 890 '6'\n 893 'Low'\n 896 'KC-PER-200'\n 898 'Peru Cajamarca 200g'\n 900 '200 g bag'\n 902 '19'\n 905 'In stock'\n 908 'KC-PER-500'\n 910 'Peru Cajamarca 500g'\n 912 '500 g bag'\n 914 '8'\n 917 'Low'\n 920 'KC-SUM-200'\n 922 'Sumatra Mandheling 200g'\n 924 '200 g bag'\n 926 '14'\n 929 'In stock'\n 932 'KC-SUM-500'\n 934 'Sumatra Mandheling 500g'\n 936 '500 g bag'\n 938 '8'\n 941 'Low'\n 944 'KC-RWA-200'\n 946 'Rwanda Nyamasheke 200g'\n 948 '200 g bag'\n 950 '9'\n 953 'Low'\n 956 'KC-RWA-500'\n 958 'Rwanda Nyamasheke 500g'\n 960 '500 g bag'\n 962 '4'\n 965 'Low'\n 966 navigation 'Pages'\n  968 'Showing 1–20 of 42'\n  970 'Previous'\n  972 '1'\n  973 [i] link '2'\n  975 [i] link '3'\n  977 [i] link 'Next'\n 979 contentinfo\n  980 'Maruyama Supply Co., Ltd. Partner Portal. For registered partner retailers only.'\n",
+ "html": "<!DOCTYPE html>\n<html lang=\"en\"><head>\n<meta charset=\"utf-8\">\n<title>Stock list - Maruyama Supply</title>\n<style>\nbody{margin:0;font-family:Verdana,Tahoma,Arial,sans-serif;font-size:12px;color:#222;background:#f2f2f2}\n.topbar{display:flex;align-items:center;gap:12px;padding:8px 16px;background:#1f3a68;color:#fff}\n.brand{font-weight:bold;font-size:15px}\n.portal{color:#cfd8e6}\n.account{margin-left:auto;color:#dfe6f0}\n.signout{font:inherit;color:#fff;background:transparent;border:1px solid #8ea2c2;padding:2px 8px;cursor:pointer}\n.content{max-width:900px;margin:16px auto;padding:16px;background:#fff;border:1px solid #c8c8c8}\n.title{margin:0 0 6px;font-size:16px}\n.meta{margin:0 0 12px;color:#666}\n.stock-table{width:100%;border-collapse:collapse}\n.stock-table th{background:#e8edf4;text-align:left;padding:5px 6px;border:1px solid #c8c8c8}\n.stock-table td{padding:4px 6px;border:1px solid #dcdcdc}\n.stock-table tbody tr:nth-child(even){background:#f8f8f8}\n.num{text-align:right}\n.status-in{color:#2c6e2f}\n.status-low{color:#a15c00}\n.status-out{color:#b3261e;font-weight:bold}\n.pager{display:flex;gap:8px;align-items:center;margin-top:10px}\n.pager a{color:#2f6fb0}\n.pager-current{font-weight:bold}\n.login-box{display:flex;flex-direction:column;gap:10px;max-width:320px}\n.field{display:flex;flex-direction:column;gap:3px}\n.field input{font:inherit;padding:4px;border:1px solid #999}\n.button{align-self:flex-start;font:inherit;padding:4px 14px;background:#2f6fb0;color:#fff;border:1px solid #1f3a68;cursor:pointer}\n.error{margin:0;padding:6px 8px;background:#fdecea;border:1px solid #e0a39e;color:#8a1c14}\n.sr-note{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}\n.footer{max-width:900px;margin:0 auto 16px;color:#888;font-size:11px}\n</style>\n</head>\n<body>\n<header class=\"topbar\"><span class=\"brand\">Maruyama Supply</span><span class=\"portal\">Partner Portal</span><span class=\"account\">Signed in as Kumo Coffee Roasters</span><form method=\"post\" action=\"/logout\"><button class=\"signout\">Sign out</button></form></header>\n<main class=\"content\">\n<h1 class=\"title\">Stock list</h1>\n<p class=\"meta\">Units available to ship today. Updated daily at 09:00 JST.</p>\n<table class=\"stock-table\">\n<thead><tr><th>SKU</th><th>Product</th><th>Pack</th><th>Available</th><th>Status</th></tr></thead>\n<tbody>\n<tr data-sku=\"KC-ETH-200\"><td>KC-ETH-200</td><td>Ethiopia Guji 200g</td><td>200 g bag</td><td class=\"num\">6</td><td><span class=\"status-low\">Low</span></td></tr>\n<tr data-sku=\"KC-ETH-500\"><td>KC-ETH-500</td><td>Ethiopia Guji 500g</td><td>500 g bag</td><td class=\"num\">12</td><td><span class=\"status-in\">In stock</span></td></tr>\n<tr data-sku=\"KC-YIR-200\"><td>KC-YIR-200</td><td>Ethiopia Yirgacheffe 200g</td><td>200 g bag</td><td class=\"num\">11</td><td><span class=\"status-in\">In stock</span></td></tr>\n<tr data-sku=\"KC-YIR-500\"><td>KC-YIR-500</td><td>Ethiopia Yirgacheffe 500g</td><td>500 g bag</td><td class=\"num\">7</td><td><span class=\"status-low\">Low</span></td></tr>\n<tr data-sku=\"KC-COL-200\"><td>KC-COL-200</td><td>Colombia Huila 200g</td><td>200 g bag</td><td class=\"num\">24</td><td><span class=\"status-in\">In stock</span></td></tr>\n<tr data-sku=\"KC-COL-500\"><td>KC-COL-500</td><td>Colombia Huila 500g</td><td>500 g bag</td><td class=\"num\">10</td><td><span class=\"status-in\">In stock</span></td></tr>\n<tr data-sku=\"KC-KEN-200\"><td>KC-KEN-200</td><td>Kenya Nyeri 200g</td><td>200 g bag</td><td class=\"num\">0</td><td><span class=\"status-out\">Sold out</span></td></tr>\n<tr data-sku=\"KC-KEN-500\"><td>KC-KEN-500</td><td>Kenya Nyeri 500g</td><td>500 g bag</td><td class=\"num\">5</td><td><span class=\"status-low\">Low</span></td></tr>\n<tr data-sku=\"KC-GUA-200\"><td>KC-GUA-200</td><td>Guatemala Antigua 200g</td><td>200 g bag</td><td class=\"num\">22</td><td><span class=\"status-in\">In stock</span></td></tr>\n<tr data-sku=\"KC-GUA-500\"><td>KC-GUA-500</td><td>Guatemala Antigua 500g</td><td>500 g bag</td><td class=\"num\">15</td><td><span class=\"status-in\">In stock</span></td></tr>\n<tr data-sku=\"KC-BRA-200\"><td>KC-BRA-200</td><td>Brazil Cerrado 200g</td><td>200 g bag</td><td class=\"num\">35</td><td><span class=\"status-in\">In stock</span></td></tr>\n<tr data-sku=\"KC-BRA-500\"><td>KC-BRA-500</td><td>Brazil Cerrado 500g</td><td>500 g bag</td><td class=\"num\">0</td><td><span class=\"status-out\">Sold out</span></td></tr>\n<tr data-sku=\"KC-CRI-200\"><td>KC-CRI-200</td><td>Costa Rica Tarrazu 200g</td><td>200 g bag</td><td class=\"num\">16</td><td><span class=\"status-in\">In stock</span></td></tr>\n<tr data-sku=\"KC-CRI-500\"><td>KC-CRI-500</td><td>Costa Rica Tarrazu 500g</td><td>500 g bag</td><td class=\"num\">6</td><td><span class=\"status-low\">Low</span></td></tr>\n<tr data-sku=\"KC-PER-200\"><td>KC-PER-200</td><td>Peru Cajamarca 200g</td><td>200 g bag</td><td class=\"num\">19</td><td><span class=\"status-in\">In stock</span></td></tr>\n<tr data-sku=\"KC-PER-500\"><td>KC-PER-500</td><td>Peru Cajamarca 500g</td><td>500 g bag</td><td class=\"num\">8</td><td><span class=\"status-low\">Low</span></td></tr>\n<tr data-sku=\"KC-SUM-200\"><td>KC-SUM-200</td><td>Sumatra Mandheling 200g</td><td>200 g bag</td><td class=\"num\">14</td><td><span class=\"status-in\">In stock</span></td></tr>\n<tr data-sku=\"KC-SUM-500\"><td>KC-SUM-500</td><td>Sumatra Mandheling 500g</td><td>500 g bag</td><td class=\"num\">8</td><td><span class=\"status-low\">Low</span></td></tr>\n<tr data-sku=\"KC-RWA-200\"><td>KC-RWA-200</td><td>Rwanda Nyamasheke 200g</td><td>200 g bag</td><td class=\"num\">9</td><td><span class=\"status-low\">Low</span></td></tr>\n<tr data-sku=\"KC-RWA-500\"><td>KC-RWA-500</td><td>Rwanda Nyamasheke 500g</td><td>500 g bag</td><td class=\"num\">4</td><td><span class=\"status-low\">Low</span></td></tr>\n</tbody>\n</table>\n<nav class=\"pager\" aria-label=\"Pages\"><span>Showing 1–20 of 42</span><span>Previous</span> <span class=\"pager-current\" aria-current=\"page\">1</span> <a href=\"/stock?page=2\">2</a> <a href=\"/stock?page=3\">3</a> <a href=\"/stock?page=2\">Next</a></nav>\n</main>\n<footer class=\"footer\">Maruyama Supply Co., Ltd. Partner Portal. For registered partner retailers only.</footer>\n\n\n</body></html>"
+}

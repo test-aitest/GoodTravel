@@ -1,0 +1,29 @@
+{
+  "message": "Computer use processes started successfully",
+  "status": {
+    "xvfb": {
+      "running": true,
+      "priority": 100,
+      "autoRestart": true,
+      "pid": 101
+    },
+    "xfce4": {
+      "running": true,
+      "priority": 200,
+      "autoRestart": true,
+      "pid": 117
+    },
+    "x11vnc": {
+      "running": true,
+      "priority": 300,
+      "autoRestart": true,
+      "pid": 134
+    },
+    "novnc": {
+      "running": true,
+      "priority": 400,
+      "autoRestart": true,
+      "pid": 151
+    }
+  }
+}

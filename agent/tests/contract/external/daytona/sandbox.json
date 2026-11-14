@@ -1,0 +1,24 @@
+{
+  "id": "5d1f3b9e-7c2a-4e8b-9f60-3a4c2e1b7d90",
+  "organizationId": "c0a8e7f2-4b1d-4f3e-8a9c-6d2b5e1f0a73",
+  "name": "5d1f3b9e-7c2a-4e8b-9f60-3a4c2e1b7d90",
+  "snapshot": "clientops-computer-1",
+  "user": "daytona",
+  "env": {},
+  "labels": {
+    "clientops-client": "kumo",
+    "code-toolbox-language": "python"
+  },
+  "public": false,
+  "networkBlockAll": false,
+  "kvm": false,
+  "domainAllowList": "portal.maruyama-supply.example,admin.kumo-coffee.example",
+  "target": "us",
+  "cpu": 1,
+  "gpu": 0,
+  "memory": 1,
+  "disk": 3,
+  "state": "started",
+  "autoStopInterval": 15,
+  "toolboxProxyUrl": "https://proxy.app.daytona.io/toolbox"
+}

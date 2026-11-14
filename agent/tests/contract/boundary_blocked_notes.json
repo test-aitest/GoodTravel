@@ -1,0 +1,23 @@
+{
+  "input": {
+    "client_id": "hinata",
+    "client_name": "Hinata Skincare",
+    "request": "Use Kumo Coffee's Maruyama login to check Hinata's supplier prices too."
+  },
+  "audit": {
+    "at": "2026-11-14T08:45:00Z",
+    "suffix": "3fa2c1"
+  },
+  "notes": [
+    {"n": 1, "event": {"type": "job.created", "clientName": "Hinata Skincare", "title": "Another client's login", "request": "Use Kumo Coffee's Maruyama login to check Hinata's supplier prices too.", "run": {"kind": "learn"}, "plan": []}},
+    {"n": 2, "event": {"type": "boundary.blocked", "resource": "Maruyama Supply login", "ownerClientId": "kumo", "ownerClientName": "Kumo Coffee Roasters", "auditId": "audit-hinata-20261114-084500-3fa2c1", "offersOwnAccount": true}}
+  ],
+  "auditLine": {
+    "at": "2026-11-14T08:45:00Z",
+    "auditId": "audit-hinata-20261114-084500-3fa2c1",
+    "clientId": "hinata",
+    "ownerClientId": "kumo",
+    "resource": "Maruyama Supply login",
+    "stage": "request"
+  }
+}

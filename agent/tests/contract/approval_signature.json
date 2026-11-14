@@ -1,0 +1,6 @@
+{
+  "description": "One approval body and its X-Webhook-Signature, computed with Python's hmac module. The screen server must produce the same header for the same raw body; AgentField 0.1.145 checks hex(HMAC-SHA256(secret, raw body)) after trimming the sha256= prefix (control-plane/internal/handlers/webhook_approval.go).",
+  "secret": "clientops-test-secret-not-real",
+  "body": "{\"requestId\":\"apr-exec_first_run\",\"decision\":\"approved\",\"feedback\":\"\"}",
+  "header": "sha256=bf43589554c8524d288047c6fc717743f0e34c30c274948f546ea035e89f96e3"
+}

@@ -1,0 +1,240 @@
+{
+  "v": 3,
+  "createdOnFiles": {
+    "v": 1,
+    "at": "2026-11-13T14:55:00Z"
+  },
+  "title": "ClientOps Console",
+  "launch": {
+    "view": "canvas"
+  },
+  "pages": [
+    {
+      "id": "screens",
+      "name": "Screens"
+    },
+    {
+      "id": "plan",
+      "name": "Implementation plan"
+    }
+  ],
+  "boards": {
+    "Setup.dc.html": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 900,
+      "title": "0 · First-time setup",
+      "expand": "fill"
+    },
+    "Main.dc.html": {
+      "x": 1520,
+      "y": 0,
+      "w": 1440,
+      "h": 900,
+      "title": "1 · New job",
+      "expand": "fill"
+    },
+    "Working.dc.html": {
+      "x": 3040,
+      "y": 0,
+      "w": 1440,
+      "h": 900,
+      "title": "2 · Working",
+      "expand": "fill"
+    },
+    "Approval.dc.html": {
+      "x": 4560,
+      "y": 0,
+      "w": 1440,
+      "h": 900,
+      "title": "3 · Approval",
+      "expand": "fill"
+    },
+    "Learned.dc.html": {
+      "x": 0,
+      "y": 2200,
+      "w": 1440,
+      "h": 900,
+      "title": "4 · Done, and faster next time",
+      "expand": "fill"
+    },
+    "Repair.dc.html": {
+      "x": 1520,
+      "y": 2200,
+      "w": 1440,
+      "h": 900,
+      "title": "5 · A screen changed",
+      "expand": "fill"
+    },
+    "Boundary.dc.html": {
+      "x": 3040,
+      "y": 2200,
+      "w": 1440,
+      "h": 900,
+      "title": "6 · Another client's login",
+      "expand": "fill"
+    },
+    "Parts.dc.html": {
+      "x": 4560,
+      "y": 2200,
+      "w": 1440,
+      "h": 900,
+      "title": "7 · The seven parts"
+    },
+    "Plan.dc.html": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 2400,
+      "title": "A · Overview",
+      "expand": "fill",
+      "page": "plan"
+    },
+    "Architecture.dc.html": {
+      "x": 1520,
+      "y": 0,
+      "w": 1440,
+      "h": 900,
+      "title": "B · Architecture",
+      "page": "plan"
+    },
+    "Phases.dc.html": {
+      "x": 3040,
+      "y": 0,
+      "w": 1440,
+      "h": 2900,
+      "title": "C · Phases and checks",
+      "expand": "fill",
+      "page": "plan"
+    },
+    "Schedule.dc.html": {
+      "x": 4560,
+      "y": 0,
+      "w": 1440,
+      "h": 1800,
+      "title": "D · Schedule and risks",
+      "expand": "fill",
+      "page": "plan"
+    },
+    "Security.dc.html": {
+      "x": 6080,
+      "y": 0,
+      "w": 1440,
+      "h": 2700,
+      "title": "E · Security, model and cost",
+      "expand": "fill",
+      "page": "plan"
+    }
+  },
+  "order": [
+    "Setup.dc.html",
+    "Main.dc.html",
+    "Working.dc.html",
+    "Approval.dc.html",
+    "Learned.dc.html",
+    "Repair.dc.html",
+    "Boundary.dc.html",
+    "Parts.dc.html",
+    "Plan.dc.html",
+    "Architecture.dc.html",
+    "Phases.dc.html",
+    "Schedule.dc.html",
+    "Security.dc.html"
+  ],
+  "notes": {
+    "row1": {
+      "x": 0,
+      "y": -300,
+      "text": "初回：準備 → 頼む → 動く → 承認",
+      "kind": "title1",
+      "maxW": 6000
+    },
+    "n0": {
+      "x": 0,
+      "y": 960,
+      "w": 700,
+      "size": "m",
+      "text": "0 · 初回だけの準備\n3ステップのチェックリストで迷わせない。進み具合は「1 / 3」と細いバー1本。終わると消える。\n顧客ごとに「Claude を使うか」を選べる（オフなら人に回す）。\n参考: Slite・Adaline のセットアップ、Codex の「最初のタスク」"
+    },
+    "n1": {
+      "x": 1520,
+      "y": 960,
+      "w": 700,
+      "size": "m",
+      "text": "1 · 新しい仕事\nChatGPT / Codex と同じ「中央に見出し・入力欄・例」。顧客は入力欄のチップで選ぶ。保存した仕事は左の一覧から。\n主ボタンは送信だけ。"
+    },
+    "n2": {
+      "x": 3040,
+      "y": 960,
+      "w": 700,
+      "size": "m",
+      "text": "2 · 作業中\nChatGPT のリサーチ中カードと同じ形：今やっていることを1行＋細い進捗バー＋停止。右の Activity は作業中だけ開き、平易な言葉の手順と顧客専用PCの画面を見せる。各手順の下に誰が決めたか（保存した手順 / Claude / あなた）を小さく出す。\n根拠: M3「進み具合は全体で1本、5秒超は割合で」、HIG「“処理中”ではなく具体的に」"
+    },
+    "n3": {
+      "x": 4560,
+      "y": 960,
+      "w": 700,
+      "size": "m",
+      "text": "3 · 承認\n見出しで何を承認するかを1文、変更は3行だけ見せて残りは「12件すべて見る」。主ボタンは「承認して保存」1つ。\n根拠: HIG「取り消しにくい操作の前に確認する」\n技術: AgentField の承認待ち"
+    },
+    "row2": {
+      "x": 0,
+      "y": 1900,
+      "text": "2回目から：速く・壊れにくく・顧客をまたがない",
+      "kind": "title1",
+      "maxW": 6000
+    },
+    "n4": {
+      "x": 0,
+      "y": 3160,
+      "w": 700,
+      "size": "m",
+      "text": "4 · 完了と次回\n結果は1行。「次からは約6秒・AIなし」と「元に戻す」を添える。夕方の定時実行は AI なしで約6秒で差分を出し、保存の前に承認を1回求める（書き込み前は必ず承認）。\n根拠: HIG「結果を元に戻せるように」\n技術: 手順は PandaScript の台本と要素の手がかりの両方で保存。ふだんは PandaScript で再生し、合わなければ要素ツリーで探し直す。どちらも AI なし。数字は目標値で、当日に実測して差し替え"
+    },
+    "n5": {
+      "x": 1520,
+      "y": 3160,
+      "w": 700,
+      "size": "m",
+      "text": "5 · 画面が変わったとき\n「ボタン名が変わったので見つけ直した」を1文で伝え、保存は承認してから。何が変わったかは右に前後だけ。誰が決めたか（Claude）と、Claude が見たのはボタン名だけであることを出す。\n技術: Lightpanda LP.getSemanticTree / Daytona accessibility（座標ではなく役割と名前で探す）。PandaScript の確認で止まり、要素ツリーで探し直し、名前が変わって見つからない1手だけ Claude Opus 5.5（effort medium）。直したら台本も作り直す"
+    },
+    "n6": {
+      "x": 3040,
+      "y": 3160,
+      "w": 700,
+      "size": "m",
+      "text": "6 · 他の顧客のログイン\nできない理由と代わりの方法を1文ずつ。顧客ごとに別のPC・ログイン・ファイルだから。試みは監査ログへ。\n根拠: HIG「止めたときは次の一手を示す」\n技術: 顧客ごとの Daytona sandbox"
+    },
+    "n7": {
+      "x": 4560,
+      "y": 3160,
+      "w": 700,
+      "size": "m",
+      "text": "7 · 7つの部品\n全画面をこの7つだけで作る。Astryx の対応: ChatComposer / ChatMessage / ProgressBar / Stepper / Card+Table / Banner / SideNav。新しい部品は足さない。"
+    },
+    "rules": {
+      "x": 0,
+      "y": 4200,
+      "w": 900,
+      "size": "m",
+      "text": "画面のきまり\n1. 見慣れた配置：左に一覧、中央に会話、右は作業中だけ（ChatGPT・Claude と同じ）\n2. 1画面に主ボタンは1つ\n3. 進み具合は1本だけ（M3）\n4. 本文に技術名やIDを出さない。詳細は Activity を開いた人だけ\n5. 文は短く、1メッセージ2文まで\n6. 絵文字・グラデーション・光る装飾なし\n7. UIの文言は英語（グローバル前提）"
+    },
+    "toplan": {
+      "x": 980,
+      "y": 4200,
+      "w": 700,
+      "size": "m",
+      "text": "実装計画は左上のページ切り替えから「Implementation plan」へ。概要・構成図・フェーズごとの確認項目・時間割とリスク・セキュリティとモデルと費用の5枚。"
+    },
+    "planrow": {
+      "x": 0,
+      "y": -300,
+      "text": "実装計画：11/14 の2時間で勝てる形にする",
+      "kind": "title1",
+      "maxW": 6000,
+      "page": "plan"
+    }
+  },
+  "designSystems": []
+}

@@ -1,0 +1,1178 @@
+{
+ "observed": {
+  "date": "2026-11-14",
+  "lightpanda": "1.0.4",
+  "url": "http://127.0.0.1:3001/stock?page=2",
+  "title": "Stock list - Maruyama Supply"
+ },
+ "jsonTree": {
+  "nodeId": "981",
+  "backendDOMNodeId": 981,
+  "nodeName": "root",
+  "xpath": "",
+  "nodeType": 9,
+  "children": [
+   {
+    "nodeId": "986",
+    "backendDOMNodeId": 986,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/header[1]/span[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Maruyama Supply",
+    "children": []
+   },
+   {
+    "nodeId": "988",
+    "backendDOMNodeId": 988,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/header[1]/span[2]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Partner Portal",
+    "children": []
+   },
+   {
+    "nodeId": "990",
+    "backendDOMNodeId": 990,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/header[1]/span[3]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Signed in as Kumo Coffee Roasters",
+    "children": []
+   },
+   {
+    "nodeId": "991",
+    "backendDOMNodeId": 991,
+    "nodeName": "form",
+    "xpath": "/html[1]/body[1]/header[1]/form[1]",
+    "nodeType": 1,
+    "isInteractive": false,
+    "role": "form",
+    "attributes": {
+     "method": "post",
+     "action": "/logout"
+    },
+    "children": [
+     {
+      "nodeId": "992",
+      "backendDOMNodeId": 992,
+      "nodeName": "button",
+      "xpath": "/html[1]/body[1]/header[1]/form[1]/button[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "button",
+      "name": "Sign out",
+      "attributes": {
+       "class": "signout"
+      },
+      "children": []
+     }
+    ]
+   },
+   {
+    "nodeId": "995",
+    "backendDOMNodeId": 995,
+    "nodeName": "h1",
+    "xpath": "/html[1]/body[1]/main[1]/h1[1]",
+    "nodeType": 1,
+    "isInteractive": false,
+    "role": "heading",
+    "name": "Stock list",
+    "attributes": {
+     "class": "title"
+    },
+    "children": []
+   },
+   {
+    "nodeId": "997",
+    "backendDOMNodeId": 997,
+    "nodeName": "p",
+    "xpath": "/html[1]/body[1]/main[1]/p[1]",
+    "nodeType": 1,
+    "isInteractive": false,
+    "role": "paragraph",
+    "attributes": {
+     "class": "meta"
+    },
+    "children": [
+     {
+      "nodeId": "998",
+      "backendDOMNodeId": 998,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/main[1]/p[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Units available to ship today. Updated daily at 09:00 JST.",
+      "children": []
+     }
+    ]
+   },
+   {
+    "nodeId": "1002",
+    "backendDOMNodeId": 1002,
+    "nodeName": "th",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/thead[1]/tr[1]/th[1]",
+    "nodeType": 1,
+    "isInteractive": false,
+    "role": "columnheader",
+    "name": "SKU",
+    "children": []
+   },
+   {
+    "nodeId": "1004",
+    "backendDOMNodeId": 1004,
+    "nodeName": "th",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/thead[1]/tr[1]/th[2]",
+    "nodeType": 1,
+    "isInteractive": false,
+    "role": "columnheader",
+    "name": "Product",
+    "children": []
+   },
+   {
+    "nodeId": "1006",
+    "backendDOMNodeId": 1006,
+    "nodeName": "th",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/thead[1]/tr[1]/th[3]",
+    "nodeType": 1,
+    "isInteractive": false,
+    "role": "columnheader",
+    "name": "Pack",
+    "children": []
+   },
+   {
+    "nodeId": "1008",
+    "backendDOMNodeId": 1008,
+    "nodeName": "th",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/thead[1]/tr[1]/th[4]",
+    "nodeType": 1,
+    "isInteractive": false,
+    "role": "columnheader",
+    "name": "Available",
+    "children": []
+   },
+   {
+    "nodeId": "1010",
+    "backendDOMNodeId": 1010,
+    "nodeName": "th",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/thead[1]/tr[1]/th[5]",
+    "nodeType": 1,
+    "isInteractive": false,
+    "role": "columnheader",
+    "name": "Status",
+    "children": []
+   },
+   {
+    "nodeId": "1015",
+    "backendDOMNodeId": 1015,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[1]/td[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "KC-HON-200",
+    "children": []
+   },
+   {
+    "nodeId": "1017",
+    "backendDOMNodeId": 1017,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[1]/td[2]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Honduras Marcala 200g",
+    "children": []
+   },
+   {
+    "nodeId": "1019",
+    "backendDOMNodeId": 1019,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[1]/td[3]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "200 g bag",
+    "children": []
+   },
+   {
+    "nodeId": "1021",
+    "backendDOMNodeId": 1021,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[1]/td[4]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "13",
+    "children": []
+   },
+   {
+    "nodeId": "1024",
+    "backendDOMNodeId": 1024,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[1]/td[5]/span[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "In stock",
+    "children": []
+   },
+   {
+    "nodeId": "1027",
+    "backendDOMNodeId": 1027,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[2]/td[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "KC-HON-500",
+    "children": []
+   },
+   {
+    "nodeId": "1029",
+    "backendDOMNodeId": 1029,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[2]/td[2]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Honduras Marcala 500g",
+    "children": []
+   },
+   {
+    "nodeId": "1031",
+    "backendDOMNodeId": 1031,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[2]/td[3]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "500 g bag",
+    "children": []
+   },
+   {
+    "nodeId": "1033",
+    "backendDOMNodeId": 1033,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[2]/td[4]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "6",
+    "children": []
+   },
+   {
+    "nodeId": "1036",
+    "backendDOMNodeId": 1036,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[2]/td[5]/span[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Low",
+    "children": []
+   },
+   {
+    "nodeId": "1039",
+    "backendDOMNodeId": 1039,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[3]/td[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "KC-PAN-200",
+    "children": []
+   },
+   {
+    "nodeId": "1041",
+    "backendDOMNodeId": 1041,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[3]/td[2]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Panama Boquete 200g",
+    "children": []
+   },
+   {
+    "nodeId": "1043",
+    "backendDOMNodeId": 1043,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[3]/td[3]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "200 g bag",
+    "children": []
+   },
+   {
+    "nodeId": "1045",
+    "backendDOMNodeId": 1045,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[3]/td[4]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "5",
+    "children": []
+   },
+   {
+    "nodeId": "1048",
+    "backendDOMNodeId": 1048,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[3]/td[5]/span[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Low",
+    "children": []
+   },
+   {
+    "nodeId": "1051",
+    "backendDOMNodeId": 1051,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[4]/td[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "KC-PAN-500",
+    "children": []
+   },
+   {
+    "nodeId": "1053",
+    "backendDOMNodeId": 1053,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[4]/td[2]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Panama Boquete 500g",
+    "children": []
+   },
+   {
+    "nodeId": "1055",
+    "backendDOMNodeId": 1055,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[4]/td[3]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "500 g bag",
+    "children": []
+   },
+   {
+    "nodeId": "1057",
+    "backendDOMNodeId": 1057,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[4]/td[4]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "2",
+    "children": []
+   },
+   {
+    "nodeId": "1060",
+    "backendDOMNodeId": 1060,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[4]/td[5]/span[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Low",
+    "children": []
+   },
+   {
+    "nodeId": "1063",
+    "backendDOMNodeId": 1063,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[5]/td[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "KC-HSE-200",
+    "children": []
+   },
+   {
+    "nodeId": "1065",
+    "backendDOMNodeId": 1065,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[5]/td[2]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "House Blend 200g",
+    "children": []
+   },
+   {
+    "nodeId": "1067",
+    "backendDOMNodeId": 1067,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[5]/td[3]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "200 g bag",
+    "children": []
+   },
+   {
+    "nodeId": "1069",
+    "backendDOMNodeId": 1069,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[5]/td[4]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "40",
+    "children": []
+   },
+   {
+    "nodeId": "1072",
+    "backendDOMNodeId": 1072,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[5]/td[5]/span[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "In stock",
+    "children": []
+   },
+   {
+    "nodeId": "1075",
+    "backendDOMNodeId": 1075,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[6]/td[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "KC-HSE-500",
+    "children": []
+   },
+   {
+    "nodeId": "1077",
+    "backendDOMNodeId": 1077,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[6]/td[2]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "House Blend 500g",
+    "children": []
+   },
+   {
+    "nodeId": "1079",
+    "backendDOMNodeId": 1079,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[6]/td[3]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "500 g bag",
+    "children": []
+   },
+   {
+    "nodeId": "1081",
+    "backendDOMNodeId": 1081,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[6]/td[4]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "18",
+    "children": []
+   },
+   {
+    "nodeId": "1084",
+    "backendDOMNodeId": 1084,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[6]/td[5]/span[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "In stock",
+    "children": []
+   },
+   {
+    "nodeId": "1087",
+    "backendDOMNodeId": 1087,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[7]/td[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "KC-ESP-200",
+    "children": []
+   },
+   {
+    "nodeId": "1089",
+    "backendDOMNodeId": 1089,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[7]/td[2]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Espresso Blend 200g",
+    "children": []
+   },
+   {
+    "nodeId": "1091",
+    "backendDOMNodeId": 1091,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[7]/td[3]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "200 g bag",
+    "children": []
+   },
+   {
+    "nodeId": "1093",
+    "backendDOMNodeId": 1093,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[7]/td[4]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "30",
+    "children": []
+   },
+   {
+    "nodeId": "1096",
+    "backendDOMNodeId": 1096,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[7]/td[5]/span[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "In stock",
+    "children": []
+   },
+   {
+    "nodeId": "1099",
+    "backendDOMNodeId": 1099,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[8]/td[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "KC-ESP-500",
+    "children": []
+   },
+   {
+    "nodeId": "1101",
+    "backendDOMNodeId": 1101,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[8]/td[2]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Espresso Blend 500g",
+    "children": []
+   },
+   {
+    "nodeId": "1103",
+    "backendDOMNodeId": 1103,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[8]/td[3]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "500 g bag",
+    "children": []
+   },
+   {
+    "nodeId": "1105",
+    "backendDOMNodeId": 1105,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[8]/td[4]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "19",
+    "children": []
+   },
+   {
+    "nodeId": "1108",
+    "backendDOMNodeId": 1108,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[8]/td[5]/span[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "In stock",
+    "children": []
+   },
+   {
+    "nodeId": "1111",
+    "backendDOMNodeId": 1111,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[9]/td[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "KC-DEC-200",
+    "children": []
+   },
+   {
+    "nodeId": "1113",
+    "backendDOMNodeId": 1113,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[9]/td[2]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Decaf Colombia 200g",
+    "children": []
+   },
+   {
+    "nodeId": "1115",
+    "backendDOMNodeId": 1115,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[9]/td[3]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "200 g bag",
+    "children": []
+   },
+   {
+    "nodeId": "1117",
+    "backendDOMNodeId": 1117,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[9]/td[4]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "12",
+    "children": []
+   },
+   {
+    "nodeId": "1120",
+    "backendDOMNodeId": 1120,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[9]/td[5]/span[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "In stock",
+    "children": []
+   },
+   {
+    "nodeId": "1123",
+    "backendDOMNodeId": 1123,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[10]/td[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "KC-DEC-500",
+    "children": []
+   },
+   {
+    "nodeId": "1125",
+    "backendDOMNodeId": 1125,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[10]/td[2]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Decaf Colombia 500g",
+    "children": []
+   },
+   {
+    "nodeId": "1127",
+    "backendDOMNodeId": 1127,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[10]/td[3]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "500 g bag",
+    "children": []
+   },
+   {
+    "nodeId": "1129",
+    "backendDOMNodeId": 1129,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[10]/td[4]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "5",
+    "children": []
+   },
+   {
+    "nodeId": "1132",
+    "backendDOMNodeId": 1132,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[10]/td[5]/span[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Low",
+    "children": []
+   },
+   {
+    "nodeId": "1135",
+    "backendDOMNodeId": 1135,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[11]/td[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "KC-DRP-ETH",
+    "children": []
+   },
+   {
+    "nodeId": "1137",
+    "backendDOMNodeId": 1137,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[11]/td[2]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Drip Bags Ethiopia Guji x10",
+    "children": []
+   },
+   {
+    "nodeId": "1139",
+    "backendDOMNodeId": 1139,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[11]/td[3]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "10 bags",
+    "children": []
+   },
+   {
+    "nodeId": "1141",
+    "backendDOMNodeId": 1141,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[11]/td[4]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "25",
+    "children": []
+   },
+   {
+    "nodeId": "1144",
+    "backendDOMNodeId": 1144,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[11]/td[5]/span[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "In stock",
+    "children": []
+   },
+   {
+    "nodeId": "1147",
+    "backendDOMNodeId": 1147,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[12]/td[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "KC-DRP-COL",
+    "children": []
+   },
+   {
+    "nodeId": "1149",
+    "backendDOMNodeId": 1149,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[12]/td[2]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Drip Bags Colombia Huila x10",
+    "children": []
+   },
+   {
+    "nodeId": "1151",
+    "backendDOMNodeId": 1151,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[12]/td[3]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "10 bags",
+    "children": []
+   },
+   {
+    "nodeId": "1153",
+    "backendDOMNodeId": 1153,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[12]/td[4]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "20",
+    "children": []
+   },
+   {
+    "nodeId": "1156",
+    "backendDOMNodeId": 1156,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[12]/td[5]/span[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "In stock",
+    "children": []
+   },
+   {
+    "nodeId": "1159",
+    "backendDOMNodeId": 1159,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[13]/td[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "KC-DRP-KEN",
+    "children": []
+   },
+   {
+    "nodeId": "1161",
+    "backendDOMNodeId": 1161,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[13]/td[2]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Drip Bags Kenya Nyeri x10",
+    "children": []
+   },
+   {
+    "nodeId": "1163",
+    "backendDOMNodeId": 1163,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[13]/td[3]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "10 bags",
+    "children": []
+   },
+   {
+    "nodeId": "1165",
+    "backendDOMNodeId": 1165,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[13]/td[4]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "0",
+    "children": []
+   },
+   {
+    "nodeId": "1168",
+    "backendDOMNodeId": 1168,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[13]/td[5]/span[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Sold out",
+    "children": []
+   },
+   {
+    "nodeId": "1171",
+    "backendDOMNodeId": 1171,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[14]/td[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "KC-DRP-GUA",
+    "children": []
+   },
+   {
+    "nodeId": "1173",
+    "backendDOMNodeId": 1173,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[14]/td[2]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Drip Bags Guatemala Antigua x10",
+    "children": []
+   },
+   {
+    "nodeId": "1175",
+    "backendDOMNodeId": 1175,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[14]/td[3]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "10 bags",
+    "children": []
+   },
+   {
+    "nodeId": "1177",
+    "backendDOMNodeId": 1177,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[14]/td[4]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "15",
+    "children": []
+   },
+   {
+    "nodeId": "1180",
+    "backendDOMNodeId": 1180,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[14]/td[5]/span[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "In stock",
+    "children": []
+   },
+   {
+    "nodeId": "1183",
+    "backendDOMNodeId": 1183,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[15]/td[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "KC-DRP-HSE",
+    "children": []
+   },
+   {
+    "nodeId": "1185",
+    "backendDOMNodeId": 1185,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[15]/td[2]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Drip Bags House Blend x10",
+    "children": []
+   },
+   {
+    "nodeId": "1187",
+    "backendDOMNodeId": 1187,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[15]/td[3]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "10 bags",
+    "children": []
+   },
+   {
+    "nodeId": "1189",
+    "backendDOMNodeId": 1189,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[15]/td[4]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "48",
+    "children": []
+   },
+   {
+    "nodeId": "1192",
+    "backendDOMNodeId": 1192,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[15]/td[5]/span[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "In stock",
+    "children": []
+   },
+   {
+    "nodeId": "1195",
+    "backendDOMNodeId": 1195,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[16]/td[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "KC-DRP-DEC",
+    "children": []
+   },
+   {
+    "nodeId": "1197",
+    "backendDOMNodeId": 1197,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[16]/td[2]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Drip Bags Decaf Colombia x10",
+    "children": []
+   },
+   {
+    "nodeId": "1199",
+    "backendDOMNodeId": 1199,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[16]/td[3]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "10 bags",
+    "children": []
+   },
+   {
+    "nodeId": "1201",
+    "backendDOMNodeId": 1201,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[16]/td[4]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "10",
+    "children": []
+   },
+   {
+    "nodeId": "1204",
+    "backendDOMNodeId": 1204,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[16]/td[5]/span[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "In stock",
+    "children": []
+   },
+   {
+    "nodeId": "1207",
+    "backendDOMNodeId": 1207,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[17]/td[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "KC-GDS-FLT",
+    "children": []
+   },
+   {
+    "nodeId": "1209",
+    "backendDOMNodeId": 1209,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[17]/td[2]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Paper Filters x100",
+    "children": []
+   },
+   {
+    "nodeId": "1211",
+    "backendDOMNodeId": 1211,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[17]/td[3]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "100 pcs",
+    "children": []
+   },
+   {
+    "nodeId": "1213",
+    "backendDOMNodeId": 1213,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[17]/td[4]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "60",
+    "children": []
+   },
+   {
+    "nodeId": "1216",
+    "backendDOMNodeId": 1216,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[17]/td[5]/span[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "In stock",
+    "children": []
+   },
+   {
+    "nodeId": "1219",
+    "backendDOMNodeId": 1219,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[18]/td[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "KC-GDS-DRP",
+    "children": []
+   },
+   {
+    "nodeId": "1221",
+    "backendDOMNodeId": 1221,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[18]/td[2]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Ceramic Dripper",
+    "children": []
+   },
+   {
+    "nodeId": "1223",
+    "backendDOMNodeId": 1223,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[18]/td[3]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "1 pc",
+    "children": []
+   },
+   {
+    "nodeId": "1225",
+    "backendDOMNodeId": 1225,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[18]/td[4]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "9",
+    "children": []
+   },
+   {
+    "nodeId": "1228",
+    "backendDOMNodeId": 1228,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[18]/td[5]/span[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Low",
+    "children": []
+   },
+   {
+    "nodeId": "1231",
+    "backendDOMNodeId": 1231,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[19]/td[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "KC-GDS-SRV",
+    "children": []
+   },
+   {
+    "nodeId": "1233",
+    "backendDOMNodeId": 1233,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[19]/td[2]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Glass Server 600ml",
+    "children": []
+   },
+   {
+    "nodeId": "1235",
+    "backendDOMNodeId": 1235,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[19]/td[3]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "1 pc",
+    "children": []
+   },
+   {
+    "nodeId": "1237",
+    "backendDOMNodeId": 1237,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[19]/td[4]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "11",
+    "children": []
+   },
+   {
+    "nodeId": "1240",
+    "backendDOMNodeId": 1240,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[19]/td[5]/span[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "In stock",
+    "children": []
+   },
+   {
+    "nodeId": "1243",
+    "backendDOMNodeId": 1243,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[20]/td[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "KC-GDS-GRN",
+    "children": []
+   },
+   {
+    "nodeId": "1245",
+    "backendDOMNodeId": 1245,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[20]/td[2]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Hand Grinder",
+    "children": []
+   },
+   {
+    "nodeId": "1247",
+    "backendDOMNodeId": 1247,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[20]/td[3]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "1 pc",
+    "children": []
+   },
+   {
+    "nodeId": "1249",
+    "backendDOMNodeId": 1249,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[20]/td[4]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "3",
+    "children": []
+   },
+   {
+    "nodeId": "1252",
+    "backendDOMNodeId": 1252,
+    "nodeName": "text",
+    "xpath": "/html[1]/body[1]/main[1]/table[1]/tbody[1]/tr[20]/td[5]/span[1]/text()[1]",
+    "nodeType": 3,
+    "nodeValue": "Low",
+    "children": []
+   },
+   {
+    "nodeId": "1253",
+    "backendDOMNodeId": 1253,
+    "nodeName": "nav",
+    "xpath": "/html[1]/body[1]/main[1]/nav[1]",
+    "nodeType": 1,
+    "isInteractive": false,
+    "role": "navigation",
+    "name": "Pages",
+    "attributes": {
+     "class": "pager",
+     "aria-label": "Pages"
+    },
+    "children": [
+     {
+      "nodeId": "1255",
+      "backendDOMNodeId": 1255,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/main[1]/nav[1]/span[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Showing 21–40 of 42",
+      "children": []
+     },
+     {
+      "nodeId": "1256",
+      "backendDOMNodeId": 1256,
+      "nodeName": "a",
+      "xpath": "/html[1]/body[1]/main[1]/nav[1]/a[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "link",
+      "name": "Previous",
+      "attributes": {
+       "href": "/stock?page=1"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "1258",
+      "backendDOMNodeId": 1258,
+      "nodeName": "a",
+      "xpath": "/html[1]/body[1]/main[1]/nav[1]/a[2]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "link",
+      "name": "1",
+      "attributes": {
+       "href": "/stock?page=1"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "1261",
+      "backendDOMNodeId": 1261,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/main[1]/nav[1]/span[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "2",
+      "children": []
+     },
+     {
+      "nodeId": "1262",
+      "backendDOMNodeId": 1262,
+      "nodeName": "a",
+      "xpath": "/html[1]/body[1]/main[1]/nav[1]/a[3]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "link",
+      "name": "3",
+      "attributes": {
+       "href": "/stock?page=3"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "1264",
+      "backendDOMNodeId": 1264,
+      "nodeName": "a",
+      "xpath": "/html[1]/body[1]/main[1]/nav[1]/a[4]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "link",
+      "name": "Next",
+      "attributes": {
+       "href": "/stock?page=3"
+      },
+      "children": []
+     }
+    ]
+   },
+   {
+    "nodeId": "1266",
+    "backendDOMNodeId": 1266,
+    "nodeName": "footer",
+    "xpath": "/html[1]/body[1]/footer[1]",
+    "nodeType": 1,
+    "isInteractive": false,
+    "role": "contentinfo",
+    "attributes": {
+     "class": "footer"
+    },
+    "children": [
+     {
+      "nodeId": "1267",
+      "backendDOMNodeId": 1267,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/footer[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Maruyama Supply Co., Ltd. Partner Portal. For registered partner retailers only.",
+      "children": []
+     }
+    ]
+   }
+  ]
+ }
+}

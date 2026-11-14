@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>ClientOps フェーズと確認項目</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+.d{font-family:Figtree,"Hiragino Sans","Noto Sans JP",-apple-system,"Segoe UI",sans-serif;font-size:14.5px;line-height:1.7;color:#0d0d0d;background:#fff;padding:56px 24px 72px;box-sizing:border-box;-webkit-font-smoothing:antialiased}
+.w{max-width:1100px;margin:0 auto;display:flex;flex-direction:column;gap:22px}
+.ph{border:1px solid rgba(0,0,0,.09);border-radius:16px;overflow:hidden}
+.hd{display:flex;align-items:center;gap:12px;padding:14px 20px;background:#fafafa;border-bottom:1px solid rgba(0,0,0,.07);flex-wrap:wrap}
+.id{font-weight:700;font-variant-numeric:tabular-nums;width:30px}
+.nm{font-weight:700;font-size:16px;flex:1}
+.pill{display:inline-block;font-size:12px;font-weight:600;padding:1px 8px;border-radius:6px;white-space:nowrap}
+.g{background:#e7f4e1;color:#1d6b06}
+.a{background:#fff4cc;color:#5e4500}
+.n{background:#efefef;color:#333}
+.rw{display:grid;grid-template-columns:180px minmax(0,1fr);gap:16px;padding:11px 20px;border-bottom:1px solid rgba(0,0,0,.06)}
+.rw:last-child{border-bottom:0}
+.lb{color:#5c5c5c;font-size:13px;font-weight:600}
+.tech{color:#5c5c5c}
+</style>
+</helmet>
+<div class="d">
+<div class="w">
+
+  <div style="display: flex; flex-direction: column; gap: 8px">
+    <h1 style="margin: 0; font-size: 30px; font-weight: 700">フェーズと確認項目</h1>
+    <p style="margin: 0; color: #474747; max-width: 74ch">各フェーズは、下の「できるようになること」が実際の画面で動くのを確かめてから次へ進む。確かめ方は毎回3段：ロジックの単体テスト、Playwright での自動UIテスト、Chrome に映して目で見る。テストは書き換えず、実装を直す。</p>
+  </div>
+
+  <section class="ph" aria-label="P0">
+    <div class="hd"><span class="id">P0</span><span class="nm">準備：鍵と土台</span><span class="pill g">必ず</span><span class="tech">明朝、または会場で 14:00–15:30</span></div>
+    <div class="rw"><span class="lb">できるようになること</span><span>手元から Daytona・AgentField・Claude Opus 5.5 が呼べる。Kumo 用のサンドボックスで Lightpanda と、デモ用の仕入先サイト・管理画面が動く</span></div>
+    <div class="rw"><span class="lb">確かめ方</span><span>確認用コマンド1つで、サンドボックスID、管理画面の要素ツリーの行数、Claude の返答、AgentField の実行IDが出る。AgentField 経由（LiteLLM）で claude-opus-5-5 が通るか確かめ、通らなければ Anthropic の SDK で直接呼ぶ。AgentField のテレメトリが止まっている。サンドボックス内のサイトを署名付きURLでブラウザに映す。ビルドが通る（TypeScript 7 と Next 16 の組み合わせもここで確認）</span></div>
+    <div class="rw"><span class="lb">軽さ・無駄のなさ</span><span>サンドボックスは作り置きのイメージから60秒以内に起動。秘密は .env.local だけに置き、本人が入れる</span></div>
+    <div class="rw"><span class="lb">使う技術</span><span class="tech">Daytona · Lightpanda · AgentField · Claude Opus 5.5</span></div>
+  </section>
+
+  <section class="ph" aria-label="P1">
+    <div class="hd"><span class="id">P1</span><span class="nm">画面：キャンバスの8枚をそのまま</span><span class="pill g">必ず</span></div>
+    <div class="rw"><span class="lb">できるようになること</span><span>Screens の8枚が Astryx の部品だけで動き、仮の出来事の列で「準備 → 依頼 → 作業中 → 承認 → 完了」を最後まで操作できる</span></div>
+    <div class="rw"><span class="lb">確かめ方</span><span>単体：出来事の列から画面の状態への変換。自動UI：一連をクリックで通す。画面：Chrome に映し、キャンバスと並べて見比べる</span></div>
+    <div class="rw"><span class="lb">軽さ・無駄のなさ</span><span>部品は7種だけ。Astryx の検査（doctor）が通る。1画面に主ボタンは1つ。出来事の形は1つで、画面と MCP が同じものを読む</span></div>
+    <div class="rw"><span class="lb">使う技術</span><span class="tech">Astryx（ai-chat テンプレート）· Next.js 16</span></div>
+  </section>
+
+  <section class="ph" aria-label="P2">
+    <div class="hd"><span class="id">P2</span><span class="nm">本物の1回目：承認つき</span><span class="pill g">必ず</span></div>
+    <div class="rw"><span class="lb">できるようになること</span><span>Kumo への依頼で、本物のサンドボックスが仕入先の在庫と管理画面を読み、12件の差分で承認待ちになる。承認すると保存し、12行を読み直して一致を確かめる</span></div>
+    <div class="rw"><span class="lb">確かめ方</span><span>単体：SKU での突き合わせと、読み直しの判定。Claude に送る中身にログイン情報と表の数値が入っていない。Claude の返答が決めた形でなければ実行しない。自動UI：本物の環境で依頼から「Done」まで。画面：右の Activity に実ページと手順、各手順を誰が決めたかが出る</span></div>
+    <div class="rw"><span class="lb">軽さ・無駄のなさ</span><span>突き合わせは SKU の表を1回なめるだけ（件数に比例）。AI 呼び出しは10回以下。要素の探し方は PandaScript と要素ツリーの2通りだけで、初回・再実行・修復で同じものを使う</span></div>
+    <div class="rw"><span class="lb">使う技術</span><span class="tech">AgentField（Python のエージェント、はしごと承認待ち）· Daytona · Lightpanda · Claude Opus 5.5（effort medium）</span></div>
+  </section>
+
+  <section class="ph" aria-label="P3">
+    <div class="hd"><span class="id">P3</span><span class="nm">覚えて再実行</span><span class="pill g">必ず</span></div>
+    <div class="rw"><span class="lb">できるようになること</span><span>成功した手順を PandaScript の台本と、要素の手がかり（役割・名前・どのフォームの中か）の両方で保存し、2回目は PandaScript で AI を呼ばずに同じ結果になる。台本には、要素が1つだけあるかと操作後の状態の確認を入れる。保存するのは承認・書き込み・全行の一致まで通ったときだけ。かかった時間と AI の回数を画面に出す</span></div>
+    <div class="rw"><span class="lb">確かめ方</span><span>単体：手順の保存と読み込み、再実行で AI 呼び出しが0回。自動UI：「もう一度」から比較の表示まで。画面：実測値を目で確かめる</span></div>
+    <div class="rw"><span class="lb">軽さ・無駄のなさ</span><span>再実行の AI 呼び出しは0回。時間は実測して表示し、目標は10秒以内</span></div>
+    <div class="rw"><span class="lb">使う技術</span><span class="tech">AgentField のメモリ · Lightpanda PandaScript（lightpanda run）· 要素ツリー</span></div>
+  </section>
+
+  <section class="ph" aria-label="P4">
+    <div class="hd"><span class="id">P4</span><span class="nm">画面が変わったら直す</span><span class="pill a">できれば</span></div>
+    <div class="rw"><span class="lb">できるようになること</span><span>管理画面のボタン名を変えると、PandaScript の確認で止まり、要素ツリーで探し直す。名前が変わって見つからないので、その1手だけ Claude で探し直す。Claude が「確信なし」なら人に回す。確かめてから PandaScript を作り直し、v2 として保存する</span></div>
+    <div class="rw"><span class="lb">確かめ方</span><span>単体：一致が0件や2件以上のときは押さずに止まる。自動UI：名前を変えるスイッチから修復の表示まで。画面</span></div>
+    <div class="rw"><span class="lb">軽さ・無駄のなさ</span><span>AI 呼び出しは修復の1回だけ。間違ったボタンを押す回数は0</span></div>
+    <div class="rw"><span class="lb">使う技術</span><span class="tech">Claude Opus 5.5（effort medium）· Lightpanda · AgentField の承認待ち</span></div>
+  </section>
+
+  <section class="ph" aria-label="P5">
+    <div class="hd"><span class="id">P5</span><span class="nm">顧客の境界</span><span class="pill a">できれば</span></div>
+    <div class="rw"><span class="lb">できるようになること</span><span>Hinata 用に別のサンドボックスを持つ。Hinata から Kumo のログインを求めると断り、監査ログに残る</span></div>
+    <div class="rw"><span class="lb">確かめ方</span><span>単体：ログインの保管庫は顧客IDでしか引けない。自動UI：断りの表示。画面</span></div>
+    <div class="rw"><span class="lb">軽さ・無駄のなさ</span><span>他の顧客の秘密に届く道は0。判定はコードの1か所だけ</span></div>
+    <div class="rw"><span class="lb">使う技術</span><span class="tech">Daytona（顧客ごとのサンドボックス）· AgentField（記録）</span></div>
+  </section>
+
+  <section class="ph" aria-label="P6">
+    <div class="hd"><span class="id">P6</span><span class="nm">仕上げと提出</span><span class="pill g">必ず</span></div>
+    <div class="rw"><span class="lb">できるようになること</span><span>3分デモが通しで2回続けて成功する。予備の録画がある。README に Daytona・AgentField・Lightpanda の使いどころとコードの場所を書く</span></div>
+    <div class="rw"><span class="lb">確かめ方</span><span>通し練習を2回、時間を計る</span></div>
+    <div class="rw"><span class="lb">軽さ・無駄のなさ</span><span>3分以内。使っていないコードと重複は0</span></div>
+  </section>
+
+  <section class="ph" aria-label="Later">
+    <div class="hd"><span class="id">—</span><span class="nm">余力があれば</span><span class="pill n">あとで</span></div>
+    <div class="rw"><span class="lb">内容</span><span>MCP で同じ道具（依頼・状況・承認・保存した手順の一覧）を公開し、Claude や ChatGPT から呼べるようにする。定時実行。macOS のPC と、デスクトップアプリへの拡張（同じ要素の手がかりを Daytona の AT-SPI / macOS AX で使う）。初回準備の画面。開発が終わってから：effort の検証（medium と high の比較）</span></div>
+  </section>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

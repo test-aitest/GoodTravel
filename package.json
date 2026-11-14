@@ -1,0 +1,68 @@
+{
+  "name": "clientops",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "oxlint --deny-warnings",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test ./scripts ./sandbox && bun test --preload ./src/test/dom.ts ./src && bun run test:agent",
+    "test:agent": "uv run --directory agent pytest -q -W error::DeprecationWarning",
+    "test:security": "uv run --directory agent pytest -q -W error::DeprecationWarning tests/test_security.py && bun test --preload ./src/test/dom.ts ./scripts/agentfield.test.ts ./src/lib/approvalSignature.test.ts ./src/lib/approvalRoutes.test.ts ./src/lib/choiceRoutes.test.ts ./src/lib/mcpKey.test.ts ./src/lib/events.test.ts ./src/lib/instructionIgnored.test.ts ./src/lib/hiddenInstructionContract.test.ts ./sandbox/runner/sanitize.test.ts ./sandbox/runner/placeholders.test.ts ./sandbox/runner/vault.test.ts",
+    "test:ui": "playwright test",
+    "stage": "bun scripts/stage.ts",
+    "restore": "bun scripts/restore.ts",
+    "demo:reset": "bun scripts/demoReset.ts",
+    "agentfield": "bun --env-file=.env.local run agentfield:container",
+    "agentfield:container": "docker run -d --rm --name clientops-agentfield -p 127.0.0.1:8080:8080 -v clientops-agentfield-data:/data -e AGENTFIELD_HOME=/data -e AGENTFIELD_TELEMETRY_ENABLED=false -e AGENTFIELD_WEBHOOK_ALLOWED_HOSTS=host.docker.internal -e AGENTFIELD_AGENT_ORPHAN_REAP_ENABLED=false -e AGENTFIELD_APPROVAL_WEBHOOK_SECRET agentfield/control-plane:v0.1.145@sha256:a3ff0d821a81265fca4743b7a2d65ec76e85babc150ac8b18842a26cce7ba3c1",
+    "agent": "bun --env-file=.env.local run agent:node",
+    "agent:node": "CLIENTOPS_SCHEDULER=on LITELLM_LOCAL_MODEL_COST_MAP=True AGENT_CALLBACK_URL=http://host.docker.internal:8001 uv run --directory agent python serve.py",
+    "mcp": "bun src/mcp/server.ts",
+    "astryx": "node node_modules/@astryxdesign/cli/clients/cli/bin/astryx.mjs",
+    "agentfield:stop": "docker stop clientops-agentfield",
+    "agentfield:reset": "docker volume rm clientops-agentfield-data",
+    "lightpanda": "./vendor/lightpanda/lightpanda serve --host 127.0.0.1 --port 9222",
+    "computer:snapshot": "uv run --directory agent python -m clientops.computer_image",
+    "check": "bun --env-file=.env.local run check:agent",
+    "check:agent": "LITELLM_LOCAL_MODEL_COST_MAP=True uv run --directory agent python -m clientops.check",
+    "check:claude": "bun --env-file=.env.local scripts/live.ts claude"
+  },
+  "dependencies": {
+    "@astryxdesign/core": "^0.7.15",
+    "@astryxdesign/theme-neutral": "^0.7.15",
+    "@gsap/react": "^2.1.2",
+    "@heroicons/react": "^2.2.0",
+    "@modelcontextprotocol/server": "2.4.0",
+    "@stylexjs/stylex": "^0.19.2",
+    "gsap": "^3.15.1",
+    "next": "16.4.6",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@astryxdesign/cli": "^0.7.15",
+    "@happy-dom/global-registrator": "^21.0.4",
+    "@modelcontextprotocol/client": "2.4.0",
+    "@playwright/test": "^1.65.0",
+    "@testing-library/dom": "^10.4.2",
+    "@testing-library/react": "^16.3.3",
+    "@types/bun": "^1.4.4",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "oxlint": "^1.93.0",
+    "typescript": "^7.0.2"
+  },
+  "packageManager": "bun@1.4.4",
+  "ignoreScripts": [
+    "sharp",
+    "unrs-resolver"
+  ],
+  "trustedDependencies": [
+    "sharp",
+    "unrs-resolver"
+  ]
+}

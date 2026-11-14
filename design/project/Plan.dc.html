@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>ClientOps 実装計画・概要</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+.d{font-family:Figtree,"Hiragino Sans","Noto Sans JP",-apple-system,"Segoe UI",sans-serif;font-size:15px;line-height:1.7;color:#0d0d0d;background:#fff;padding:56px 24px 72px;box-sizing:border-box;-webkit-font-smoothing:antialiased}
+.w{max-width:1040px;margin:0 auto;display:flex;flex-direction:column;gap:40px}
+.sec{display:flex;flex-direction:column;gap:14px}
+.h2{margin:0;font-size:20px;font-weight:700}
+.k{font-size:12px;font-weight:600;color:#6b6b6b;letter-spacing:.04em}
+.box{border:1px solid rgba(0,0,0,.09);border-radius:14px;overflow-x:auto}
+.t{width:100%;border-collapse:collapse;font-size:14px}
+.t th{text-align:left;font-weight:600;color:#5c5c5c;font-size:12.5px;padding:10px 16px;border-bottom:1px solid rgba(0,0,0,.1);background:#fafafa;white-space:nowrap}
+.t td{padding:12px 16px;border-bottom:1px solid rgba(0,0,0,.06);vertical-align:top}
+.t tr:last-child td{border-bottom:0}
+.tm{font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:600}
+.pill{display:inline-block;font-size:12px;font-weight:600;padding:1px 8px;border-radius:6px;white-space:nowrap}
+.g{background:#e7f4e1;color:#1d6b06}
+.a{background:#fff4cc;color:#5e4500}
+.n{background:#efefef;color:#333}
+.cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.c{border:1px solid rgba(0,0,0,.09);border-radius:14px;padding:16px 18px;display:flex;flex-direction:column;gap:6px;font-size:14px}
+ul{margin:0;padding-left:20px}
+li{margin:2px 0}
+</style>
+</helmet>
+<div class="d">
+<div class="w">
+
+  <div class="sec" style="gap: 8px">
+    <span class="k">CLIENTOPS · AGENT FORGE AI HACKATHON TOKYO · 2026-11-14</span>
+    <h1 style="margin: 0; font-size: 34px; line-height: 1.3; font-weight: 700">実装計画</h1>
+    <p style="margin: 0; color: #474747; max-width: 70ch">顧客ごとに隔離されたクラウドPCで働く AI ワーカーに、チャットで仕事を頼むアプリ。開発時間は 15:30–17:30 の 2 時間なので、「一度やった仕事を覚えて、2 回目から AI なしで速くなる」を本物の環境で見せることに絞る。</p>
+  </div>
+
+  <div class="sec">
+    <h2 class="h2">今の状態（11/13 夜）</h2>
+    <div class="box"><table class="t">
+      <tbody>
+        <tr><td style="width: 200px">画面設計</td><td><span class="pill g">済み</span> Screens ページの 8 枚。ChatGPT と同じ配置、1画面に主ボタン1つ</td></tr>
+        <tr><td>スポンサーAPIの裏取り</td><td><span class="pill g">済み</span> Daytona・AgentField・Lightpanda の公式資料で呼び方と制限を確認（D の「リスク」に反映）</td></tr>
+        <tr><td>モデルとセキュリティ</td><td><span class="pill g">済み</span> 誰が決めるかの4段のはしご、Claude Opus 5.5（effort medium で開始）、守ることの一覧（E の1枚）</td></tr>
+        <tr><td>実装の準備</td><td><span class="pill g">済み</span> 課題 24 件を lesson/clientops/issues に作成。001 から1件ずつ進め、確かめた課題ごとにソースの写しを残す（Git は使わない）</td></tr>
+        <tr><td>方針</td><td><span class="pill g">決定</span> 持ち込みの可否に関係なく、製品として作り込む。会場では手直しと、ほかの参加者との議論の種にする（11/14）</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="sec">
+    <h2 class="h2">審査の4項目にどう答えるか</h2>
+    <div class="box"><table class="t">
+      <thead><tr><th>審査項目</th><th>このプロダクトの答え</th></tr></thead>
+      <tbody>
+        <tr><td style="width: 200px">革新性</td><td>一度やった仕事を手順として覚え、2回目は AI を呼ばずに速く終える。画面が変わったときだけ、その1手を AI で直す</td></tr>
+        <tr><td>現実の課題</td><td>複数ブランドを代行するEC運用チーム。顧客ごとのログイン切り替え、別顧客への誤入力、夜の定型作業</td></tr>
+        <tr><td>動くデモ</td><td>本物の Daytona サンドボックス2台で、実際のサイト操作・承認・再実行を、時間と AI 呼び出し回数つきで見せる</td></tr>
+        <tr><td>スポンサー活用</td><td>スポンサー2社を中心で使う。Daytona＝顧客ごとのPC。AgentField＝「PandaScript → 要素ツリー → Claude → あなた」のはしごで各手順を誰が決めるかを管理し、承認待ちと手順の記憶を持ち、誰が決めたかを流れ図に残す。どちらも外すとプロダクトが成り立たない使い方にする</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="sec">
+    <h2 class="h2">3分デモの流れ</h2>
+    <div class="box"><table class="t">
+      <thead><tr><th>時刻</th><th>見せること</th><th>画面</th></tr></thead>
+      <tbody>
+        <tr><td class="tm">0:00</td><td>課題を1文：「5社の在庫を毎晩、5つのログインで更新している」</td><td>—</td></tr>
+        <tr><td class="tm">0:15</td><td>Kumo Coffee に「今日の在庫を同期して。保存前に聞いて」と頼む</td><td>1 · New job</td></tr>
+        <tr><td class="tm">0:35</td><td>Kumo 専用PCで動く。右に実ページと手順</td><td>2 · Working</td></tr>
+        <tr><td class="tm">1:05</td><td>12件の差分で止まる → 承認 → 保存して12行を読み直す</td><td>3 · Approval</td></tr>
+        <tr><td class="tm">1:30</td><td>もう一度実行。AI 0回・約6秒で差分まで出し、承認して保存（時間は実測値を表示）</td><td>4 · Done</td></tr>
+        <tr><td class="tm">2:00</td><td>管理画面のボタン名を変える → 書き込む前に止まり、1手だけ直す</td><td>5 · A screen changed</td></tr>
+        <tr><td class="tm">2:25</td><td>Hinata から Kumo のログインを頼む → 断る</td><td>6 · Another client's login</td></tr>
+        <tr><td class="tm">2:45</td><td>構成図1枚で締める（顧客ごとのPC × 覚えて速くなる実行）</td><td>B · Architecture</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="sec">
+    <h2 class="h2">作る範囲</h2>
+    <div class="cols">
+      <div class="c"><span class="pill g" style="align-self: flex-start">必ず</span><span style="font-weight: 600">P0–P3</span><span>準備、画面、本物の1回目（承認つき）、覚えて再実行。これだけで革新性と動くデモが成り立つ</span></div>
+      <div class="c"><span class="pill a" style="align-self: flex-start">できれば</span><span style="font-weight: 600">P4–P5</span><span>画面が変わったときの修復、顧客の境界。削るならこの順で P5 → P4</span></div>
+      <div class="c"><span class="pill n" style="align-self: flex-start">余力</span><span style="font-weight: 600">あとで</span><span>MCP で Claude・ChatGPT から呼べるようにする、定時実行、macOS のPC、初回準備の画面</span></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <h2 class="h2">決まったこと</h2>
+    <ul>
+      <li>名前は ClientOps（仮）。UIの文言は英語（グローバル前提）</li>
+      <li>見た目は ChatGPT・Claude と同じ配置で最小限。Astryx の neutral テーマと ai-chat テンプレートを土台にする</li>
+      <li>顧客は架空の3社（Kumo Coffee Roasters、Hinata Skincare、Sora Outdoor）と仕入先 Maruyama Supply。デモ用サイトは顧客のサンドボックスの中で動かす</li>
+      <li>技術は Daytona・AgentField・Lightpanda の3つ。Tavily と Nosana は使わない（11/13 決定。デモの話の中で必要な場面がない）</li>
+      <li>AI は Claude Opus 5.5 だけ。effort は medium で運用を始め、選び間違いが出たら high に上げる。effort の検証は開発が終わってから（11/14 決定）。xhigh は遅すぎ、fast mode は料金2倍なので使わない。各手順は「PandaScript → 要素ツリー → Claude → あなた」の4段で決める（E）</li>
+      <li>PandaScript と要素ツリーは二者択一にせず両方使う。ふだんは PandaScript の速い道で再実行し、合わなければ要素ツリーで AI なしに探し直す（11/14 決定）</li>
+      <li>AI の費用は初回の手順づくりで約60円、修復1回で約8円、2回目からは0円の見積もり（E、実測で差し替え）</li>
+      <li>AI に見せるのは要素の役割と名前だけ。ログイン情報は見せず、どの顧客のPCを使うかはサーバーが決める（E）</li>
+      <li>実装は画面の確認が終わってから。各フェーズは「単体テスト＋自動UIテスト＋画面で目視」で確かめてから次へ</li>
+    </ul>
+  </div>
+
+  <div class="sec">
+    <h2 class="h2">まだ決めていないこと</h2>
+    <ul>
+      <li>デモに「ページ内の隠し指示を無視する」場面を入れるか（E）</li>
+      <li>保存した手順だけで動く定時実行でも、書き込みの前に毎回承認を求めるか。今は求める（E）</li>
+      <li>チームで出るか、1人で出るか</li>
+      <li>正式な名前</li>
+    </ul>
+  </div>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2400}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "clients": [
+    { "id": "kumo", "name": "Kumo Coffee Roasters", "shortName": "Kumo Coffee", "nickname": "Kumo" },
+    { "id": "hinata", "name": "Hinata Skincare", "shortName": "Hinata Skincare", "nickname": "Hinata" },
+    { "id": "sora", "name": "Sora Outdoor", "shortName": "Sora Outdoor", "nickname": "Sora" }
+  ]
+}

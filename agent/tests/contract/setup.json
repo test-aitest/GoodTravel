@@ -1,0 +1,66 @@
+{
+  "loginNames": {
+    "supplier": { "username": "LP_SUPPLIER_USERNAME", "password": "LP_SUPPLIER_PASSWORD" },
+    "store": { "username": "LP_STORE_USERNAME", "password": "LP_STORE_PASSWORD" }
+  },
+  "skills": ["prepare_computer", "setup_status"],
+  "answers": {
+    "noComputer": {
+      "clientId": "kumo",
+      "computer": "missing",
+      "logins": {
+        "present": [],
+        "missing": ["LP_SUPPLIER_USERNAME", "LP_SUPPLIER_PASSWORD", "LP_STORE_USERNAME", "LP_STORE_PASSWORD"]
+      }
+    },
+    "computerWithoutLogins": {
+      "clientId": "kumo",
+      "computer": "ready",
+      "logins": {
+        "present": [],
+        "missing": ["LP_SUPPLIER_USERNAME", "LP_SUPPLIER_PASSWORD", "LP_STORE_USERNAME", "LP_STORE_PASSWORD"]
+      }
+    },
+    "computerWithLogins": {
+      "clientId": "kumo",
+      "computer": "ready",
+      "logins": {
+        "present": ["LP_SUPPLIER_USERNAME", "LP_SUPPLIER_PASSWORD", "LP_STORE_USERNAME", "LP_STORE_PASSWORD"],
+        "missing": []
+      }
+    },
+    "computerAsleep": {
+      "clientId": "kumo",
+      "computer": "ready",
+      "logins": null
+    },
+    "noSites": {
+      "clientId": "sora",
+      "computer": "unavailable",
+      "logins": { "present": [], "missing": [] }
+    },
+    "daytonaRefusedTheKey": {
+      "clientId": "kumo",
+      "computer": "failed",
+      "problem": "key_refused"
+    }
+  },
+  "logins": {
+    "clientId": "kumo",
+    "stdin": {
+      "LP_SUPPLIER_USERNAME": "contract-supplier-user",
+      "LP_SUPPLIER_PASSWORD": "contract-supplier-pass-7Q!",
+      "LP_STORE_USERNAME": "contract-store-user",
+      "LP_STORE_PASSWORD": "contract-store-pass-9W#"
+    },
+    "added": {
+      "ok": true,
+      "present": ["LP_SUPPLIER_USERNAME", "LP_SUPPLIER_PASSWORD", "LP_STORE_USERNAME", "LP_STORE_PASSWORD"],
+      "missing": []
+    },
+    "refused": {
+      "ok": false,
+      "error": "There is no client 'acme'. Known clients: hinata, kumo, sora."
+    }
+  }
+}

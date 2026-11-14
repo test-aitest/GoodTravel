@@ -1,0 +1,69 @@
+{
+  "method": "POST",
+  "path": "/v1/messages",
+  "headers": {
+    "content-type": "application/json",
+    "anthropic-version": "2023-06-01",
+    "anthropic-beta": "structured-outputs-2025-11-13",
+    "x-api-key": "<ANTHROPIC_API_KEY>"
+  },
+  "body": {
+    "model": "claude-opus-5-5",
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "<user>"
+          }
+        ]
+      }
+    ],
+    "max_tokens": 16000,
+    "output_config": {
+      "effort": "medium",
+      "format": {
+        "type": "json_schema",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "element_id": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "action": {
+              "type": "string",
+              "enum": [
+                "click",
+                "fill",
+                "none"
+              ]
+            },
+            "confident": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "element_id",
+            "action",
+            "confident"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "system": [
+      {
+        "type": "text",
+        "text": "<system>"
+      }
+    ]
+  }
+}

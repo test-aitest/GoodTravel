@@ -1,0 +1,20 @@
+NOT POSSIBLE IN THIS SESSION
+
+The supplied singapore-guide.jpg, singapore-intro.mp3, singapore-intro.txt,
+singapore-detail.mp3, and singapore-detail.txt are present in this folder.
+
+No enabled tool in this session provides video generation or genuine
+audio-driven lip synchronization. The available image-generation capability
+creates or edits still images; it cannot generate talking-head video.
+I therefore cannot produce the requested speech-synchronized mouth, jaw,
+and facial movements, natural blinks, and slight head motion while preserving
+the supplied fictional guide's identity and Marina Bay background.
+
+I can inspect files, write this explanation, and inspect existing media with
+local tools where available. Encoding or muxing alone cannot create the
+required facial animation. I have not used still-image video, zooms, warps,
+another person's likeness, or downloaded any tools, models, or other assets.
+
+Neither singapore-intro.mp4 nor singapore-detail.mp4 was created. There are
+no generated MP4 files for which to print ffprobe durations or streams.
+Work has stopped as requested; the supplied source files were not modified.

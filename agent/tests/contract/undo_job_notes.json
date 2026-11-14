@@ -1,0 +1,100 @@
+{
+  "input": {
+    "client_id": "kumo"
+  },
+  "jobId": "exec_undo",
+  "notes": [
+    {
+      "n": 1,
+      "event": {
+        "type": "job.created",
+        "clientName": "Kumo Coffee Roasters",
+        "title": "Undo stock sync",
+        "request": "Undo this sync",
+        "run": {
+          "kind": "undo"
+        },
+        "plan": [
+          {
+            "stepId": "sign-in",
+            "title": "Sign in to the store admin"
+          },
+          {
+            "stepId": "undo",
+            "title": "Put back the stock from before the sync"
+          }
+        ]
+      }
+    },
+    {
+      "n": 2,
+      "event": {
+        "type": "step.started",
+        "stepId": "sign-in",
+        "activity": "Signing in to the store admin"
+      }
+    },
+    {
+      "n": 3,
+      "event": {
+        "type": "page.seen",
+        "stepId": "sign-in",
+        "host": "admin.kumo-coffee.example",
+        "html": "<!doctype html><html><head><title>Inventory - Kumo Coffee - Store Admin</title></head><body><h1>Inventory - Kumo Coffee - Store Admin</h1></body></html>"
+      }
+    },
+    {
+      "n": 4,
+      "event": {
+        "type": "step.done",
+        "stepId": "sign-in",
+        "summary": "Signed in to the store admin",
+        "tookMs": 250
+      }
+    },
+    {
+      "n": 5,
+      "event": {
+        "type": "step.started",
+        "stepId": "undo",
+        "activity": "Putting back 12 products"
+      }
+    },
+    {
+      "n": 6,
+      "event": {
+        "type": "page.seen",
+        "stepId": "undo",
+        "host": "admin.kumo-coffee.example",
+        "html": "<!doctype html><html><head><title>Inventory - Kumo Coffee - Store Admin</title></head><body><h1>Inventory - Kumo Coffee - Store Admin</h1></body></html>"
+      }
+    },
+    {
+      "n": 7,
+      "event": {
+        "type": "write.done",
+        "stepId": "undo",
+        "written": 12
+      }
+    },
+    {
+      "n": 8,
+      "event": {
+        "type": "verify.done",
+        "stepId": "undo",
+        "checked": 12,
+        "matched": 12
+      }
+    },
+    {
+      "n": 9,
+      "event": {
+        "type": "step.done",
+        "stepId": "undo",
+        "summary": "Put back and checked every row",
+        "detail": "12 products",
+        "tookMs": 250
+      }
+    }
+  ]
+}

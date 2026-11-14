@@ -1,0 +1,19 @@
+{
+  "input": {
+    "client_id": "kumo",
+    "client_name": "Kumo Coffee Roasters",
+    "request": "Check that the worker can reach Kumo's sites."
+  },
+  "notes": [
+    {"n": 1, "event": {"type": "job.created", "clientName": "Kumo Coffee Roasters", "title": "Connection check", "request": "Check that the worker can reach Kumo's sites.", "run": {"kind": "learn"}, "plan": [{"stepId": "open-computer", "title": "Open the client's computer"}, {"stepId": "read-supplier", "title": "Read the supplier portal"}, {"stepId": "read-store", "title": "Read the store admin"}]}},
+    {"n": 2, "event": {"type": "step.started", "stepId": "open-computer", "activity": "Opening the client's computer"}},
+    {"n": 3, "event": {"type": "step.decided", "stepId": "open-computer", "rung": "script", "tookMs": 250}},
+    {"n": 4, "event": {"type": "step.done", "stepId": "open-computer", "summary": "Opened the client's computer", "tookMs": 500}},
+    {"n": 5, "event": {"type": "step.started", "stepId": "read-supplier", "activity": "Reading the supplier portal"}},
+    {"n": 6, "event": {"type": "step.decided", "stepId": "read-supplier", "rung": "tree", "tookMs": 250, "escalatedFrom": ["script"]}},
+    {"n": 7, "event": {"type": "step.done", "stepId": "read-supplier", "summary": "Read the supplier portal", "tookMs": 500}},
+    {"n": 8, "event": {"type": "step.started", "stepId": "read-store", "activity": "Reading the store admin"}},
+    {"n": 9, "event": {"type": "step.decided", "stepId": "read-store", "rung": "script", "tookMs": 250}},
+    {"n": 10, "event": {"type": "step.done", "stepId": "read-store", "summary": "Read the store admin", "tookMs": 500}}
+  ]
+}

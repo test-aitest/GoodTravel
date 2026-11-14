@@ -1,0 +1,22 @@
+{
+  "400": {
+    "exception": "litellm.exceptions.BadRequestError",
+    "status_code": 400,
+    "message_contains": "invalid_request_error"
+  },
+  "401": {
+    "exception": "litellm.exceptions.AuthenticationError",
+    "status_code": 401,
+    "message_contains": "authentication_error"
+  },
+  "429": {
+    "exception": "agentfield.rate_limiter.RateLimitError",
+    "status_code": null,
+    "message_contains": "rate_limit_error"
+  },
+  "529": {
+    "exception": "litellm.exceptions.InternalServerError",
+    "status_code": 500,
+    "message_contains": "overloaded_error"
+  }
+}

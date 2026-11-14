@@ -1,0 +1,172 @@
+{
+  "input": {
+    "client_id": "kumo"
+  },
+  "jobId": "exec_replay_renamed_button",
+  "notes": [
+    {
+      "n": 1,
+      "event": {
+        "type": "job.created",
+        "clientName": "Kumo Coffee Roasters",
+        "title": "Supplier stock sync",
+        "request": "Daily at 18:00: sync supplier stock to the store admin.",
+        "run": {
+          "kind": "replay",
+          "procedureVersion": 1
+        },
+        "plan": [
+          {
+            "stepId": "sign-in",
+            "title": "Sign in to Maruyama Supply"
+          },
+          {
+            "stepId": "read",
+            "title": "Read today's stock"
+          },
+          {
+            "stepId": "compare",
+            "title": "Compare with the store admin"
+          },
+          {
+            "stepId": "check-save",
+            "title": "Check the save button"
+          },
+          {
+            "stepId": "ask",
+            "title": "Ask you before saving"
+          },
+          {
+            "stepId": "save",
+            "title": "Save and check every row"
+          }
+        ]
+      }
+    },
+    {
+      "n": 2,
+      "event": {
+        "type": "step.started",
+        "stepId": "sign-in",
+        "activity": "Signing in to Maruyama Supply"
+      }
+    },
+    {
+      "n": 3,
+      "event": {
+        "type": "step.decided",
+        "stepId": "sign-in",
+        "rung": "script",
+        "tookMs": 0
+      }
+    },
+    {
+      "n": 4,
+      "event": {
+        "type": "page.seen",
+        "stepId": "sign-in",
+        "host": "portal.maruyama-supply.example",
+        "html": "<!doctype html><html><head><title>Stock list - Maruyama Supply</title></head><body><h1>Stock list - Maruyama Supply</h1></body></html>"
+      }
+    },
+    {
+      "n": 5,
+      "event": {
+        "type": "step.done",
+        "stepId": "sign-in",
+        "summary": "Signed in to Maruyama Supply",
+        "tookMs": 10
+      }
+    },
+    {
+      "n": 6,
+      "event": {
+        "type": "step.started",
+        "stepId": "read",
+        "activity": "Reading today's stock"
+      }
+    },
+    {
+      "n": 7,
+      "event": {
+        "type": "step.decided",
+        "stepId": "read",
+        "rung": "script",
+        "tookMs": 0
+      }
+    },
+    {
+      "n": 8,
+      "event": {
+        "type": "page.seen",
+        "stepId": "read",
+        "host": "portal.maruyama-supply.example",
+        "html": "<!doctype html><html><head><title>Stock list - Maruyama Supply</title></head><body><h1>Stock list - Maruyama Supply</h1></body></html>"
+      }
+    },
+    {
+      "n": 9,
+      "event": {
+        "type": "step.done",
+        "stepId": "read",
+        "summary": "Read today's stock",
+        "detail": "42 products",
+        "tookMs": 10
+      }
+    },
+    {
+      "n": 10,
+      "event": {
+        "type": "step.started",
+        "stepId": "compare",
+        "activity": "Comparing with the store admin",
+        "detail": "Matching by SKU"
+      }
+    },
+    {
+      "n": 11,
+      "event": {
+        "type": "step.decided",
+        "stepId": "compare",
+        "rung": "script",
+        "tookMs": 0
+      }
+    },
+    {
+      "n": 12,
+      "event": {
+        "type": "page.seen",
+        "stepId": "compare",
+        "host": "admin.kumo-coffee.example",
+        "html": "<!doctype html><html><head><title>Inventory - Kumo Coffee - Store Admin</title></head><body><h1>Inventory - Kumo Coffee - Store Admin</h1></body></html>"
+      }
+    },
+    {
+      "n": 13,
+      "event": {
+        "type": "step.done",
+        "stepId": "compare",
+        "summary": "Compared with the store admin",
+        "detail": "4 products differ",
+        "tookMs": 10
+      }
+    },
+    {
+      "n": 14,
+      "event": {
+        "type": "step.started",
+        "stepId": "check-save",
+        "activity": "Checking the save button"
+      }
+    },
+    {
+      "n": 15,
+      "event": {
+        "type": "job.failed",
+        "reason": "error",
+        "message": "The store admin doesn't match the saved steps any more, so I stopped. Nothing was changed.",
+        "stepId": "check-save"
+      }
+    }
+  ]
+}

@@ -1,0 +1,588 @@
+{
+  "description": "Supplier portal: sign in, read the stock list (page 1 as text, interactive-only text and JSON, interactive elements), then pages 2 and 3 as text.",
+  "observed": {
+    "date": "2026-11-14",
+    "lightpanda": "1.0.4",
+    "binary": "lightpanda-aarch64-macos",
+    "server": "lightpanda serve --host 127.0.0.1 --port 9222",
+    "sites": "bun sandbox/sites/server.ts (supplier 127.0.0.1:3001, store 127.0.0.1:3002), client kumo, day 1"
+  },
+  "trimmed": [
+    "calls[].request/response keep only method, params and result or error; the wire field shows the full framing (id, sessionId) of two exchanges",
+    "redacted: the text of the two sign-in LP.fillNode calls is null (it was the login); the response is real"
+  ],
+  "wire": [
+    {
+      "direction": "send",
+      "message": {
+        "id": 3,
+        "method": "Target.attachToTarget",
+        "params": {
+          "targetId": "FID-0000000001",
+          "flatten": true
+        }
+      }
+    },
+    {
+      "direction": "recv",
+      "message": {
+        "id": 3,
+        "result": {
+          "sessionId": "SID-1"
+        }
+      }
+    },
+    {
+      "direction": "send",
+      "message": {
+        "id": 14,
+        "method": "LP.getSemanticTree",
+        "params": {
+          "format": "text",
+          "interactiveOnly": true
+        },
+        "sessionId": "SID-1"
+      }
+    },
+    {
+      "direction": "recv",
+      "message": {
+        "id": 14,
+        "result": {
+          "semanticTree": "5 RootWebArea 'Stock list - Maruyama Supply'\n 16 [i] button 'Sign out'\n 18 heading 'Stock list'\n 23 columnheader 'SKU'\n 25 columnheader 'Product'\n 27 columnheader 'Pack'\n 29 columnheader 'Available'\n 31 columnheader 'Status'\n 274 navigation 'Pages'\n  281 [i] link '2'\n  282 [i] link '3'\n  283 [i] link 'Next'\n"
+        },
+        "sessionId": "SID-1"
+      }
+    }
+  ],
+  "calls": [
+    {
+      "request": {
+        "method": "Target.createBrowserContext",
+        "params": {}
+      },
+      "response": {
+        "result": {
+          "browserContextId": "BID-1"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "Target.createTarget",
+        "params": {
+          "url": "about:blank",
+          "browserContextId": "BID-1"
+        }
+      },
+      "response": {
+        "result": {
+          "targetId": "FID-0000000001"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "Target.attachToTarget",
+        "params": {
+          "targetId": "FID-0000000001",
+          "flatten": true
+        }
+      },
+      "response": {
+        "result": {
+          "sessionId": "SID-1"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "Page.enable",
+        "params": {}
+      },
+      "response": {
+        "result": {}
+      }
+    },
+    {
+      "request": {
+        "method": "Page.navigate",
+        "params": {
+          "url": "http://127.0.0.1:3001/login"
+        }
+      },
+      "response": {
+        "result": {
+          "frameId": "FID-0000000001",
+          "loaderId": "LID-0000000001"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "LP.waitUntil",
+        "params": {
+          "until": "load"
+        }
+      },
+      "response": {
+        "result": {}
+      }
+    },
+    {
+      "request": {
+        "method": "LP.getInteractiveElements",
+        "params": {}
+      },
+      "response": {
+        "result": {
+          "elements": [
+            {
+              "backendNodeId": 1,
+              "tagName": "input",
+              "role": "textbox",
+              "name": "Account ID",
+              "type": "native",
+              "tabIndex": 0,
+              "inputType": "text",
+              "value": "",
+              "elementName": "username"
+            },
+            {
+              "backendNodeId": 2,
+              "tagName": "input",
+              "role": "textbox",
+              "name": "Password",
+              "type": "native",
+              "tabIndex": 0,
+              "inputType": "password",
+              "value": "",
+              "elementName": "password"
+            },
+            {
+              "backendNodeId": 3,
+              "tagName": "button",
+              "role": "button",
+              "name": "Sign in",
+              "type": "native",
+              "tabIndex": 0,
+              "class": "button"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "LP.fillNode",
+        "params": {
+          "backendNodeId": 1,
+          "text": null
+        }
+      },
+      "response": {
+        "result": []
+      },
+      "redacted": [
+        "text"
+      ]
+    },
+    {
+      "request": {
+        "method": "LP.fillNode",
+        "params": {
+          "backendNodeId": 2,
+          "text": null
+        }
+      },
+      "response": {
+        "result": []
+      },
+      "redacted": [
+        "text"
+      ]
+    },
+    {
+      "request": {
+        "method": "LP.clickNode",
+        "params": {
+          "backendNodeId": 3
+        }
+      },
+      "response": {
+        "result": []
+      }
+    },
+    {
+      "request": {
+        "method": "LP.waitForSelector",
+        "params": {
+          "selector": "table"
+        }
+      },
+      "response": {
+        "result": {
+          "backendNodeId": 4
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "Target.getTargetInfo",
+        "params": {
+          "targetId": "FID-0000000001"
+        }
+      },
+      "response": {
+        "result": {
+          "targetInfo": {
+            "url": "http://127.0.0.1:3001/stock",
+            "title": "Stock list - Maruyama Supply",
+            "targetId": "FID-0000000001",
+            "attached": true,
+            "type": "page",
+            "canAccessOpener": false,
+            "browserContextId": "BID-1"
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "LP.getSemanticTree",
+        "params": {
+          "format": "text"
+        }
+      },
+      "response": {
+        "result": {
+          "semanticTree": "5 RootWebArea 'Stock list - Maruyama Supply'\n 10 'Maruyama Supply'\n 12 'Partner Portal'\n 14 'Signed in as Kumo Coffee Roasters'\n 15 form\n  16 [i] button 'Sign out'\n 18 heading 'Stock list'\n 19 paragraph\n  20 'Units available to ship today. Updated daily at 09:00 JST.'\n 23 columnheader 'SKU'\n 25 columnheader 'Product'\n 27 columnheader 'Pack'\n 29 columnheader 'Available'\n 31 columnheader 'Status'\n 36 'KC-ETH-200'\n 38 'Ethiopia Guji 200g'\n 40 '200 g bag'\n 42 '6'\n 45 'Low'\n 48 'KC-ETH-500'\n 50 'Ethiopia Guji 500g'\n 52 '500 g bag'\n 54 '12'\n 57 'In stock'\n 60 'KC-YIR-200'\n 62 'Ethiopia Yirgacheffe 200g'\n 64 '200 g bag'\n 66 '11'\n 69 'In stock'\n 72 'KC-YIR-500'\n 74 'Ethiopia Yirgacheffe 500g'\n 76 '500 g bag'\n 78 '7'\n 81 'Low'\n 84 'KC-COL-200'\n 86 'Colombia Huila 200g'\n 88 '200 g bag'\n 90 '24'\n 93 'In stock'\n 96 'KC-COL-500'\n 98 'Colombia Huila 500g'\n 100 '500 g bag'\n 102 '10'\n 105 'In stock'\n 108 'KC-KEN-200'\n 110 'Kenya Nyeri 200g'\n 112 '200 g bag'\n 114 '0'\n 117 'Sold out'\n 120 'KC-KEN-500'\n 122 'Kenya Nyeri 500g'\n 124 '500 g bag'\n 126 '5'\n 129 'Low'\n 132 'KC-GUA-200'\n 134 'Guatemala Antigua 200g'\n 136 '200 g bag'\n 138 '22'\n 141 'In stock'\n 144 'KC-GUA-500'\n 146 'Guatemala Antigua 500g'\n 148 '500 g bag'\n 150 '15'\n 153 'In stock'\n 156 'KC-BRA-200'\n 158 'Brazil Cerrado 200g'\n 160 '200 g bag'\n 162 '35'\n 165 'In stock'\n 168 'KC-BRA-500'\n 170 'Brazil Cerrado 500g'\n 172 '500 g bag'\n 174 '0'\n 177 'Sold out'\n 180 'KC-CRI-200'\n 182 'Costa Rica Tarrazu 200g'\n 184 '200 g bag'\n 186 '16'\n 189 'In stock'\n 192 'KC-CRI-500'\n 194 'Costa Rica Tarrazu 500g'\n 196 '500 g bag'\n 198 '6'\n 201 'Low'\n 204 'KC-PER-200'\n 206 'Peru Cajamarca 200g'\n 208 '200 g bag'\n 210 '19'\n 213 'In stock'\n 216 'KC-PER-500'\n 218 'Peru Cajamarca 500g'\n 220 '500 g bag'\n 222 '8'\n 225 'Low'\n 228 'KC-SUM-200'\n 230 'Sumatra Mandheling 200g'\n 232 '200 g bag'\n 234 '14'\n 237 'In stock'\n 240 'KC-SUM-500'\n 242 'Sumatra Mandheling 500g'\n 244 '500 g bag'\n 246 '8'\n 249 'Low'\n 252 'KC-RWA-200'\n 254 'Rwanda Nyamasheke 200g'\n 256 '200 g bag'\n 258 '9'\n 261 'Low'\n 264 'KC-RWA-500'\n 266 'Rwanda Nyamasheke 500g'\n 268 '500 g bag'\n 270 '4'\n 273 'Low'\n 274 navigation 'Pages'\n  276 'Showing 1–20 of 42'\n  278 'Previous'\n  280 '1'\n  281 [i] link '2'\n  282 [i] link '3'\n  283 [i] link 'Next'\n 284 contentinfo\n  285 'Maruyama Supply Co., Ltd. Partner Portal. For registered partner retailers only.'\n"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "LP.getSemanticTree",
+        "params": {
+          "format": "text",
+          "interactiveOnly": true
+        }
+      },
+      "response": {
+        "result": {
+          "semanticTree": "5 RootWebArea 'Stock list - Maruyama Supply'\n 16 [i] button 'Sign out'\n 18 heading 'Stock list'\n 23 columnheader 'SKU'\n 25 columnheader 'Product'\n 27 columnheader 'Pack'\n 29 columnheader 'Available'\n 31 columnheader 'Status'\n 274 navigation 'Pages'\n  281 [i] link '2'\n  282 [i] link '3'\n  283 [i] link 'Next'\n"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "LP.getSemanticTree",
+        "params": {
+          "interactiveOnly": true
+        }
+      },
+      "response": {
+        "result": {
+          "semanticTree": {
+            "nodeId": "5",
+            "backendDOMNodeId": 5,
+            "nodeName": "root",
+            "xpath": "",
+            "nodeType": 9,
+            "children": [
+              {
+                "nodeId": "16",
+                "backendDOMNodeId": 16,
+                "nodeName": "button",
+                "xpath": "/html[1]/body[1]/header[1]/form[1]/button[1]",
+                "nodeType": 1,
+                "isInteractive": true,
+                "role": "button",
+                "name": "Sign out",
+                "attributes": {
+                  "class": "signout"
+                },
+                "children": []
+              },
+              {
+                "nodeId": "18",
+                "backendDOMNodeId": 18,
+                "nodeName": "h1",
+                "xpath": "/html[1]/body[1]/main[1]/h1[1]",
+                "nodeType": 1,
+                "isInteractive": false,
+                "role": "heading",
+                "name": "Stock list",
+                "attributes": {
+                  "class": "title"
+                },
+                "children": []
+              },
+              {
+                "nodeId": "23",
+                "backendDOMNodeId": 23,
+                "nodeName": "th",
+                "xpath": "/html[1]/body[1]/main[1]/table[1]/thead[1]/tr[1]/th[1]",
+                "nodeType": 1,
+                "isInteractive": false,
+                "role": "columnheader",
+                "name": "SKU",
+                "children": []
+              },
+              {
+                "nodeId": "25",
+                "backendDOMNodeId": 25,
+                "nodeName": "th",
+                "xpath": "/html[1]/body[1]/main[1]/table[1]/thead[1]/tr[1]/th[2]",
+                "nodeType": 1,
+                "isInteractive": false,
+                "role": "columnheader",
+                "name": "Product",
+                "children": []
+              },
+              {
+                "nodeId": "27",
+                "backendDOMNodeId": 27,
+                "nodeName": "th",
+                "xpath": "/html[1]/body[1]/main[1]/table[1]/thead[1]/tr[1]/th[3]",
+                "nodeType": 1,
+                "isInteractive": false,
+                "role": "columnheader",
+                "name": "Pack",
+                "children": []
+              },
+              {
+                "nodeId": "29",
+                "backendDOMNodeId": 29,
+                "nodeName": "th",
+                "xpath": "/html[1]/body[1]/main[1]/table[1]/thead[1]/tr[1]/th[4]",
+                "nodeType": 1,
+                "isInteractive": false,
+                "role": "columnheader",
+                "name": "Available",
+                "children": []
+              },
+              {
+                "nodeId": "31",
+                "backendDOMNodeId": 31,
+                "nodeName": "th",
+                "xpath": "/html[1]/body[1]/main[1]/table[1]/thead[1]/tr[1]/th[5]",
+                "nodeType": 1,
+                "isInteractive": false,
+                "role": "columnheader",
+                "name": "Status",
+                "children": []
+              },
+              {
+                "nodeId": "274",
+                "backendDOMNodeId": 274,
+                "nodeName": "nav",
+                "xpath": "/html[1]/body[1]/main[1]/nav[1]",
+                "nodeType": 1,
+                "isInteractive": false,
+                "role": "navigation",
+                "name": "Pages",
+                "attributes": {
+                  "class": "pager",
+                  "aria-label": "Pages"
+                },
+                "children": [
+                  {
+                    "nodeId": "281",
+                    "backendDOMNodeId": 281,
+                    "nodeName": "a",
+                    "xpath": "/html[1]/body[1]/main[1]/nav[1]/a[1]",
+                    "nodeType": 1,
+                    "isInteractive": true,
+                    "role": "link",
+                    "name": "2",
+                    "attributes": {
+                      "href": "/stock?page=2"
+                    },
+                    "children": []
+                  },
+                  {
+                    "nodeId": "282",
+                    "backendDOMNodeId": 282,
+                    "nodeName": "a",
+                    "xpath": "/html[1]/body[1]/main[1]/nav[1]/a[2]",
+                    "nodeType": 1,
+                    "isInteractive": true,
+                    "role": "link",
+                    "name": "3",
+                    "attributes": {
+                      "href": "/stock?page=3"
+                    },
+                    "children": []
+                  },
+                  {
+                    "nodeId": "283",
+                    "backendDOMNodeId": 283,
+                    "nodeName": "a",
+                    "xpath": "/html[1]/body[1]/main[1]/nav[1]/a[3]",
+                    "nodeType": 1,
+                    "isInteractive": true,
+                    "role": "link",
+                    "name": "Next",
+                    "attributes": {
+                      "href": "/stock?page=2"
+                    },
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "LP.getInteractiveElements",
+        "params": {}
+      },
+      "response": {
+        "result": {
+          "elements": [
+            {
+              "backendNodeId": 16,
+              "tagName": "button",
+              "role": "button",
+              "name": "Sign out",
+              "type": "native",
+              "tabIndex": 0,
+              "class": "signout"
+            },
+            {
+              "backendNodeId": 281,
+              "tagName": "a",
+              "role": "link",
+              "name": "2",
+              "type": "native",
+              "tabIndex": 0,
+              "href": "http://127.0.0.1:3001/stock?page=2"
+            },
+            {
+              "backendNodeId": 282,
+              "tagName": "a",
+              "role": "link",
+              "name": "3",
+              "type": "native",
+              "tabIndex": 0,
+              "href": "http://127.0.0.1:3001/stock?page=3"
+            },
+            {
+              "backendNodeId": 283,
+              "tagName": "a",
+              "role": "link",
+              "name": "Next",
+              "type": "native",
+              "tabIndex": 0,
+              "href": "http://127.0.0.1:3001/stock?page=2"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "Page.navigate",
+        "params": {
+          "url": "http://127.0.0.1:3001/stock?page=2"
+        }
+      },
+      "response": {
+        "result": {
+          "frameId": "FID-0000000001",
+          "loaderId": "LID-0000000003"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "LP.waitUntil",
+        "params": {
+          "until": "load"
+        }
+      },
+      "response": {
+        "result": {}
+      }
+    },
+    {
+      "request": {
+        "method": "LP.getSemanticTree",
+        "params": {
+          "format": "text"
+        }
+      },
+      "response": {
+        "result": {
+          "semanticTree": "291 RootWebArea 'Stock list - Maruyama Supply'\n 296 'Maruyama Supply'\n 298 'Partner Portal'\n 300 'Signed in as Kumo Coffee Roasters'\n 301 form\n  302 [i] button 'Sign out'\n 304 heading 'Stock list'\n 305 paragraph\n  306 'Units available to ship today. Updated daily at 09:00 JST.'\n 310 columnheader 'SKU'\n 312 columnheader 'Product'\n 314 columnheader 'Pack'\n 316 columnheader 'Available'\n 318 columnheader 'Status'\n 323 'KC-HON-200'\n 325 'Honduras Marcala 200g'\n 327 '200 g bag'\n 329 '13'\n 332 'In stock'\n 335 'KC-HON-500'\n 337 'Honduras Marcala 500g'\n 339 '500 g bag'\n 341 '6'\n 344 'Low'\n 347 'KC-PAN-200'\n 349 'Panama Boquete 200g'\n 351 '200 g bag'\n 353 '5'\n 356 'Low'\n 359 'KC-PAN-500'\n 361 'Panama Boquete 500g'\n 363 '500 g bag'\n 365 '2'\n 368 'Low'\n 371 'KC-HSE-200'\n 373 'House Blend 200g'\n 375 '200 g bag'\n 377 '40'\n 380 'In stock'\n 383 'KC-HSE-500'\n 385 'House Blend 500g'\n 387 '500 g bag'\n 389 '18'\n 392 'In stock'\n 395 'KC-ESP-200'\n 397 'Espresso Blend 200g'\n 399 '200 g bag'\n 401 '30'\n 404 'In stock'\n 407 'KC-ESP-500'\n 409 'Espresso Blend 500g'\n 411 '500 g bag'\n 413 '19'\n 416 'In stock'\n 419 'KC-DEC-200'\n 421 'Decaf Colombia 200g'\n 423 '200 g bag'\n 425 '12'\n 428 'In stock'\n 431 'KC-DEC-500'\n 433 'Decaf Colombia 500g'\n 435 '500 g bag'\n 437 '5'\n 440 'Low'\n 443 'KC-DRP-ETH'\n 445 'Drip Bags Ethiopia Guji x10'\n 447 '10 bags'\n 449 '25'\n 452 'In stock'\n 455 'KC-DRP-COL'\n 457 'Drip Bags Colombia Huila x10'\n 459 '10 bags'\n 461 '20'\n 464 'In stock'\n 467 'KC-DRP-KEN'\n 469 'Drip Bags Kenya Nyeri x10'\n 471 '10 bags'\n 473 '0'\n 476 'Sold out'\n 479 'KC-DRP-GUA'\n 481 'Drip Bags Guatemala Antigua x10'\n 483 '10 bags'\n 485 '15'\n 488 'In stock'\n 491 'KC-DRP-HSE'\n 493 'Drip Bags House Blend x10'\n 495 '10 bags'\n 497 '48'\n 500 'In stock'\n 503 'KC-DRP-DEC'\n 505 'Drip Bags Decaf Colombia x10'\n 507 '10 bags'\n 509 '10'\n 512 'In stock'\n 515 'KC-GDS-FLT'\n 517 'Paper Filters x100'\n 519 '100 pcs'\n 521 '60'\n 524 'In stock'\n 527 'KC-GDS-DRP'\n 529 'Ceramic Dripper'\n 531 '1 pc'\n 533 '9'\n 536 'Low'\n 539 'KC-GDS-SRV'\n 541 'Glass Server 600ml'\n 543 '1 pc'\n 545 '11'\n 548 'In stock'\n 551 'KC-GDS-GRN'\n 553 'Hand Grinder'\n 555 '1 pc'\n 557 '3'\n 560 'Low'\n 561 navigation 'Pages'\n  563 'Showing 21–40 of 42'\n  564 [i] link 'Previous'\n  565 [i] link '1'\n  567 '2'\n  568 [i] link '3'\n  569 [i] link 'Next'\n 570 contentinfo\n  571 'Maruyama Supply Co., Ltd. Partner Portal. For registered partner retailers only.'\n"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "Page.navigate",
+        "params": {
+          "url": "http://127.0.0.1:3001/stock?page=3"
+        }
+      },
+      "response": {
+        "result": {
+          "frameId": "FID-0000000001",
+          "loaderId": "LID-0000000004"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "LP.waitUntil",
+        "params": {
+          "until": "load"
+        }
+      },
+      "response": {
+        "result": {}
+      }
+    },
+    {
+      "request": {
+        "method": "LP.getSemanticTree",
+        "params": {
+          "format": "text"
+        }
+      },
+      "response": {
+        "result": {
+          "semanticTree": "572 RootWebArea 'Stock list - Maruyama Supply'\n 577 'Maruyama Supply'\n 579 'Partner Portal'\n 581 'Signed in as Kumo Coffee Roasters'\n 582 form\n  583 [i] button 'Sign out'\n 585 heading 'Stock list'\n 586 paragraph\n  587 'Units available to ship today. Updated daily at 09:00 JST.'\n 591 columnheader 'SKU'\n 593 columnheader 'Product'\n 595 columnheader 'Pack'\n 597 columnheader 'Available'\n 599 columnheader 'Status'\n 604 'KC-GDS-CAN'\n 606 'Storage Canister'\n 608 '1 pc'\n 610 '17'\n 613 'In stock'\n 616 'KC-GDS-GFT'\n 618 'Gift Box 2 x 200g'\n 620 '1 box'\n 622 '8'\n 625 'Low'\n 626 navigation 'Pages'\n  628 'Showing 41–42 of 42'\n  629 [i] link 'Previous'\n  630 [i] link '1'\n  631 [i] link '2'\n  633 '3'\n  635 'Next'\n 636 contentinfo\n  637 'Maruyama Supply Co., Ltd. Partner Portal. For registered partner retailers only.'\n"
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "Target.closeTarget",
+        "params": {
+          "targetId": "FID-0000000001"
+        }
+      },
+      "response": {
+        "result": {
+          "success": true
+        }
+      }
+    },
+    {
+      "request": {
+        "method": "Target.disposeBrowserContext",
+        "params": {
+          "browserContextId": "BID-1"
+        }
+      },
+      "response": {
+        "result": {}
+      }
+    }
+  ]
+}

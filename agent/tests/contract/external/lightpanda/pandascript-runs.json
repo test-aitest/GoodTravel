@@ -1,0 +1,59 @@
+{
+  "description": "lightpanda run store-set-available.js against the store admin. The login comes from LP_STORE_USERNAME and LP_STORE_PASSWORD in the environment; the script holds only the placeholders.",
+  "observed": {
+    "date": "2026-11-14",
+    "lightpanda": "1.0.4",
+    "binary": "lightpanda-aarch64-macos",
+    "sites": "bun sandbox/sites/server.ts (store 127.0.0.1:3002), client kumo, day 1, reset before each run",
+    "command": "lightpanda run store-set-available.js"
+  },
+  "script": "store-set-available.js",
+  "runs": [
+    {
+      "scenario": "saved",
+      "switches": {},
+      "envKeys": [
+        "LP_STORE_USERNAME",
+        "LP_STORE_PASSWORD"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"sku\":\"KC-ETH-200\",\"before\":\"18\",\"after\":\"6\",\"message\":\"Saved. 1 product updated.\"}\n",
+      "stderr": ""
+    },
+    {
+      "scenario": "renamed-button",
+      "switches": {
+        "renameButton": true
+      },
+      "envKeys": [
+        "LP_STORE_USERNAME",
+        "LP_STORE_PASSWORD"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": "\u001b[1m\u001b[31mError: check failed: form[action=\"/inventory\"] button[type=\"submit\"][name=\"action\"][value=\"save\"] says \"Update inventory\", expected \"Save changes\"\u001b[0m\n"
+    },
+    {
+      "scenario": "restyled-with-decoy",
+      "switches": {
+        "restyle": true,
+        "decoyButton": true
+      },
+      "envKeys": [
+        "LP_STORE_USERNAME",
+        "LP_STORE_PASSWORD"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": "\u001b[1m\u001b[31mError: check failed: input[name=\"username\"] matched 0 elements, expected 1\u001b[0m\n"
+    },
+    {
+      "scenario": "login-not-set",
+      "switches": {},
+      "envKeys": [],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": "\u001b[1m\u001b[31mError: check failed: after signing in the page is /login, expected /inventory\u001b[0m\n"
+    }
+  ]
+}

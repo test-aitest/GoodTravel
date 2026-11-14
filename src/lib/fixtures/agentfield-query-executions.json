@@ -1,0 +1,120 @@
+{
+  "ok": true,
+  "data": {
+    "limit": 20,
+    "offset": 0,
+    "resource": "executions",
+    "results": [
+      {
+        "execution_id": "exec_20261113_164757_rx0wzfpk",
+        "run_id": "run_20261113_164757_xl176unw",
+        "agent_node_id": "clientops",
+        "instance_id": "b16514a8f922480b8ac94f8bb1658440",
+        "reasoner_id": "run_job",
+        "node_id": "clientops",
+        "input": {
+          "input": {
+            "client_id": "kumo",
+            "client_name": "Kumo Coffee Roasters",
+            "request": "Check that the worker can reach Kumo's sites."
+          }
+        },
+        "result": {
+          "clientId": "kumo",
+          "status": "done",
+          "steps": 3
+        },
+        "input_uri": "payload://51f3718d47be2eaea66c19f9c9e4485c",
+        "result_uri": "payload://2a0c8c327d8b3d6273cc6796e9a380ba",
+        "status": "succeeded",
+        "started_at": "2026-11-13T16:47:57.243714301Z",
+        "completed_at": "2026-11-13T16:47:57.583377Z",
+        "duration_ms": 331,
+        "notes": [
+          {
+            "message": "{\"n\":2,\"event\":{\"type\":\"step.started\",\"stepId\":\"open-computer\",\"activity\":\"Opening the client's computer\"}}",
+            "tags": [
+              "clientops.event"
+            ],
+            "timestamp": "2026-11-13T16:47:57.253768718Z"
+          },
+          {
+            "message": "{\"n\":1,\"event\":{\"type\":\"job.created\",\"clientName\":\"Kumo Coffee Roasters\",\"title\":\"Connection check\",\"request\":\"Check that the worker can reach Kumo's sites.\",\"run\":{\"kind\":\"learn\"},\"plan\":[{\"stepId\":\"open-computer\",\"title\":\"Open the client's computer\"},{\"stepId\":\"read-supplier\",\"title\":\"Read the supplier portal\"},{\"stepId\":\"read-store\",\"title\":\"Read the store admin\"}]}}",
+            "tags": [
+              "clientops.event"
+            ],
+            "timestamp": "2026-11-13T16:47:57.253745968Z"
+          },
+          {
+            "message": "{\"n\":3,\"event\":{\"type\":\"step.decided\",\"stepId\":\"open-computer\",\"rung\":\"script\",\"tookMs\":105}}",
+            "tags": [
+              "clientops.event"
+            ],
+            "timestamp": "2026-11-13T16:47:57.361036218Z"
+          },
+          {
+            "message": "{\"n\":5,\"event\":{\"type\":\"step.started\",\"stepId\":\"read-supplier\",\"activity\":\"Reading the supplier portal\"}}",
+            "tags": [
+              "clientops.event"
+            ],
+            "timestamp": "2026-11-13T16:47:57.360950718Z"
+          },
+          {
+            "message": "{\"n\":4,\"event\":{\"type\":\"step.done\",\"stepId\":\"open-computer\",\"summary\":\"Opened the client's computer\",\"tookMs\":105}}",
+            "tags": [
+              "clientops.event"
+            ],
+            "timestamp": "2026-11-13T16:47:57.360944551Z"
+          },
+          {
+            "message": "{\"n\":6,\"event\":{\"type\":\"step.decided\",\"stepId\":\"read-supplier\",\"rung\":\"script\",\"tookMs\":111}}",
+            "tags": [
+              "clientops.event"
+            ],
+            "timestamp": "2026-11-13T16:47:57.471950051Z"
+          },
+          {
+            "message": "{\"n\":7,\"event\":{\"type\":\"step.done\",\"stepId\":\"read-supplier\",\"summary\":\"Read the supplier portal\",\"tookMs\":111}}",
+            "tags": [
+              "clientops.event"
+            ],
+            "timestamp": "2026-11-13T16:47:57.471950093Z"
+          },
+          {
+            "message": "{\"n\":8,\"event\":{\"type\":\"step.started\",\"stepId\":\"read-store\",\"activity\":\"Reading the store admin\"}}",
+            "tags": [
+              "clientops.event"
+            ],
+            "timestamp": "2026-11-13T16:47:57.472032759Z"
+          },
+          {
+            "message": "{\"n\":10,\"event\":{\"type\":\"step.done\",\"stepId\":\"read-store\",\"summary\":\"Read the store admin\",\"tookMs\":110}}",
+            "tags": [
+              "clientops.event"
+            ],
+            "timestamp": "2026-11-13T16:47:57.58968451Z"
+          },
+          {
+            "message": "{\"n\":9,\"event\":{\"type\":\"step.decided\",\"stepId\":\"read-store\",\"rung\":\"script\",\"tookMs\":110}}",
+            "tags": [
+              "clientops.event"
+            ],
+            "timestamp": "2026-11-13T16:47:57.58936076Z"
+          }
+        ],
+        "created_at": "2026-11-13T16:47:57.243937384Z",
+        "updated_at": "2026-11-13T16:47:57.600174176Z"
+      }
+    ],
+    "total": 1
+  },
+  "meta": {
+    "load": {
+      "running_agents": 1,
+      "total_agents": 1,
+      "active_executions": 0,
+      "cpu_cores": 11,
+      "recommended_max_concurrent": 5
+    }
+  }
+}

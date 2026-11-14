@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ClientOps · The seven parts</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+.r{font-family:Figtree,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:1.5;color:#0d0d0d;background:#f6f6f5;width:1440px;height:900px;box-sizing:border-box;padding:48px 56px;display:flex;flex-direction:column;gap:28px;-webkit-font-smoothing:antialiased}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;flex:1}
+.cell{background:#fff;border-radius:16px;border:1px solid rgba(0,0,0,.07);padding:20px;display:flex;flex-direction:column;gap:16px}
+.name{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.n{font-weight:600}
+.c{font-family:ui-monospace,"SF Mono",Menlo,Consolas,monospace;font-size:12px;color:#6b6b6b}
+.stage{flex:1;display:flex;flex-direction:column;justify-content:center;gap:10px}
+.rule{font-size:13px;color:#5c5c5c}
+.row{display:flex;align-items:center;gap:10px}
+.card{border:1px solid rgba(0,0,0,.09);border-radius:16px;background:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:32px;padding:0 14px;border-radius:999px;font:inherit;font-weight:600;font-size:13px;border:1px solid rgba(0,0,0,.12);background:#fff;color:#0d0d0d;text-decoration:none}
+.btn.p{background:#0d0d0d;color:#fff;border-color:#0d0d0d}
+.dot{width:8px;height:8px;border-radius:50%;flex:none}
+</style>
+</helmet>
+<div class="r">
+  <div style="display: flex; flex-direction: column; gap: 4px">
+    <h1 style="margin: 0; font-size: 26px; font-weight: 600">Every screen is made of these seven parts</h1>
+    <p style="margin: 0; color: #5c5c5c">Built from Astryx components. No new parts without a reason.</p>
+  </div>
+  <div class="grid">
+    <section class="cell" aria-label="Composer">
+      <div class="name"><span class="n">1 · Composer</span><span class="c">ChatComposer</span></div>
+      <div class="stage">
+        <div class="card" style="border-radius: 22px; padding: 12px 10px 10px 14px; display: flex; flex-direction: column; gap: 10px"><span style="color: #8a8a8a; font-size: 14px">Describe a job in your own words</span><span class="row" style="justify-content: space-between"><span style="font-size: 12px; border: 1px solid rgba(0,0,0,.1); border-radius: 999px; padding: 3px 10px">Asks before saving</span><span style="width: 28px; height: 28px; border-radius: 50%; background: #0d0d0d; display: inline-flex; align-items: center; justify-content: center"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"></path></svg></span></span></div>
+      </div>
+      <span class="rule">Always at the bottom. Shows which client it will work for.</span>
+    </section>
+
+    <section class="cell" aria-label="Your message">
+      <div class="name"><span class="n">2 · Your message</span><span class="c">ChatMessage user</span></div>
+      <div class="stage"><span style="align-self: flex-end; background: #f1f1f1; border-radius: 18px; padding: 9px 14px; font-size: 14px; max-width: 90%">Sync today's supplier stock. Ask me before saving.</span></div>
+      <span class="rule">Right side, gray. Plain words, like a chat.</span>
+    </section>
+
+    <section class="cell" aria-label="Worker message">
+      <div class="name"><span class="n">3 · Worker message</span><span class="c">ChatMessage assistant</span></div>
+      <div class="stage">
+        <div style="display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: 10px; font-size: 14px"><svg width="24" height="24" viewBox="0 0 32 32" role="img" aria-label="Worker" fill="none"><rect x="0.75" y="0.75" width="30.5" height="30.5" rx="8" fill="#fff" stroke="#d4d4d4" stroke-width="1.5"></rect><rect x="7.5" y="9" width="17" height="12" rx="2.5" stroke="#0d0d0d" stroke-width="1.5"></rect><path d="M11 13.5l2.2 1.8L11 17.1" stroke="#0d0d0d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M15.5 17.2h4.5M12.5 24.5h7" stroke="#0d0d0d" stroke-width="1.5" stroke-linecap="round"></path></svg><span>12 products are different. Nothing is saved yet.</span></div>
+      </div>
+      <span class="rule">Two sentences at most. No tool names or IDs.</span>
+    </section>
+
+    <section class="cell" aria-label="Progress card">
+      <div class="name"><span class="n">4 · Progress card</span><span class="c">Card · ProgressBar</span></div>
+      <div class="stage">
+        <div class="card" style="padding: 12px 14px; display: flex; flex-direction: column; gap: 8px; font-size: 14px"><span class="row" style="justify-content: space-between"><span style="font-weight: 600">Comparing with the store admin</span><span style="width: 22px; height: 22px; border-radius: 50%; background: #0d0d0d; display: inline-flex; align-items: center; justify-content: center"><svg width="8" height="8" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"></rect></svg></span></span><span style="display: flex; height: 4px; border-radius: 2px; background: #ececec"><span style="width: 33%; background: #0d0d0d; border-radius: 2px"></span></span><span style="font-size: 12px; color: #6b6b6b">Step 3 of 6</span></div>
+      </div>
+      <span class="rule">One per job. Says what is happening now. Opens Activity.</span>
+    </section>
+
+    <section class="cell" aria-label="Steps">
+      <div class="name"><span class="n">5 · Steps</span><span class="c">Stepper vertical</span></div>
+      <div class="stage" style="gap: 8px; font-size: 14px">
+        <span class="row" style="align-items: flex-start"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#198100" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><circle cx="12" cy="12" r="9"></circle><path d="M8.5 12.5l2.3 2.3 4.7-5"></path></svg><span>Read today's stock<br><span style="color: #6b6b6b; font-size: 12.5px; font-weight: 400">Decided by Claude</span></span></span>
+        <span class="row" style="align-items: flex-start; font-weight: 600"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2.2" aria-hidden="true" style="flex: none"><circle cx="12" cy="12" r="9" stroke="#e3e3e3"></circle><path d="M21 12a9 9 0 0 0-9-9" stroke="#0d0d0d" stroke-linecap="round"></path></svg><span>Comparing with the store admin<br><span style="color: #6b6b6b; font-size: 12.5px; font-weight: 400">Claude is deciding</span></span></span>
+        <span class="row" style="align-items: flex-start; color: #6b6b6b"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c4c4c4" stroke-width="1.8" aria-hidden="true" style="flex: none"><circle cx="12" cy="12" r="9"></circle></svg><span>Ask you before saving<br><span style="color: #6b6b6b; font-size: 12.5px; font-weight: 400">You decide</span></span></span>
+      </div>
+      <span class="rule">Only inside Activity. Done, now, next, and who decided.</span>
+    </section>
+
+    <section class="cell" aria-label="Approval card">
+      <div class="name"><span class="n">6 · Approval card</span><span class="c">Card · Button</span></div>
+      <div class="stage">
+        <div class="card" style="padding: 14px; display: flex; flex-direction: column; gap: 10px"><span style="font-weight: 600; font-size: 14px">Save 12 stock changes to the store admin?</span><span class="row" style="gap: 6px"><span class="btn p">Save changes</span><span class="btn" style="border-color: transparent">Not now</span></span></div>
+      </div>
+      <span class="rule">A question as the title. One main button.</span>
+    </section>
+
+    <section class="cell" aria-label="Result line">
+      <div class="name"><span class="n">7 · Result line</span><span class="c">Text · Banner</span></div>
+      <div class="stage" style="gap: 10px; font-size: 14px">
+        <span class="row"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#198100" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M8.5 12.5l2.3 2.3 4.7-5"></path></svg>Done. 12 products updated.</span>
+        <span class="row"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b58500" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v4.5M12 16h.01"></path></svg>Stopped before saving.</span>
+        <span class="row"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9303a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"></rect><path d="M8 11V8a4 4 0 0 1 8 0v3"></path></svg>Not allowed for this client.</span>
+      </div>
+      <span class="rule">Shape and color together, never color alone.</span>
+    </section>
+
+    <section class="cell" aria-label="Worker mark" style="background: #0d0d0d; color: #fff; border-color: #0d0d0d">
+      <div class="name"><span class="n">The worker mark</span><span class="c" style="color: #a3a3a3">one per client</span></div>
+      <div class="stage" style="flex-direction: row; align-items: flex-end; justify-content: center; gap: 22px">
+        <svg width="20" height="20" viewBox="0 0 32 32" role="img" aria-label="Worker mark small" fill="none"><rect x="0.75" y="0.75" width="30.5" height="30.5" rx="8" fill="#fff" stroke="#fff" stroke-width="1.5"></rect><rect x="7.5" y="9" width="17" height="12" rx="2.5" stroke="#0d0d0d" stroke-width="1.5"></rect><path d="M11 13.5l2.2 1.8L11 17.1" stroke="#0d0d0d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M15.5 17.2h4.5M12.5 24.5h7" stroke="#0d0d0d" stroke-width="1.5" stroke-linecap="round"></path></svg>
+        <svg width="32" height="32" viewBox="0 0 32 32" role="img" aria-label="Worker mark medium" fill="none"><rect x="0.75" y="0.75" width="30.5" height="30.5" rx="8" fill="#fff" stroke="#fff" stroke-width="1.5"></rect><rect x="7.5" y="9" width="17" height="12" rx="2.5" stroke="#0d0d0d" stroke-width="1.5"></rect><path d="M11 13.5l2.2 1.8L11 17.1" stroke="#0d0d0d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M15.5 17.2h4.5M12.5 24.5h7" stroke="#0d0d0d" stroke-width="1.5" stroke-linecap="round"></path></svg>
+        <svg width="64" height="64" viewBox="0 0 32 32" role="img" aria-label="Worker mark large" fill="none"><rect x="0.75" y="0.75" width="30.5" height="30.5" rx="8" fill="#fff" stroke="#fff" stroke-width="1"></rect><rect x="7.5" y="9" width="17" height="12" rx="2.5" stroke="#0d0d0d" stroke-width="1.2"></rect><path d="M11 13.5l2.2 1.8L11 17.1" stroke="#0d0d0d" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M15.5 17.2h4.5M12.5 24.5h7" stroke="#0d0d0d" stroke-width="1.2" stroke-linecap="round"></path></svg>
+      </div>
+      <span class="rule" style="color: #c4c4c4">A computer with a prompt: the worker always has its own machine.</span>
+    </section>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,336 @@
+{
+  "input": {
+    "client_id": "kumo"
+  },
+  "jobId": "exec_refind",
+  "notes": [
+    {
+      "n": 1,
+      "event": {
+        "type": "job.created",
+        "clientName": "Kumo Coffee Roasters",
+        "title": "Supplier stock sync",
+        "request": "Daily at 18:00: sync supplier stock to the store admin.",
+        "run": {
+          "kind": "replay",
+          "procedureVersion": 1
+        },
+        "plan": [
+          {
+            "stepId": "sign-in",
+            "title": "Sign in to Maruyama Supply"
+          },
+          {
+            "stepId": "read",
+            "title": "Read today's stock"
+          },
+          {
+            "stepId": "compare",
+            "title": "Compare with the store admin"
+          },
+          {
+            "stepId": "check-save",
+            "title": "Check the save button"
+          },
+          {
+            "stepId": "ask",
+            "title": "Ask you before saving"
+          },
+          {
+            "stepId": "save",
+            "title": "Save and check every row"
+          }
+        ]
+      }
+    },
+    {
+      "n": 2,
+      "event": {
+        "type": "step.started",
+        "stepId": "sign-in",
+        "activity": "Signing in to Maruyama Supply"
+      }
+    },
+    {
+      "n": 3,
+      "event": {
+        "type": "step.decided",
+        "stepId": "sign-in",
+        "rung": "script",
+        "tookMs": 0
+      }
+    },
+    {
+      "n": 4,
+      "event": {
+        "type": "page.seen",
+        "stepId": "sign-in",
+        "host": "portal.maruyama-supply.example",
+        "html": "<!doctype html><html><head><title>Stock list - Maruyama Supply</title></head><body><h1>Stock list - Maruyama Supply</h1></body></html>"
+      }
+    },
+    {
+      "n": 5,
+      "event": {
+        "type": "step.done",
+        "stepId": "sign-in",
+        "summary": "Signed in to Maruyama Supply",
+        "tookMs": 10
+      }
+    },
+    {
+      "n": 6,
+      "event": {
+        "type": "step.started",
+        "stepId": "read",
+        "activity": "Reading today's stock"
+      }
+    },
+    {
+      "n": 7,
+      "event": {
+        "type": "step.decided",
+        "stepId": "read",
+        "rung": "script",
+        "tookMs": 0
+      }
+    },
+    {
+      "n": 8,
+      "event": {
+        "type": "page.seen",
+        "stepId": "read",
+        "host": "portal.maruyama-supply.example",
+        "html": "<!doctype html><html><head><title>Stock list - Maruyama Supply</title></head><body><h1>Stock list - Maruyama Supply</h1></body></html>"
+      }
+    },
+    {
+      "n": 9,
+      "event": {
+        "type": "step.done",
+        "stepId": "read",
+        "summary": "Read today's stock",
+        "detail": "42 products",
+        "tookMs": 10
+      }
+    },
+    {
+      "n": 10,
+      "event": {
+        "type": "step.started",
+        "stepId": "compare",
+        "activity": "Comparing with the store admin",
+        "detail": "Matching by SKU"
+      }
+    },
+    {
+      "n": 11,
+      "event": {
+        "type": "step.decided",
+        "stepId": "compare",
+        "rung": "script",
+        "tookMs": 0
+      }
+    },
+    {
+      "n": 12,
+      "event": {
+        "type": "page.seen",
+        "stepId": "compare",
+        "host": "admin.kumo-coffee.example",
+        "html": "<!doctype html><html><head><title>Inventory - Kumo Coffee - Store Admin</title></head><body><h1>Inventory - Kumo Coffee - Store Admin</h1></body></html>"
+      }
+    },
+    {
+      "n": 13,
+      "event": {
+        "type": "step.done",
+        "stepId": "compare",
+        "summary": "Compared with the store admin",
+        "detail": "4 products differ",
+        "tookMs": 10
+      }
+    },
+    {
+      "n": 14,
+      "event": {
+        "type": "step.started",
+        "stepId": "check-save",
+        "activity": "Checking the save button"
+      }
+    },
+    {
+      "n": 15,
+      "event": {
+        "type": "step.decided",
+        "stepId": "check-save",
+        "rung": "tree",
+        "tookMs": 250,
+        "escalatedFrom": [
+          "script"
+        ]
+      }
+    },
+    {
+      "n": 16,
+      "event": {
+        "type": "page.seen",
+        "stepId": "check-save",
+        "host": "admin.kumo-coffee.example",
+        "html": "<!doctype html><html><head><title>Inventory - Kumo Coffee - Store Admin</title></head><body><h1>Inventory - Kumo Coffee - Store Admin</h1></body></html>"
+      }
+    },
+    {
+      "n": 17,
+      "event": {
+        "type": "step.done",
+        "stepId": "check-save",
+        "summary": "Save button found",
+        "tookMs": 260
+      }
+    },
+    {
+      "n": 18,
+      "event": {
+        "type": "step.started",
+        "stepId": "ask",
+        "activity": "Waiting for your OK"
+      }
+    },
+    {
+      "n": 19,
+      "event": {
+        "type": "approval.requested",
+        "approvalId": "apr-exec_refind",
+        "stepId": "ask",
+        "question": "Save 4 stock changes to the store admin?",
+        "changes": [
+          {
+            "sku": "KC-ETH-200",
+            "name": "Ethiopia Guji 200g",
+            "store": 6,
+            "supplier": 2
+          },
+          {
+            "sku": "KC-COL-200",
+            "name": "Colombia Huila 200g",
+            "store": 24,
+            "supplier": 18
+          },
+          {
+            "sku": "KC-KEN-200",
+            "name": "Kenya Nyeri 200g",
+            "store": 0,
+            "supplier": 12
+          },
+          {
+            "sku": "KC-HSE-200",
+            "name": "House Blend 200g",
+            "store": 40,
+            "supplier": 36
+          }
+        ],
+        "undoable": true
+      }
+    },
+    {
+      "n": 20,
+      "event": {
+        "type": "approval.answered",
+        "approvalId": "apr-exec_refind",
+        "decision": "approved",
+        "by": "You"
+      }
+    },
+    {
+      "n": 21,
+      "event": {
+        "type": "step.decided",
+        "stepId": "ask",
+        "rung": "human",
+        "tookMs": 24000
+      }
+    },
+    {
+      "n": 22,
+      "event": {
+        "type": "step.done",
+        "stepId": "ask",
+        "summary": "You approved 4 changes",
+        "tookMs": 24000
+      }
+    },
+    {
+      "n": 23,
+      "event": {
+        "type": "step.started",
+        "stepId": "save",
+        "activity": "Saving 4 changes"
+      }
+    },
+    {
+      "n": 24,
+      "event": {
+        "type": "step.decided",
+        "stepId": "save",
+        "rung": "script",
+        "tookMs": 0
+      }
+    },
+    {
+      "n": 25,
+      "event": {
+        "type": "page.seen",
+        "stepId": "save",
+        "host": "admin.kumo-coffee.example",
+        "html": "<!doctype html><html><head><title>Inventory - Kumo Coffee - Store Admin</title></head><body><h1>Inventory - Kumo Coffee - Store Admin</h1></body></html>"
+      }
+    },
+    {
+      "n": 26,
+      "event": {
+        "type": "page.seen",
+        "stepId": "save",
+        "host": "admin.kumo-coffee.example",
+        "html": "<!doctype html><html><head><title>Inventory - Kumo Coffee - Store Admin</title></head><body><h1>Inventory - Kumo Coffee - Store Admin</h1></body></html>"
+      }
+    },
+    {
+      "n": 27,
+      "event": {
+        "type": "write.done",
+        "stepId": "save",
+        "written": 4
+      }
+    },
+    {
+      "n": 28,
+      "event": {
+        "type": "verify.done",
+        "stepId": "save",
+        "checked": 4,
+        "matched": 4
+      }
+    },
+    {
+      "n": 29,
+      "event": {
+        "type": "step.done",
+        "stepId": "save",
+        "summary": "Saved and checked every row",
+        "detail": "4 products",
+        "tookMs": 250
+      }
+    },
+    {
+      "n": 30,
+      "event": {
+        "type": "procedure.saved",
+        "procedureId": "kumo-stock-sync",
+        "version": 2,
+        "stepCount": 6,
+        "expectedReplayMs": 4200
+      }
+    }
+  ]
+}

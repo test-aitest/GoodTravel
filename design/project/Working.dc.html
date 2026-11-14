@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ClientOps · Working</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+.r{font-family:Figtree,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:15px;line-height:1.5;color:#0d0d0d;background:#fff;display:flex;flex-wrap:wrap;min-height:900px;-webkit-font-smoothing:antialiased}
+.side{flex:1 1 260px;max-width:100%;background:#f9f9f9;border-right:1px solid rgba(0,0,0,.06);display:flex;flex-direction:column;gap:18px;padding:12px 10px;box-sizing:border-box}
+.si{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:10px;color:#0d0d0d;text-decoration:none;font-size:14px}
+.si.on{background:#ececec}
+.sh{font-size:12.5px;color:#6b6b6b;padding:0 10px;font-weight:500}
+.dot{width:8px;height:8px;border-radius:50%;flex:none}
+.main{flex:999 1 520px;min-width:0;display:flex;flex-direction:column}
+.top{display:flex;align-items:center;gap:10px;padding:12px 20px}
+.row{display:flex;align-items:center;gap:10px}
+.feed{flex:1;display:flex;flex-direction:column;gap:22px;padding:16px 24px;width:100%;max-width:720px;margin:0 auto;box-sizing:border-box}
+.ub{align-self:flex-end;max-width:80%;background:#f1f1f1;border-radius:20px;padding:10px 16px}
+.cmp{border:1px solid rgba(0,0,0,.1);border-radius:26px;box-shadow:0 2px 12px rgba(0,0,0,.06);background:#fff;padding:12px 12px 12px 18px;display:flex;align-items:center;gap:10px}
+.card{border:1px solid rgba(0,0,0,.09);border-radius:16px;background:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;height:36px;padding:0 16px;border-radius:999px;font:inherit;font-weight:600;font-size:14px;border:1px solid rgba(0,0,0,.12);background:#fff;color:#0d0d0d;text-decoration:none;box-sizing:border-box}
+.btn.p{background:#0d0d0d;color:#fff;border-color:#0d0d0d}
+.panel{flex:1 1 460px;max-width:100%;border-left:1px solid rgba(0,0,0,.08);display:flex;flex-direction:column;min-width:0;background:#fff}
+.st{display:grid;grid-template-columns:20px minmax(0,1fr);gap:12px;padding:8px 0;font-size:14px}
+.sub{font-size:12.5px;color:#6b6b6b}
+a{color:#0d0d0d}
+</style>
+</helmet>
+<div class="r">
+
+<nav class="side" aria-label="Main">
+  <div class="row" style="padding: 4px 10px">
+    <svg width="22" height="22" viewBox="0 0 24 24" role="img" aria-label="ClientOps"><rect x="1" y="1" width="22" height="22" rx="6" fill="#0d0d0d"></rect><rect x="6" y="7" width="12" height="8.5" rx="1.75" fill="none" stroke="#fff" stroke-width="1.5"></rect><path d="M9.5 18.5h5" stroke="#fff" stroke-width="1.5" stroke-linecap="round"></path></svg><span style="font-weight: 700; font-size: 15px">ClientOps</span>
+  </div>
+  <div style="display: flex; flex-direction: column; gap: 2px">
+    <a class="si" href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h8"></path><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"></path></svg>New job</a>
+    <a class="si" href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>Search jobs</a>
+  </div>
+  <div style="display: flex; flex-direction: column; gap: 2px">
+    <span class="sh">Clients</span>
+    <a class="si" href="#"><span class="dot" style="background: #198100"></span><span style="flex: 1">Kumo Coffee Roasters</span><span style="font-size: 12px; color: #6b6b6b">Working</span></a>
+    <a class="si" href="#"><span class="dot" style="background: #e0a800"></span><span style="flex: 1">Hinata Skincare</span><span title="1 waiting for your approval" aria-label="1 waiting for your approval" style="min-width: 20px; height: 20px; padding: 0 6px; border-radius: 10px; background: #fff4cc; color: #5e4500; font-size: 12px; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; box-sizing: border-box">1</span></a>
+    <a class="si" href="#"><span class="dot" style="background: #c4c4c4"></span>Sora Outdoor</a>
+  </div>
+  <div style="display: flex; flex-direction: column; gap: 2px">
+    <span class="sh">Recent</span>
+    <a class="si on" href="#">Supplier stock sync</a>
+    <a class="si" href="#">Weekly price check</a>
+    <a class="si" href="#">October invoices</a>
+  </div>
+  <div class="row" style="margin-top: auto; padding: 8px 10px">
+    <span style="width: 28px; height: 28px; border-radius: 50%; background: #e3e3e3; display: inline-flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700">AT</span>
+    <span style="font-size: 14px">Aoi Tanaka</span>
+  </div>
+</nav>
+
+<main class="main">
+  <div class="top">
+    <div style="display: flex; flex-direction: column; flex: 1; min-width: 0"><span style="font-weight: 600; font-size: 16px">Supplier stock sync</span><span style="font-size: 13px; color: #6b6b6b">Kumo Coffee Roasters</span></div>
+  </div>
+  <div class="feed">
+    <div class="ub">Sync today's stock from Maruyama Supply to our store admin. Ask me before you save anything.</div>
+    <div style="display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 14px">
+      <svg width="28" height="28" viewBox="0 0 32 32" role="img" aria-label="Kumo Coffee's worker" fill="none"><rect x="0.75" y="0.75" width="30.5" height="30.5" rx="8" fill="#fff" stroke="#d4d4d4" stroke-width="1.5"></rect><rect x="7.5" y="9" width="17" height="12" rx="2.5" stroke="#0d0d0d" stroke-width="1.5"></rect><path d="M11 13.5l2.2 1.8L11 17.1" stroke="#0d0d0d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M15.5 17.2h4.5M12.5 24.5h7" stroke="#0d0d0d" stroke-width="1.5" stroke-linecap="round"></path></svg>
+      <div style="display: flex; flex-direction: column; gap: 14px; min-width: 0; padding-top: 2px">
+        <p style="margin: 0">I'll read Maruyama Supply's stock and compare it with your store admin. I'll ask before saving anything.</p>
+        <section class="card" style="padding: 14px 16px; display: flex; flex-direction: column; gap: 10px; max-width: 460px" aria-label="Progress">
+          <div class="row" style="justify-content: space-between"><span style="font-weight: 600">Comparing with the store admin</span><button type="button" aria-label="Stop the job" style="width: 28px; height: 28px; border-radius: 50%; border: 0; background: #0d0d0d; color: #fff; display: inline-flex; align-items: center; justify-content: center; padding: 0"><svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"></rect></svg></button></div>
+          <span role="progressbar" aria-label="Job progress" aria-valuemin="0" aria-valuemax="6" aria-valuenow="2" style="display: flex; height: 4px; border-radius: 2px; background: #ececec"><span style="width: 33%; background: #0d0d0d; border-radius: 2px"></span></span>
+          <span class="sub" style="font-variant-numeric: tabular-nums">Step 3 of 6</span>
+        </section>
+      </div>
+    </div>
+  </div>
+  <div style="padding: 0 24px 20px; width: 100%; max-width: 720px; margin: 0 auto; box-sizing: border-box">
+    <form class="cmp" aria-label="Message the worker">
+      <label for="m2" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Message</label>
+      <input id="m2" placeholder="Ask something while it works" style="flex: 1; border: 0; font: inherit; font-size: 15px; outline: none; padding: 4px 0; min-width: 0">
+      <button type="submit" aria-label="Send" style="width: 36px; height: 36px; border-radius: 50%; border: 0; background: #e8e8e8; color: #6b6b6b; display: inline-flex; align-items: center; justify-content: center"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"></path></svg></button>
+    </form>
+  </div>
+</main>
+
+<aside class="panel" aria-label="Activity">
+  <div class="row" style="padding: 12px 16px; justify-content: space-between">
+    <span style="font-weight: 600">Activity</span>
+    <button type="button" aria-label="Close activity" style="width: 32px; height: 32px; border: 0; background: transparent; display: inline-flex; align-items: center; justify-content: center; color: #6b6b6b"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+  </div>
+  <div style="padding: 0 16px 16px; display: flex; flex-direction: column; gap: 16px; flex: 1">
+    <div class="card" style="overflow: hidden">
+      <div class="row" style="padding: 7px 10px; background: #f5f5f5; gap: 8px; font-size: 12px; color: #5c5c5c"><span class="row" style="gap: 6px; font-weight: 600; color: #0d0d0d"><span class="dot" style="background: #c9303a"></span>Live</span><span style="flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap">Kumo's computer · admin.kumo-coffee.jp</span></div>
+      <div style="font-family: -apple-system, 'Segoe UI', Roboto, sans-serif; font-size: 10.5px; color: #1f2328; background: #fbfbfa; display: grid; grid-template-columns: 84px minmax(0, 1fr)">
+        <div style="background: #2b2b2b; color: #e8e8e8; padding: 10px 8px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 700; color: #fff">Kumo Coffee</span><span>Orders</span><span>Products</span><span style="color: #fff; font-weight: 700">Inventory</span><span>Customers</span></div>
+        <div style="padding: 10px; display: flex; flex-direction: column; gap: 6px">
+          <span style="font-weight: 700; font-size: 12px">Inventory</span>
+          <table style="width: 100%; border-collapse: collapse; background: #fff; border: 1px solid #e3e3e3; outline: 2px solid #0d0d0d; outline-offset: 2px">
+            <thead><tr style="background: #f6f6f6"><th style="text-align: left; padding: 4px 5px; font-weight: 600">SKU</th><th style="text-align: left; padding: 4px 5px; font-weight: 600">Product</th><th style="text-align: right; padding: 4px 5px; font-weight: 600">Available</th></tr></thead>
+            <tbody>
+              <tr><td style="padding: 4px 5px; border-top: 1px solid #eee">KC-ETH-200</td><td style="padding: 4px 5px; border-top: 1px solid #eee">Ethiopia Guji 200g</td><td style="padding: 4px 5px; border-top: 1px solid #eee; text-align: right">18</td></tr>
+              <tr><td style="padding: 4px 5px; border-top: 1px solid #eee">KC-COL-200</td><td style="padding: 4px 5px; border-top: 1px solid #eee">Colombia Huila 200g</td><td style="padding: 4px 5px; border-top: 1px solid #eee; text-align: right">0</td></tr>
+              <tr><td style="padding: 4px 5px; border-top: 1px solid #eee">KC-KEN-200</td><td style="padding: 4px 5px; border-top: 1px solid #eee">Kenya Nyeri 200g</td><td style="padding: 4px 5px; border-top: 1px solid #eee; text-align: right">9</td></tr>
+              <tr><td style="padding: 4px 5px; border-top: 1px solid #eee">KC-GUA-500</td><td style="padding: 4px 5px; border-top: 1px solid #eee">Guatemala Antigua 500g</td><td style="padding: 4px 5px; border-top: 1px solid #eee; text-align: right">4</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column" aria-label="Steps">
+      <li class="st"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#198100" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M8.5 12.5l2.3 2.3 4.7-5"></path></svg><span>Signed in to Maruyama Supply<br><span class="sub">Decided by Claude · 2.2 s</span></span></li>
+      <li class="st"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#198100" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M8.5 12.5l2.3 2.3 4.7-5"></path></svg><span>Read today's stock, 42 products<br><span class="sub">Decided by Claude · 1.1 s</span></span></li>
+      <li class="st"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2.2" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="#e3e3e3"></circle><path d="M21 12a9 9 0 0 0-9-9" stroke="#0d0d0d" stroke-linecap="round"></path></svg><span style="font-weight: 600">Comparing with the store admin<br><span class="sub" style="font-weight: 400">Claude is deciding · matching by SKU</span></span></li>
+      <li class="st" style="color: #6b6b6b"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c4c4c4" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle></svg><span>Check the save button</span></li>
+      <li class="st" style="color: #6b6b6b"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c4c4c4" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle></svg><span>Ask you before saving<br><span class="sub">You decide</span></span></li>
+      <li class="st" style="color: #6b6b6b"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c4c4c4" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle></svg><span>Save and check every row</span></li>
+    </ol>
+    <div class="row" style="margin-top: auto; gap: 8px">
+      <a class="btn" href="#" style="flex: 1">Take over</a>
+      <a class="btn" href="#" style="flex: 1">Stop</a>
+    </div>
+  </div>
+</aside>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

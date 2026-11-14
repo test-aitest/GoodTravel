@@ -1,0 +1,472 @@
+{
+  "client": "kumo",
+  "day": 3,
+  "supplier": [
+    {
+      "sku": "KC-ETH-200",
+      "name": "Ethiopia Guji 200g",
+      "available": 0
+    },
+    {
+      "sku": "KC-ETH-500",
+      "name": "Ethiopia Guji 500g",
+      "available": 12
+    },
+    {
+      "sku": "KC-YIR-200",
+      "name": "Ethiopia Yirgacheffe 200g",
+      "available": 15
+    },
+    {
+      "sku": "KC-YIR-500",
+      "name": "Ethiopia Yirgacheffe 500g",
+      "available": 7
+    },
+    {
+      "sku": "KC-COL-200",
+      "name": "Colombia Huila 200g",
+      "available": 18
+    },
+    {
+      "sku": "KC-COL-500",
+      "name": "Colombia Huila 500g",
+      "available": 10
+    },
+    {
+      "sku": "KC-KEN-200",
+      "name": "Kenya Nyeri 200g",
+      "available": 12
+    },
+    {
+      "sku": "KC-KEN-500",
+      "name": "Kenya Nyeri 500g",
+      "available": 5
+    },
+    {
+      "sku": "KC-GUA-200",
+      "name": "Guatemala Antigua 200g",
+      "available": 22
+    },
+    {
+      "sku": "KC-GUA-500",
+      "name": "Guatemala Antigua 500g",
+      "available": 9
+    },
+    {
+      "sku": "KC-BRA-200",
+      "name": "Brazil Cerrado 200g",
+      "available": 35
+    },
+    {
+      "sku": "KC-BRA-500",
+      "name": "Brazil Cerrado 500g",
+      "available": 20
+    },
+    {
+      "sku": "KC-CRI-200",
+      "name": "Costa Rica Tarrazu 200g",
+      "available": 16
+    },
+    {
+      "sku": "KC-CRI-500",
+      "name": "Costa Rica Tarrazu 500g",
+      "available": 6
+    },
+    {
+      "sku": "KC-PER-200",
+      "name": "Peru Cajamarca 200g",
+      "available": 19
+    },
+    {
+      "sku": "KC-PER-500",
+      "name": "Peru Cajamarca 500g",
+      "available": 8
+    },
+    {
+      "sku": "KC-SUM-200",
+      "name": "Sumatra Mandheling 200g",
+      "available": 14
+    },
+    {
+      "sku": "KC-SUM-500",
+      "name": "Sumatra Mandheling 500g",
+      "available": 8
+    },
+    {
+      "sku": "KC-RWA-200",
+      "name": "Rwanda Nyamasheke 200g",
+      "available": 9
+    },
+    {
+      "sku": "KC-RWA-500",
+      "name": "Rwanda Nyamasheke 500g",
+      "available": 4
+    },
+    {
+      "sku": "KC-HON-200",
+      "name": "Honduras Marcala 200g",
+      "available": 13
+    },
+    {
+      "sku": "KC-HON-500",
+      "name": "Honduras Marcala 500g",
+      "available": 6
+    },
+    {
+      "sku": "KC-PAN-200",
+      "name": "Panama Boquete 200g",
+      "available": 5
+    },
+    {
+      "sku": "KC-PAN-500",
+      "name": "Panama Boquete 500g",
+      "available": 2
+    },
+    {
+      "sku": "KC-HSE-200",
+      "name": "House Blend 200g",
+      "available": 36
+    },
+    {
+      "sku": "KC-HSE-500",
+      "name": "House Blend 500g",
+      "available": 18
+    },
+    {
+      "sku": "KC-ESP-200",
+      "name": "Espresso Blend 200g",
+      "available": 26
+    },
+    {
+      "sku": "KC-ESP-500",
+      "name": "Espresso Blend 500g",
+      "available": 19
+    },
+    {
+      "sku": "KC-DEC-200",
+      "name": "Decaf Colombia 200g",
+      "available": 12
+    },
+    {
+      "sku": "KC-DEC-500",
+      "name": "Decaf Colombia 500g",
+      "available": 5
+    },
+    {
+      "sku": "KC-DRP-ETH",
+      "name": "Drip Bags Ethiopia Guji x10",
+      "available": 25
+    },
+    {
+      "sku": "KC-DRP-COL",
+      "name": "Drip Bags Colombia Huila x10",
+      "available": 20
+    },
+    {
+      "sku": "KC-DRP-KEN",
+      "name": "Drip Bags Kenya Nyeri x10",
+      "available": 10
+    },
+    {
+      "sku": "KC-DRP-GUA",
+      "name": "Drip Bags Guatemala Antigua x10",
+      "available": 15
+    },
+    {
+      "sku": "KC-DRP-HSE",
+      "name": "Drip Bags House Blend x10",
+      "available": 48
+    },
+    {
+      "sku": "KC-DRP-DEC",
+      "name": "Drip Bags Decaf Colombia x10",
+      "available": 10
+    },
+    {
+      "sku": "KC-GDS-FLT",
+      "name": "Paper Filters x100",
+      "available": 60
+    },
+    {
+      "sku": "KC-GDS-DRP",
+      "name": "Ceramic Dripper",
+      "available": 9
+    },
+    {
+      "sku": "KC-GDS-SRV",
+      "name": "Glass Server 600ml",
+      "available": 11
+    },
+    {
+      "sku": "KC-GDS-GRN",
+      "name": "Hand Grinder",
+      "available": 6
+    },
+    {
+      "sku": "KC-GDS-CAN",
+      "name": "Storage Canister",
+      "available": 17
+    },
+    {
+      "sku": "KC-GDS-GFT",
+      "name": "Gift Box 2 x 200g",
+      "available": 8
+    }
+  ],
+  "store": [
+    {
+      "sku": "KC-ETH-200",
+      "name": "Ethiopia Guji 200g",
+      "available": 2
+    },
+    {
+      "sku": "KC-ETH-500",
+      "name": "Ethiopia Guji 500g",
+      "available": 12
+    },
+    {
+      "sku": "KC-YIR-200",
+      "name": "Ethiopia Yirgacheffe 200g",
+      "available": 11
+    },
+    {
+      "sku": "KC-YIR-500",
+      "name": "Ethiopia Yirgacheffe 500g",
+      "available": 7
+    },
+    {
+      "sku": "KC-COL-200",
+      "name": "Colombia Huila 200g",
+      "available": 18
+    },
+    {
+      "sku": "KC-COL-500",
+      "name": "Colombia Huila 500g",
+      "available": 10
+    },
+    {
+      "sku": "KC-KEN-200",
+      "name": "Kenya Nyeri 200g",
+      "available": 12
+    },
+    {
+      "sku": "KC-KEN-500",
+      "name": "Kenya Nyeri 500g",
+      "available": 5
+    },
+    {
+      "sku": "KC-GUA-200",
+      "name": "Guatemala Antigua 200g",
+      "available": 22
+    },
+    {
+      "sku": "KC-GUA-500",
+      "name": "Guatemala Antigua 500g",
+      "available": 15
+    },
+    {
+      "sku": "KC-BRA-200",
+      "name": "Brazil Cerrado 200g",
+      "available": 35
+    },
+    {
+      "sku": "KC-BRA-500",
+      "name": "Brazil Cerrado 500g",
+      "available": 0
+    },
+    {
+      "sku": "KC-CRI-200",
+      "name": "Costa Rica Tarrazu 200g",
+      "available": 16
+    },
+    {
+      "sku": "KC-CRI-500",
+      "name": "Costa Rica Tarrazu 500g",
+      "available": 6
+    },
+    {
+      "sku": "KC-PER-200",
+      "name": "Peru Cajamarca 200g",
+      "available": 19
+    },
+    {
+      "sku": "KC-PER-500",
+      "name": "Peru Cajamarca 500g",
+      "available": 8
+    },
+    {
+      "sku": "KC-SUM-200",
+      "name": "Sumatra Mandheling 200g",
+      "available": 14
+    },
+    {
+      "sku": "KC-SUM-500",
+      "name": "Sumatra Mandheling 500g",
+      "available": 8
+    },
+    {
+      "sku": "KC-RWA-200",
+      "name": "Rwanda Nyamasheke 200g",
+      "available": 9
+    },
+    {
+      "sku": "KC-RWA-500",
+      "name": "Rwanda Nyamasheke 500g",
+      "available": 4
+    },
+    {
+      "sku": "KC-HON-200",
+      "name": "Honduras Marcala 200g",
+      "available": 13
+    },
+    {
+      "sku": "KC-HON-500",
+      "name": "Honduras Marcala 500g",
+      "available": 6
+    },
+    {
+      "sku": "KC-PAN-200",
+      "name": "Panama Boquete 200g",
+      "available": 5
+    },
+    {
+      "sku": "KC-PAN-500",
+      "name": "Panama Boquete 500g",
+      "available": 2
+    },
+    {
+      "sku": "KC-HSE-200",
+      "name": "House Blend 200g",
+      "available": 36
+    },
+    {
+      "sku": "KC-HSE-500",
+      "name": "House Blend 500g",
+      "available": 18
+    },
+    {
+      "sku": "KC-ESP-200",
+      "name": "Espresso Blend 200g",
+      "available": 30
+    },
+    {
+      "sku": "KC-ESP-500",
+      "name": "Espresso Blend 500g",
+      "available": 19
+    },
+    {
+      "sku": "KC-DEC-200",
+      "name": "Decaf Colombia 200g",
+      "available": 12
+    },
+    {
+      "sku": "KC-DEC-500",
+      "name": "Decaf Colombia 500g",
+      "available": 5
+    },
+    {
+      "sku": "KC-DRP-ETH",
+      "name": "Drip Bags Ethiopia Guji x10",
+      "available": 25
+    },
+    {
+      "sku": "KC-DRP-COL",
+      "name": "Drip Bags Colombia Huila x10",
+      "available": 20
+    },
+    {
+      "sku": "KC-DRP-KEN",
+      "name": "Drip Bags Kenya Nyeri x10",
+      "available": 0
+    },
+    {
+      "sku": "KC-DRP-GUA",
+      "name": "Drip Bags Guatemala Antigua x10",
+      "available": 15
+    },
+    {
+      "sku": "KC-DRP-HSE",
+      "name": "Drip Bags House Blend x10",
+      "available": 48
+    },
+    {
+      "sku": "KC-DRP-DEC",
+      "name": "Drip Bags Decaf Colombia x10",
+      "available": 10
+    },
+    {
+      "sku": "KC-GDS-FLT",
+      "name": "Paper Filters x100",
+      "available": 60
+    },
+    {
+      "sku": "KC-GDS-DRP",
+      "name": "Ceramic Dripper",
+      "available": 9
+    },
+    {
+      "sku": "KC-GDS-SRV",
+      "name": "Glass Server 600ml",
+      "available": 11
+    },
+    {
+      "sku": "KC-GDS-GRN",
+      "name": "Hand Grinder",
+      "available": 3
+    },
+    {
+      "sku": "KC-GDS-CAN",
+      "name": "Storage Canister",
+      "available": 17
+    },
+    {
+      "sku": "KC-GDS-GFT",
+      "name": "Gift Box 2 x 200g",
+      "available": 8
+    }
+  ],
+  "changes": [
+    {
+      "sku": "KC-ETH-200",
+      "name": "Ethiopia Guji 200g",
+      "store": 2,
+      "supplier": 0
+    },
+    {
+      "sku": "KC-YIR-200",
+      "name": "Ethiopia Yirgacheffe 200g",
+      "store": 11,
+      "supplier": 15
+    },
+    {
+      "sku": "KC-GUA-500",
+      "name": "Guatemala Antigua 500g",
+      "store": 15,
+      "supplier": 9
+    },
+    {
+      "sku": "KC-BRA-500",
+      "name": "Brazil Cerrado 500g",
+      "store": 0,
+      "supplier": 20
+    },
+    {
+      "sku": "KC-ESP-200",
+      "name": "Espresso Blend 200g",
+      "store": 30,
+      "supplier": 26
+    },
+    {
+      "sku": "KC-DRP-KEN",
+      "name": "Drip Bags Kenya Nyeri x10",
+      "store": 0,
+      "supplier": 10
+    },
+    {
+      "sku": "KC-GDS-GRN",
+      "name": "Hand Grinder",
+      "store": 3,
+      "supplier": 6
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "clientId": "kumo",
+  "memory": {
+    "scope": "actor",
+    "scopeId": "clientops-client:kumo",
+    "key": "stock-sync/procedure"
+  },
+  "record": {
+    "version": 1,
+    "procedureId": "kumo-stock-sync",
+    "procedureVersion": 1,
+    "clientId": "kumo",
+    "savedAt": "2026-11-14T08:41:13Z",
+    "expectedReplayMs": 4200,
+    "steps": [
+      {
+        "stepId": "sign-in",
+        "site": "supplier",
+        "landing": "/stock",
+        "elements": {
+          "user": {
+            "css": "form[action=\"/login\"] input[name=\"username\"]",
+            "hint": {
+              "role": "textbox",
+              "name": "Account ID",
+              "form": "/login"
+            }
+          },
+          "password": {
+            "css": "form[action=\"/login\"] input[name=\"password\"][type=\"password\"]",
+            "hint": {
+              "role": "textbox",
+              "name": "Password",
+              "form": "/login"
+            }
+          },
+          "submit": {
+            "css": "form[action=\"/login\"] button",
+            "text": "Sign in",
+            "hint": {
+              "role": "button",
+              "name": "Sign in",
+              "form": "/login"
+            }
+          }
+        }
+      },
+      {
+        "stepId": "read",
+        "elements": {
+          "next": {
+            "css": "a",
+            "text": "Next",
+            "hint": {
+              "role": "link",
+              "name": "Next",
+              "form": null
+            }
+          }
+        }
+      },
+      {
+        "stepId": "compare",
+        "site": "store",
+        "landing": "/inventory",
+        "elements": {
+          "user": {
+            "css": "form[action=\"/login\"] input[name=\"username\"]",
+            "hint": {
+              "role": "textbox",
+              "name": "Username",
+              "form": "/login"
+            }
+          },
+          "password": {
+            "css": "form[action=\"/login\"] input[name=\"password\"][type=\"password\"]",
+            "hint": {
+              "role": "textbox",
+              "name": "Password",
+              "form": "/login"
+            }
+          },
+          "submit": {
+            "css": "form[action=\"/login\"] button",
+            "text": "Sign in",
+            "hint": {
+              "role": "button",
+              "name": "Sign in",
+              "form": "/login"
+            }
+          }
+        }
+      },
+      {
+        "stepId": "check-save",
+        "elements": {
+          "save": {
+            "css": "form[action=\"/inventory\"] button[name=\"action\"]",
+            "text": "Save changes",
+            "hint": {
+              "role": "button",
+              "name": "Save changes",
+              "form": "/inventory"
+            }
+          }
+        }
+      },
+      {
+        "stepId": "ask"
+      },
+      {
+        "stepId": "save",
+        "elements": {
+          "field": {
+            "scope": "form[action=\"/inventory\"] ",
+            "tag": "input",
+            "namePrefix": "available-",
+            "nameSuffix": "",
+            "hint": {
+              "role": "spinbutton",
+              "name": "Available for {name}",
+              "form": "/inventory"
+            }
+          },
+          "status": {
+            "css": "[role=\"status\"]",
+            "hint": {
+              "role": "status",
+              "name": "",
+              "form": null
+            }
+          }
+        }
+      }
+    ],
+    "script": "const plan = {\"maxPages\":50,\"steps\":[{\"stepId\":\"sign-in\",\"ops\":[{\"op\":\"goto\",\"url\":\"http://127.0.0.1:3001/login\"},{\"op\":\"one\",\"as\":\"user\",\"css\":\"form[action=\\\"/login\\\"] input[name=\\\"username\\\"]\",\"text\":null},{\"op\":\"one\",\"as\":\"password\",\"css\":\"form[action=\\\"/login\\\"] input[name=\\\"password\\\"][type=\\\"password\\\"]\",\"text\":null},{\"op\":\"one\",\"as\":\"submit\",\"css\":\"form[action=\\\"/login\\\"] button\",\"text\":\"Sign in\"},{\"op\":\"fill\",\"el\":\"user\",\"value\":\"$LP_SUPPLIER_USERNAME\",\"secret\":true},{\"op\":\"fill\",\"el\":\"password\",\"value\":\"$LP_SUPPLIER_PASSWORD\",\"secret\":true},{\"op\":\"click\",\"el\":\"submit\"},{\"op\":\"path\",\"is\":\"/stock\",\"code\":\"not-signed-in\"},{\"op\":\"page\"}]},{\"stepId\":\"read\",\"ops\":[{\"op\":\"table\",\"into\":\"supplier\",\"next\":{\"css\":\"a\",\"text\":\"Next\"}},{\"op\":\"page\"}]},{\"stepId\":\"compare\",\"ops\":[{\"op\":\"goto\",\"url\":\"http://127.0.0.1:3002/login\"},{\"op\":\"one\",\"as\":\"user\",\"css\":\"form[action=\\\"/login\\\"] input[name=\\\"username\\\"]\",\"text\":null},{\"op\":\"one\",\"as\":\"password\",\"css\":\"form[action=\\\"/login\\\"] input[name=\\\"password\\\"][type=\\\"password\\\"]\",\"text\":null},{\"op\":\"one\",\"as\":\"submit\",\"css\":\"form[action=\\\"/login\\\"] button\",\"text\":\"Sign in\"},{\"op\":\"fill\",\"el\":\"user\",\"value\":\"$LP_STORE_USERNAME\",\"secret\":true},{\"op\":\"fill\",\"el\":\"password\",\"value\":\"$LP_STORE_PASSWORD\",\"secret\":true},{\"op\":\"click\",\"el\":\"submit\"},{\"op\":\"path\",\"is\":\"/inventory\",\"code\":\"not-signed-in\"},{\"op\":\"table\",\"into\":\"store\",\"next\":null},{\"op\":\"page\"}]},{\"stepId\":\"check-save\",\"ops\":[{\"op\":\"one\",\"as\":\"save\",\"css\":\"form[action=\\\"/inventory\\\"] button[name=\\\"action\\\"]\",\"text\":\"Save changes\"}]}]};\nconst page = new Page();\nconst elements = {};\nconst tables = {};\nconst said = {};\nlet current = null;\nlet checks = 0;\n\nconst emit = (body) => console.log(JSON.stringify(body));\nconst quoted = (text) => JSON.stringify(text);\nconst fail = (code, detail) => {\n  throw new Error(`check failed: ${code}: ${detail}`);\n};\nconst check = (passed, code, detail) => {\n  checks += 1;\n  if (!passed) fail(code, detail());\n};\nconst inPage = (fn, ...args) => JSON.parse(page.evaluate(`JSON.stringify((${fn.toString()})(...${JSON.stringify(args)}))`));\n\nfunction locate(css, text) {\n  const clean = (value) => String(value ?? \"\").replace(/\\s+/g, \" \").trim();\n  const nameOf = (element) => clean(element.getAttribute(\"aria-label\")) || clean(element.textContent) || clean(element.value);\n  const pathOf = (element) => {\n    const parts = [];\n    for (let node = element; node && node.parentElement; node = node.parentElement) {\n      let index = 1;\n      for (let sibling = node.previousElementSibling; sibling; sibling = sibling.previousElementSibling) {\n        if (sibling.tagName === node.tagName) index += 1;\n      }\n      parts.unshift(`${node.tagName.toLowerCase()}:nth-of-type(${index})`);\n    }\n    return `html > ${parts.join(\" > \")}`;\n  };\n  const all = [...document.querySelectorAll(css)];\n  const hits = text === null ? all : all.filter((element) => nameOf(element) === text);\n  const selector = hits.length === 1 ? (all.length === 1 ? css : pathOf(hits[0])) : null;\n  return { count: hits.length, all: all.length, names: all.slice(0, 3).map(nameOf), selector };\n}\n\nfunction readTable() {\n  const clean = (value) => String(value ?? \"\").replace(/\\s+/g, \" \").trim();\n  const table = document.querySelector(\"table\");\n  if (!table) return null;\n  const cellText = (cell) => {\n    const field = cell.querySelector(\"input, select, textarea\");\n    return clean(field ? field.value : cell.textContent);\n  };\n  const columns = [...table.querySelectorAll(\"thead th\")].map(cellText);\n  const rows = [...table.querySelectorAll(\"tbody tr\")]\n    .map((row) => [...row.children].filter((cell) => cell.tagName === \"TD\").map(cellText))\n    .filter((cells) => cells.length > 0);\n  return { columns, rows };\n}\n\nfunction valueAt(selector) {\n  const field = document.querySelector(selector);\n  return field ? String(field.value ?? \"\") : null;\n}\n\nfunction filledIn(selector) {\n  const field = document.querySelector(selector);\n  const value = field ? String(field.value ?? \"\") : \"\";\n  return { filled: value !== \"\" && !value.startsWith(\"$\" + \"LP_\") };\n}\n\nfunction textAt(selector) {\n  const found = document.querySelector(selector);\n  return found ? String(found.textContent ?? \"\").replace(/\\s+/g, \" \").trim() : null;\n}\n\nfunction pathname() {\n  return location.pathname;\n}\n\nfunction snapshot() {\n  const skipped = new Set([\"password\", \"hidden\", \"checkbox\", \"radio\", \"file\"]);\n  const values = {};\n  for (const field of document.querySelectorAll(\"input[name]\")) {\n    if (!skipped.has(String(field.getAttribute(\"type\") ?? \"text\").toLowerCase())) values[field.getAttribute(\"name\")] = String(field.value ?? \"\");\n  }\n  return { url: location.href, title: document.title, html: document.documentElement.outerHTML, values };\n}\n\nconst describe = (target) => (target.text === null ? target.css : `${target.css} named ${quoted(target.text)}`);\n\nconst one = (target) => {\n  const found = inPage(locate, target.css, target.text);\n  checks += 1;\n  if (found.count === 1) return found.selector;\n  if (found.count === 0 && target.text !== null && found.all === 1) {\n    fail(\"wrong-name\", `${target.css} says ${quoted(found.names[0])}, expected ${quoted(target.text)}`);\n  }\n  fail(found.count === 0 ? \"not-found\" : \"not-one\", `${describe(target)} matched ${found.count} elements, expected 1`);\n};\n\nconst readAll = (op) => {\n  const rows = [];\n  let columns = null;\n  let previous = null;\n  let pages = 0;\n  for (;;) {\n    const table = inPage(readTable);\n    pages += 1;\n    check(table !== null, \"not-found\", () => `page ${pages} has no table`);\n    const shown = JSON.stringify(table.rows);\n    if (previous !== null) check(shown !== previous, \"same-rows\", () => `page ${pages} showed the same rows as page ${pages - 1}`);\n    previous = shown;\n    columns ??= table.columns;\n    rows.push(...table.rows);\n    if (op.next === null) break;\n    const next = inPage(locate, op.next.css, op.next.text);\n    if (next.count === 0) break;\n    check(next.count === 1, \"not-one\", () => `${describe(op.next)} matched ${next.count} elements, expected 1`);\n    check(pages < plan.maxPages, \"too-many-pages\", () => `there are more than ${plan.maxPages} pages`);\n    page.click(next.selector);\n  }\n  check(rows.length > 0, \"no-rows\", () => \"the table has no rows\");\n  tables[op.into] = { columns, rows, pages };\n  emit({ clientops: \"table\", stepId: current, into: op.into, ...tables[op.into] });\n};\n\nconst run = {\n  goto: async (op) => {\n    await page.goto(op.url);\n  },\n  one: (op) => {\n    elements[op.as] = one(op);\n  },\n  fill: (op) => {\n    page.fill(elements[op.el], op.value);\n    if (op.secret) {\n      check(inPage(filledIn, elements[op.el]).filled, \"not-taken\", () => `${op.el} was not filled from the vault`);\n    } else {\n      check(inPage(valueAt, elements[op.el]) === op.value, \"not-taken\", () => `${op.el} did not take ${quoted(op.value)}`);\n    }\n  },\n  click: (op) => {\n    page.click(elements[op.el]);\n  },\n  path: (op) => {\n    const path = inPage(pathname);\n    check(path === op.is, op.code, () => `the page is ${path}, expected ${op.is}`);\n  },\n  table: (op) => readAll(op),\n  page: () => emit({ clientops: \"page\", stepId: current, ...inPage(snapshot) }),\n  fields: (op) => {\n    const found = op.items.map((item) => ({ ...item, selector: one({ css: item.css, text: null }) }));\n    for (const item of found) {\n      const value = inPage(valueAt, item.selector);\n      check(value === item.expect, \"store-changed\", () => `${item.sku} is ${quoted(value)} now, expected ${quoted(item.expect)}`);\n    }\n    for (const item of found) {\n      page.fill(item.selector, item.value);\n      const value = inPage(valueAt, item.selector);\n      check(value === item.value, \"not-taken\", () => `${item.sku} is ${quoted(value)} after filling, expected ${quoted(item.value)}`);\n    }\n  },\n  says: (op) => {\n    const text = inPage(textAt, elements[op.el]);\n    check(text !== null && new RegExp(op.pattern, \"i\").test(text), op.code, () => `${op.el} says ${quoted(text)}`);\n    said[op.into] = text;\n  },\n};\n\nfor (const step of plan.steps) {\n  current = step.stepId;\n  checks = 0;\n  const started = Date.now();\n  emit({ clientops: \"step\", stepId: current, phase: \"start\" });\n  for (const op of step.ops) await run[op.op](op);\n  emit({ clientops: \"step\", stepId: current, phase: \"done\", tookMs: Date.now() - started, checks });\n}\n\nreturn { clientops: \"result\", said };\n"
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "client": "hinata",
+  "day": 1,
+  "supplier": [
+    {
+      "sku": "HS-TON-150",
+      "name": "Rice Toner 150ml",
+      "available": 30
+    },
+    {
+      "sku": "HS-TON-300",
+      "name": "Rice Toner 300ml",
+      "available": 14
+    },
+    {
+      "sku": "HS-MLK-120",
+      "name": "Yuzu Milk Lotion 120ml",
+      "available": 18
+    },
+    {
+      "sku": "HS-SER-030",
+      "name": "Camellia Serum 30ml",
+      "available": 0
+    },
+    {
+      "sku": "HS-CRM-050",
+      "name": "Green Tea Cream 50g",
+      "available": 21
+    },
+    {
+      "sku": "HS-CLN-150",
+      "name": "Gentle Cleansing Oil 150ml",
+      "available": 16
+    },
+    {
+      "sku": "HS-FOM-100",
+      "name": "Soft Foam Cleanser 100g",
+      "available": 27
+    },
+    {
+      "sku": "HS-MSK-005",
+      "name": "Sheet Masks x5",
+      "available": 40
+    },
+    {
+      "sku": "HS-SUN-050",
+      "name": "Daily Sun Milk 50ml",
+      "available": 48
+    },
+    {
+      "sku": "HS-LIP-010",
+      "name": "Honey Lip Balm 10g",
+      "available": 12
+    },
+    {
+      "sku": "HS-HND-060",
+      "name": "Hand Cream 60g",
+      "available": 33
+    },
+    {
+      "sku": "HS-EYE-015",
+      "name": "Eye Cream 15g",
+      "available": 9
+    },
+    {
+      "sku": "HS-MST-080",
+      "name": "Face Mist 80ml",
+      "available": 19
+    },
+    {
+      "sku": "HS-PAD-060",
+      "name": "Toner Pads x60",
+      "available": 11
+    },
+    {
+      "sku": "HS-TRV-SET",
+      "name": "Travel Set",
+      "available": 7
+    },
+    {
+      "sku": "HS-GFT-SET",
+      "name": "Gift Set",
+      "available": 3
+    }
+  ],
+  "store": [
+    {
+      "sku": "HS-TON-150",
+      "name": "Rice Toner 150ml",
+      "available": 22
+    },
+    {
+      "sku": "HS-TON-300",
+      "name": "Rice Toner 300ml",
+      "available": 14
+    },
+    {
+      "sku": "HS-MLK-120",
+      "name": "Yuzu Milk Lotion 120ml",
+      "available": 18
+    },
+    {
+      "sku": "HS-SER-030",
+      "name": "Camellia Serum 30ml",
+      "available": 6
+    },
+    {
+      "sku": "HS-CRM-050",
+      "name": "Green Tea Cream 50g",
+      "available": 21
+    },
+    {
+      "sku": "HS-CLN-150",
+      "name": "Gentle Cleansing Oil 150ml",
+      "available": 16
+    },
+    {
+      "sku": "HS-FOM-100",
+      "name": "Soft Foam Cleanser 100g",
+      "available": 27
+    },
+    {
+      "sku": "HS-MSK-005",
+      "name": "Sheet Masks x5",
+      "available": 40
+    },
+    {
+      "sku": "HS-SUN-050",
+      "name": "Daily Sun Milk 50ml",
+      "available": 35
+    },
+    {
+      "sku": "HS-LIP-010",
+      "name": "Honey Lip Balm 10g",
+      "available": 20
+    },
+    {
+      "sku": "HS-HND-060",
+      "name": "Hand Cream 60g",
+      "available": 33
+    },
+    {
+      "sku": "HS-EYE-015",
+      "name": "Eye Cream 15g",
+      "available": 9
+    },
+    {
+      "sku": "HS-MST-080",
+      "name": "Face Mist 80ml",
+      "available": 19
+    },
+    {
+      "sku": "HS-PAD-060",
+      "name": "Toner Pads x60",
+      "available": 11
+    },
+    {
+      "sku": "HS-TRV-SET",
+      "name": "Travel Set",
+      "available": 7
+    },
+    {
+      "sku": "HS-GFT-SET",
+      "name": "Gift Set",
+      "available": 8
+    }
+  ],
+  "changes": [
+    {
+      "sku": "HS-TON-150",
+      "name": "Rice Toner 150ml",
+      "store": 22,
+      "supplier": 30
+    },
+    {
+      "sku": "HS-SER-030",
+      "name": "Camellia Serum 30ml",
+      "store": 6,
+      "supplier": 0
+    },
+    {
+      "sku": "HS-SUN-050",
+      "name": "Daily Sun Milk 50ml",
+      "store": 35,
+      "supplier": 48
+    },
+    {
+      "sku": "HS-LIP-010",
+      "name": "Honey Lip Balm 10g",
+      "store": 20,
+      "supplier": 12
+    },
+    {
+      "sku": "HS-GFT-SET",
+      "name": "Gift Set",
+      "store": 8,
+      "supplier": 3
+    }
+  ]
+}

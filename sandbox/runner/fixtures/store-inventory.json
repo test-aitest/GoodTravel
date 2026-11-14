@@ -1,0 +1,1878 @@
+{
+ "observed": {
+  "date": "2026-11-14",
+  "lightpanda": "1.0.4",
+  "url": "http://127.0.0.1:3002/inventory",
+  "title": "Inventory - Kumo Coffee - Store Admin"
+ },
+ "jsonTree": {
+  "nodeId": "22",
+  "backendDOMNodeId": 22,
+  "nodeName": "root",
+  "xpath": "",
+  "nodeType": 9,
+  "children": [
+   {
+    "nodeId": "26",
+    "backendDOMNodeId": 26,
+    "nodeName": "aside",
+    "xpath": "/html[1]/body[1]/div[1]/aside[1]",
+    "nodeType": 1,
+    "isInteractive": false,
+    "role": "complementary",
+    "attributes": {
+     "class": "sidebar"
+    },
+    "children": [
+     {
+      "nodeId": "28",
+      "backendDOMNodeId": 28,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/aside[1]/span[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Kumo Coffee",
+      "children": []
+     },
+     {
+      "nodeId": "29",
+      "backendDOMNodeId": 29,
+      "nodeName": "nav",
+      "xpath": "/html[1]/body[1]/div[1]/aside[1]/nav[1]",
+      "nodeType": 1,
+      "isInteractive": false,
+      "role": "navigation",
+      "name": "Store",
+      "attributes": {
+       "class": "nav",
+       "aria-label": "Store"
+      },
+      "children": [
+       {
+        "nodeId": "31",
+        "backendDOMNodeId": 31,
+        "nodeName": "text",
+        "xpath": "/html[1]/body[1]/div[1]/aside[1]/nav[1]/span[1]/text()[1]",
+        "nodeType": 3,
+        "nodeValue": "Orders",
+        "children": []
+       },
+       {
+        "nodeId": "33",
+        "backendDOMNodeId": 33,
+        "nodeName": "text",
+        "xpath": "/html[1]/body[1]/div[1]/aside[1]/nav[1]/span[2]/text()[1]",
+        "nodeType": 3,
+        "nodeValue": "Products",
+        "children": []
+       },
+       {
+        "nodeId": "35",
+        "backendDOMNodeId": 35,
+        "nodeName": "text",
+        "xpath": "/html[1]/body[1]/div[1]/aside[1]/nav[1]/span[3]/text()[1]",
+        "nodeType": 3,
+        "nodeValue": "Inventory",
+        "children": []
+       },
+       {
+        "nodeId": "37",
+        "backendDOMNodeId": 37,
+        "nodeName": "text",
+        "xpath": "/html[1]/body[1]/div[1]/aside[1]/nav[1]/span[4]/text()[1]",
+        "nodeType": 3,
+        "nodeValue": "Customers",
+        "children": []
+       }
+      ]
+     },
+     {
+      "nodeId": "38",
+      "backendDOMNodeId": 38,
+      "nodeName": "form",
+      "xpath": "/html[1]/body[1]/div[1]/aside[1]/form[1]",
+      "nodeType": 1,
+      "isInteractive": false,
+      "role": "form",
+      "attributes": {
+       "method": "post",
+       "action": "/logout"
+      },
+      "children": [
+       {
+        "nodeId": "39",
+        "backendDOMNodeId": 39,
+        "nodeName": "button",
+        "xpath": "/html[1]/body[1]/div[1]/aside[1]/form[1]/button[1]",
+        "nodeType": 1,
+        "isInteractive": true,
+        "role": "button",
+        "name": "Sign out",
+        "attributes": {
+         "class": "signout"
+        },
+        "children": []
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "nodeId": "42",
+    "backendDOMNodeId": 42,
+    "nodeName": "h1",
+    "xpath": "/html[1]/body[1]/div[1]/main[1]/h1[1]",
+    "nodeType": 1,
+    "isInteractive": false,
+    "role": "heading",
+    "name": "Inventory",
+    "attributes": {
+     "class": "page-title"
+    },
+    "children": []
+   },
+   {
+    "nodeId": "44",
+    "backendDOMNodeId": 44,
+    "nodeName": "p",
+    "xpath": "/html[1]/body[1]/div[1]/main[1]/p[1]",
+    "nodeType": 1,
+    "isInteractive": false,
+    "role": "paragraph",
+    "attributes": {
+     "class": "hint"
+    },
+    "children": [
+     {
+      "nodeId": "45",
+      "backendDOMNodeId": 45,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/p[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Available counts all locations: Warehouse and Daikanyama shop.",
+      "children": []
+     }
+    ]
+   },
+   {
+    "nodeId": "21",
+    "backendDOMNodeId": 21,
+    "nodeName": "form",
+    "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]",
+    "nodeType": 1,
+    "isInteractive": false,
+    "role": "form",
+    "attributes": {
+     "method": "post",
+     "action": "/inventory"
+    },
+    "children": [
+     {
+      "nodeId": "49",
+      "backendDOMNodeId": 49,
+      "nodeName": "th",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/thead[1]/tr[1]/th[1]",
+      "nodeType": 1,
+      "isInteractive": false,
+      "role": "columnheader",
+      "name": "SKU",
+      "children": []
+     },
+     {
+      "nodeId": "51",
+      "backendDOMNodeId": 51,
+      "nodeName": "th",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/thead[1]/tr[1]/th[2]",
+      "nodeType": 1,
+      "isInteractive": false,
+      "role": "columnheader",
+      "name": "Product",
+      "children": []
+     },
+     {
+      "nodeId": "53",
+      "backendDOMNodeId": 53,
+      "nodeName": "th",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/thead[1]/tr[1]/th[3]",
+      "nodeType": 1,
+      "isInteractive": false,
+      "role": "columnheader",
+      "name": "Available",
+      "children": []
+     },
+     {
+      "nodeId": "58",
+      "backendDOMNodeId": 58,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[1]/td[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "KC-ETH-200",
+      "children": []
+     },
+     {
+      "nodeId": "60",
+      "backendDOMNodeId": 60,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[1]/td[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Ethiopia Guji 200g",
+      "children": []
+     },
+     {
+      "nodeId": "62",
+      "backendDOMNodeId": 62,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[1]/td[3]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "spinbutton",
+      "name": "Available for Ethiopia Guji 200g",
+      "value": "18",
+      "attributes": {
+       "class": "qty",
+       "type": "number",
+       "min": "0",
+       "step": "1",
+       "name": "available-KC-ETH-200",
+       "value": "18",
+       "aria-label": "Available for Ethiopia Guji 200g"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "65",
+      "backendDOMNodeId": 65,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[2]/td[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "KC-ETH-500",
+      "children": []
+     },
+     {
+      "nodeId": "67",
+      "backendDOMNodeId": 67,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[2]/td[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Ethiopia Guji 500g",
+      "children": []
+     },
+     {
+      "nodeId": "69",
+      "backendDOMNodeId": 69,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[2]/td[3]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "spinbutton",
+      "name": "Available for Ethiopia Guji 500g",
+      "value": "12",
+      "attributes": {
+       "class": "qty",
+       "type": "number",
+       "min": "0",
+       "step": "1",
+       "name": "available-KC-ETH-500",
+       "value": "12",
+       "aria-label": "Available for Ethiopia Guji 500g"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "72",
+      "backendDOMNodeId": 72,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[3]/td[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "KC-YIR-200",
+      "children": []
+     },
+     {
+      "nodeId": "74",
+      "backendDOMNodeId": 74,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[3]/td[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Ethiopia Yirgacheffe 200g",
+      "children": []
+     },
+     {
+      "nodeId": "76",
+      "backendDOMNodeId": 76,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[3]/td[3]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "spinbutton",
+      "name": "Available for Ethiopia Yirgacheffe 200g",
+      "value": "20",
+      "attributes": {
+       "class": "qty",
+       "type": "number",
+       "min": "0",
+       "step": "1",
+       "name": "available-KC-YIR-200",
+       "value": "20",
+       "aria-label": "Available for Ethiopia Yirgacheffe 200g"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "79",
+      "backendDOMNodeId": 79,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[4]/td[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "KC-YIR-500",
+      "children": []
+     },
+     {
+      "nodeId": "81",
+      "backendDOMNodeId": 81,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[4]/td[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Ethiopia Yirgacheffe 500g",
+      "children": []
+     },
+     {
+      "nodeId": "83",
+      "backendDOMNodeId": 83,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[4]/td[3]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "spinbutton",
+      "name": "Available for Ethiopia Yirgacheffe 500g",
+      "value": "7",
+      "attributes": {
+       "class": "qty",
+       "type": "number",
+       "min": "0",
+       "step": "1",
+       "name": "available-KC-YIR-500",
+       "value": "7",
+       "aria-label": "Available for Ethiopia Yirgacheffe 500g"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "86",
+      "backendDOMNodeId": 86,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[5]/td[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "KC-COL-200",
+      "children": []
+     },
+     {
+      "nodeId": "88",
+      "backendDOMNodeId": 88,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[5]/td[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Colombia Huila 200g",
+      "children": []
+     },
+     {
+      "nodeId": "90",
+      "backendDOMNodeId": 90,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[5]/td[3]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "spinbutton",
+      "name": "Available for Colombia Huila 200g",
+      "value": "0",
+      "attributes": {
+       "class": "qty",
+       "type": "number",
+       "min": "0",
+       "step": "1",
+       "name": "available-KC-COL-200",
+       "value": "0",
+       "aria-label": "Available for Colombia Huila 200g"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "93",
+      "backendDOMNodeId": 93,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[6]/td[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "KC-COL-500",
+      "children": []
+     },
+     {
+      "nodeId": "95",
+      "backendDOMNodeId": 95,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[6]/td[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Colombia Huila 500g",
+      "children": []
+     },
+     {
+      "nodeId": "97",
+      "backendDOMNodeId": 97,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[6]/td[3]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "spinbutton",
+      "name": "Available for Colombia Huila 500g",
+      "value": "10",
+      "attributes": {
+       "class": "qty",
+       "type": "number",
+       "min": "0",
+       "step": "1",
+       "name": "available-KC-COL-500",
+       "value": "10",
+       "aria-label": "Available for Colombia Huila 500g"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "100",
+      "backendDOMNodeId": 100,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[7]/td[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "KC-KEN-200",
+      "children": []
+     },
+     {
+      "nodeId": "102",
+      "backendDOMNodeId": 102,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[7]/td[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Kenya Nyeri 200g",
+      "children": []
+     },
+     {
+      "nodeId": "104",
+      "backendDOMNodeId": 104,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[7]/td[3]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "spinbutton",
+      "name": "Available for Kenya Nyeri 200g",
+      "value": "9",
+      "attributes": {
+       "class": "qty",
+       "type": "number",
+       "min": "0",
+       "step": "1",
+       "name": "available-KC-KEN-200",
+       "value": "9",
+       "aria-label": "Available for Kenya Nyeri 200g"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "107",
+      "backendDOMNodeId": 107,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[8]/td[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "KC-KEN-500",
+      "children": []
+     },
+     {
+      "nodeId": "109",
+      "backendDOMNodeId": 109,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[8]/td[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Kenya Nyeri 500g",
+      "children": []
+     },
+     {
+      "nodeId": "111",
+      "backendDOMNodeId": 111,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[8]/td[3]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "spinbutton",
+      "name": "Available for Kenya Nyeri 500g",
+      "value": "5",
+      "attributes": {
+       "class": "qty",
+       "type": "number",
+       "min": "0",
+       "step": "1",
+       "name": "available-KC-KEN-500",
+       "value": "5",
+       "aria-label": "Available for Kenya Nyeri 500g"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "114",
+      "backendDOMNodeId": 114,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[9]/td[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "KC-GUA-200",
+      "children": []
+     },
+     {
+      "nodeId": "116",
+      "backendDOMNodeId": 116,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[9]/td[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Guatemala Antigua 200g",
+      "children": []
+     },
+     {
+      "nodeId": "118",
+      "backendDOMNodeId": 118,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[9]/td[3]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "spinbutton",
+      "name": "Available for Guatemala Antigua 200g",
+      "value": "22",
+      "attributes": {
+       "class": "qty",
+       "type": "number",
+       "min": "0",
+       "step": "1",
+       "name": "available-KC-GUA-200",
+       "value": "22",
+       "aria-label": "Available for Guatemala Antigua 200g"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "121",
+      "backendDOMNodeId": 121,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[10]/td[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "KC-GUA-500",
+      "children": []
+     },
+     {
+      "nodeId": "123",
+      "backendDOMNodeId": 123,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[10]/td[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Guatemala Antigua 500g",
+      "children": []
+     },
+     {
+      "nodeId": "125",
+      "backendDOMNodeId": 125,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[10]/td[3]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "spinbutton",
+      "name": "Available for Guatemala Antigua 500g",
+      "value": "4",
+      "attributes": {
+       "class": "qty",
+       "type": "number",
+       "min": "0",
+       "step": "1",
+       "name": "available-KC-GUA-500",
+       "value": "4",
+       "aria-label": "Available for Guatemala Antigua 500g"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "128",
+      "backendDOMNodeId": 128,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[11]/td[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "KC-BRA-200",
+      "children": []
+     },
+     {
+      "nodeId": "130",
+      "backendDOMNodeId": 130,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[11]/td[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Brazil Cerrado 200g",
+      "children": []
+     },
+     {
+      "nodeId": "132",
+      "backendDOMNodeId": 132,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[11]/td[3]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "spinbutton",
+      "name": "Available for Brazil Cerrado 200g",
+      "value": "35",
+      "attributes": {
+       "class": "qty",
+       "type": "number",
+       "min": "0",
+       "step": "1",
+       "name": "available-KC-BRA-200",
+       "value": "35",
+       "aria-label": "Available for Brazil Cerrado 200g"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "135",
+      "backendDOMNodeId": 135,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[12]/td[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "KC-BRA-500",
+      "children": []
+     },
+     {
+      "nodeId": "137",
+      "backendDOMNodeId": 137,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[12]/td[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Brazil Cerrado 500g",
+      "children": []
+     },
+     {
+      "nodeId": "139",
+      "backendDOMNodeId": 139,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[12]/td[3]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "spinbutton",
+      "name": "Available for Brazil Cerrado 500g",
+      "value": "7",
+      "attributes": {
+       "class": "qty",
+       "type": "number",
+       "min": "0",
+       "step": "1",
+       "name": "available-KC-BRA-500",
+       "value": "7",
+       "aria-label": "Available for Brazil Cerrado 500g"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "142",
+      "backendDOMNodeId": 142,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[13]/td[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "KC-CRI-200",
+      "children": []
+     },
+     {
+      "nodeId": "144",
+      "backendDOMNodeId": 144,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[13]/td[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Costa Rica Tarrazu 200g",
+      "children": []
+     },
+     {
+      "nodeId": "146",
+      "backendDOMNodeId": 146,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[13]/td[3]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "spinbutton",
+      "name": "Available for Costa Rica Tarrazu 200g",
+      "value": "16",
+      "attributes": {
+       "class": "qty",
+       "type": "number",
+       "min": "0",
+       "step": "1",
+       "name": "available-KC-CRI-200",
+       "value": "16",
+       "aria-label": "Available for Costa Rica Tarrazu 200g"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "149",
+      "backendDOMNodeId": 149,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[14]/td[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "KC-CRI-500",
+      "children": []
+     },
+     {
+      "nodeId": "151",
+      "backendDOMNodeId": 151,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[14]/td[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Costa Rica Tarrazu 500g",
+      "children": []
+     },
+     {
+      "nodeId": "153",
+      "backendDOMNodeId": 153,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[14]/td[3]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "spinbutton",
+      "name": "Available for Costa Rica Tarrazu 500g",
+      "value": "6",
+      "attributes": {
+       "class": "qty",
+       "type": "number",
+       "min": "0",
+       "step": "1",
+       "name": "available-KC-CRI-500",
+       "value": "6",
+       "aria-label": "Available for Costa Rica Tarrazu 500g"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "156",
+      "backendDOMNodeId": 156,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[15]/td[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "KC-PER-200",
+      "children": []
+     },
+     {
+      "nodeId": "158",
+      "backendDOMNodeId": 158,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[15]/td[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Peru Cajamarca 200g",
+      "children": []
+     },
+     {
+      "nodeId": "160",
+      "backendDOMNodeId": 160,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[15]/td[3]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "spinbutton",
+      "name": "Available for Peru Cajamarca 200g",
+      "value": "19",
+      "attributes": {
+       "class": "qty",
+       "type": "number",
+       "min": "0",
+       "step": "1",
+       "name": "available-KC-PER-200",
+       "value": "19",
+       "aria-label": "Available for Peru Cajamarca 200g"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "163",
+      "backendDOMNodeId": 163,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[16]/td[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "KC-PER-500",
+      "children": []
+     },
+     {
+      "nodeId": "165",
+      "backendDOMNodeId": 165,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[16]/td[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Peru Cajamarca 500g",
+      "children": []
+     },
+     {
+      "nodeId": "167",
+      "backendDOMNodeId": 167,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[16]/td[3]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "spinbutton",
+      "name": "Available for Peru Cajamarca 500g",
+      "value": "8",
+      "attributes": {
+       "class": "qty",
+       "type": "number",
+       "min": "0",
+       "step": "1",
+       "name": "available-KC-PER-500",
+       "value": "8",
+       "aria-label": "Available for Peru Cajamarca 500g"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "170",
+      "backendDOMNodeId": 170,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[17]/td[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "KC-SUM-200",
+      "children": []
+     },
+     {
+      "nodeId": "172",
+      "backendDOMNodeId": 172,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[17]/td[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Sumatra Mandheling 200g",
+      "children": []
+     },
+     {
+      "nodeId": "174",
+      "backendDOMNodeId": 174,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[17]/td[3]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "spinbutton",
+      "name": "Available for Sumatra Mandheling 200g",
+      "value": "14",
+      "attributes": {
+       "class": "qty",
+       "type": "number",
+       "min": "0",
+       "step": "1",
+       "name": "available-KC-SUM-200",
+       "value": "14",
+       "aria-label": "Available for Sumatra Mandheling 200g"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "177",
+      "backendDOMNodeId": 177,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[18]/td[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "KC-SUM-500",
+      "children": []
+     },
+     {
+      "nodeId": "179",
+      "backendDOMNodeId": 179,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[18]/td[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Sumatra Mandheling 500g",
+      "children": []
+     },
+     {
+      "nodeId": "181",
+      "backendDOMNodeId": 181,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[18]/td[3]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "spinbutton",
+      "name": "Available for Sumatra Mandheling 500g",
+      "value": "3",
+      "attributes": {
+       "class": "qty",
+       "type": "number",
+       "min": "0",
+       "step": "1",
+       "name": "available-KC-SUM-500",
+       "value": "3",
+       "aria-label": "Available for Sumatra Mandheling 500g"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "184",
+      "backendDOMNodeId": 184,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[19]/td[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "KC-RWA-200",
+      "children": []
+     },
+     {
+      "nodeId": "186",
+      "backendDOMNodeId": 186,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[19]/td[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Rwanda Nyamasheke 200g",
+      "children": []
+     },
+     {
+      "nodeId": "188",
+      "backendDOMNodeId": 188,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[19]/td[3]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "spinbutton",
+      "name": "Available for Rwanda Nyamasheke 200g",
+      "value": "9",
+      "attributes": {
+       "class": "qty",
+       "type": "number",
+       "min": "0",
+       "step": "1",
+       "name": "available-KC-RWA-200",
+       "value": "9",
+       "aria-label": "Available for Rwanda Nyamasheke 200g"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "191",
+      "backendDOMNodeId": 191,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[20]/td[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "KC-RWA-500",
+      "children": []
+     },
+     {
+      "nodeId": "193",
+      "backendDOMNodeId": 193,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[20]/td[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Rwanda Nyamasheke 500g",
+      "children": []
+     },
+     {
+      "nodeId": "195",
+      "backendDOMNodeId": 195,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[20]/td[3]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "spinbutton",
+      "name": "Available for Rwanda Nyamasheke 500g",
+      "value": "4",
+      "attributes": {
+       "class": "qty",
+       "type": "number",
+       "min": "0",
+       "step": "1",
+       "name": "available-KC-RWA-500",
+       "value": "4",
+       "aria-label": "Available for Rwanda Nyamasheke 500g"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "198",
+      "backendDOMNodeId": 198,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[21]/td[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "KC-HON-200",
+      "children": []
+     },
+     {
+      "nodeId": "200",
+      "backendDOMNodeId": 200,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[21]/td[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Honduras Marcala 200g",
+      "children": []
+     },
+     {
+      "nodeId": "202",
+      "backendDOMNodeId": 202,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[21]/td[3]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "spinbutton",
+      "name": "Available for Honduras Marcala 200g",
+      "value": "13",
+      "attributes": {
+       "class": "qty",
+       "type": "number",
+       "min": "0",
+       "step": "1",
+       "name": "available-KC-HON-200",
+       "value": "13",
+       "aria-label": "Available for Honduras Marcala 200g"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "205",
+      "backendDOMNodeId": 205,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[22]/td[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "KC-HON-500",
+      "children": []
+     },
+     {
+      "nodeId": "207",
+      "backendDOMNodeId": 207,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[22]/td[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Honduras Marcala 500g",
+      "children": []
+     },
+     {
+      "nodeId": "209",
+      "backendDOMNodeId": 209,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[22]/td[3]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "spinbutton",
+      "name": "Available for Honduras Marcala 500g",
+      "value": "6",
+      "attributes": {
+       "class": "qty",
+       "type": "number",
+       "min": "0",
+       "step": "1",
+       "name": "available-KC-HON-500",
+       "value": "6",
+       "aria-label": "Available for Honduras Marcala 500g"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "212",
+      "backendDOMNodeId": 212,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[23]/td[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "KC-PAN-200",
+      "children": []
+     },
+     {
+      "nodeId": "214",
+      "backendDOMNodeId": 214,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[23]/td[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Panama Boquete 200g",
+      "children": []
+     },
+     {
+      "nodeId": "216",
+      "backendDOMNodeId": 216,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[23]/td[3]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "spinbutton",
+      "name": "Available for Panama Boquete 200g",
+      "value": "2",
+      "attributes": {
+       "class": "qty",
+       "type": "number",
+       "min": "0",
+       "step": "1",
+       "name": "available-KC-PAN-200",
+       "value": "2",
+       "aria-label": "Available for Panama Boquete 200g"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "219",
+      "backendDOMNodeId": 219,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[24]/td[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "KC-PAN-500",
+      "children": []
+     },
+     {
+      "nodeId": "221",
+      "backendDOMNodeId": 221,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[24]/td[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Panama Boquete 500g",
+      "children": []
+     },
+     {
+      "nodeId": "223",
+      "backendDOMNodeId": 223,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[24]/td[3]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "spinbutton",
+      "name": "Available for Panama Boquete 500g",
+      "value": "2",
+      "attributes": {
+       "class": "qty",
+       "type": "number",
+       "min": "0",
+       "step": "1",
+       "name": "available-KC-PAN-500",
+       "value": "2",
+       "aria-label": "Available for Panama Boquete 500g"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "226",
+      "backendDOMNodeId": 226,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[25]/td[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "KC-HSE-200",
+      "children": []
+     },
+     {
+      "nodeId": "228",
+      "backendDOMNodeId": 228,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[25]/td[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "House Blend 200g",
+      "children": []
+     },
+     {
+      "nodeId": "230",
+      "backendDOMNodeId": 230,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[25]/td[3]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "spinbutton",
+      "name": "Available for House Blend 200g",
+      "value": "52",
+      "attributes": {
+       "class": "qty",
+       "type": "number",
+       "min": "0",
+       "step": "1",
+       "name": "available-KC-HSE-200",
+       "value": "52",
+       "aria-label": "Available for House Blend 200g"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "233",
+      "backendDOMNodeId": 233,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[26]/td[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "KC-HSE-500",
+      "children": []
+     },
+     {
+      "nodeId": "235",
+      "backendDOMNodeId": 235,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[26]/td[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "House Blend 500g",
+      "children": []
+     },
+     {
+      "nodeId": "237",
+      "backendDOMNodeId": 237,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[26]/td[3]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "spinbutton",
+      "name": "Available for House Blend 500g",
+      "value": "18",
+      "attributes": {
+       "class": "qty",
+       "type": "number",
+       "min": "0",
+       "step": "1",
+       "name": "available-KC-HSE-500",
+       "value": "18",
+       "aria-label": "Available for House Blend 500g"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "240",
+      "backendDOMNodeId": 240,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[27]/td[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "KC-ESP-200",
+      "children": []
+     },
+     {
+      "nodeId": "242",
+      "backendDOMNodeId": 242,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[27]/td[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Espresso Blend 200g",
+      "children": []
+     },
+     {
+      "nodeId": "244",
+      "backendDOMNodeId": 244,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[27]/td[3]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "spinbutton",
+      "name": "Available for Espresso Blend 200g",
+      "value": "30",
+      "attributes": {
+       "class": "qty",
+       "type": "number",
+       "min": "0",
+       "step": "1",
+       "name": "available-KC-ESP-200",
+       "value": "30",
+       "aria-label": "Available for Espresso Blend 200g"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "247",
+      "backendDOMNodeId": 247,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[28]/td[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "KC-ESP-500",
+      "children": []
+     },
+     {
+      "nodeId": "249",
+      "backendDOMNodeId": 249,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[28]/td[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Espresso Blend 500g",
+      "children": []
+     },
+     {
+      "nodeId": "251",
+      "backendDOMNodeId": 251,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[28]/td[3]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "spinbutton",
+      "name": "Available for Espresso Blend 500g",
+      "value": "25",
+      "attributes": {
+       "class": "qty",
+       "type": "number",
+       "min": "0",
+       "step": "1",
+       "name": "available-KC-ESP-500",
+       "value": "25",
+       "aria-label": "Available for Espresso Blend 500g"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "254",
+      "backendDOMNodeId": 254,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[29]/td[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "KC-DEC-200",
+      "children": []
+     },
+     {
+      "nodeId": "256",
+      "backendDOMNodeId": 256,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[29]/td[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Decaf Colombia 200g",
+      "children": []
+     },
+     {
+      "nodeId": "258",
+      "backendDOMNodeId": 258,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[29]/td[3]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "spinbutton",
+      "name": "Available for Decaf Colombia 200g",
+      "value": "12",
+      "attributes": {
+       "class": "qty",
+       "type": "number",
+       "min": "0",
+       "step": "1",
+       "name": "available-KC-DEC-200",
+       "value": "12",
+       "aria-label": "Available for Decaf Colombia 200g"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "261",
+      "backendDOMNodeId": 261,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[30]/td[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "KC-DEC-500",
+      "children": []
+     },
+     {
+      "nodeId": "263",
+      "backendDOMNodeId": 263,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[30]/td[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Decaf Colombia 500g",
+      "children": []
+     },
+     {
+      "nodeId": "265",
+      "backendDOMNodeId": 265,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[30]/td[3]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "spinbutton",
+      "name": "Available for Decaf Colombia 500g",
+      "value": "5",
+      "attributes": {
+       "class": "qty",
+       "type": "number",
+       "min": "0",
+       "step": "1",
+       "name": "available-KC-DEC-500",
+       "value": "5",
+       "aria-label": "Available for Decaf Colombia 500g"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "268",
+      "backendDOMNodeId": 268,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[31]/td[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "KC-DRP-ETH",
+      "children": []
+     },
+     {
+      "nodeId": "270",
+      "backendDOMNodeId": 270,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[31]/td[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Drip Bags Ethiopia Guji x10",
+      "children": []
+     },
+     {
+      "nodeId": "272",
+      "backendDOMNodeId": 272,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[31]/td[3]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "spinbutton",
+      "name": "Available for Drip Bags Ethiopia Guji x10",
+      "value": "25",
+      "attributes": {
+       "class": "qty",
+       "type": "number",
+       "min": "0",
+       "step": "1",
+       "name": "available-KC-DRP-ETH",
+       "value": "25",
+       "aria-label": "Available for Drip Bags Ethiopia Guji x10"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "275",
+      "backendDOMNodeId": 275,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[32]/td[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "KC-DRP-COL",
+      "children": []
+     },
+     {
+      "nodeId": "277",
+      "backendDOMNodeId": 277,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[32]/td[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Drip Bags Colombia Huila x10",
+      "children": []
+     },
+     {
+      "nodeId": "279",
+      "backendDOMNodeId": 279,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[32]/td[3]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "spinbutton",
+      "name": "Available for Drip Bags Colombia Huila x10",
+      "value": "20",
+      "attributes": {
+       "class": "qty",
+       "type": "number",
+       "min": "0",
+       "step": "1",
+       "name": "available-KC-DRP-COL",
+       "value": "20",
+       "aria-label": "Available for Drip Bags Colombia Huila x10"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "282",
+      "backendDOMNodeId": 282,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[33]/td[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "KC-DRP-KEN",
+      "children": []
+     },
+     {
+      "nodeId": "284",
+      "backendDOMNodeId": 284,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[33]/td[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Drip Bags Kenya Nyeri x10",
+      "children": []
+     },
+     {
+      "nodeId": "286",
+      "backendDOMNodeId": 286,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[33]/td[3]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "spinbutton",
+      "name": "Available for Drip Bags Kenya Nyeri x10",
+      "value": "14",
+      "attributes": {
+       "class": "qty",
+       "type": "number",
+       "min": "0",
+       "step": "1",
+       "name": "available-KC-DRP-KEN",
+       "value": "14",
+       "aria-label": "Available for Drip Bags Kenya Nyeri x10"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "289",
+      "backendDOMNodeId": 289,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[34]/td[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "KC-DRP-GUA",
+      "children": []
+     },
+     {
+      "nodeId": "291",
+      "backendDOMNodeId": 291,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[34]/td[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Drip Bags Guatemala Antigua x10",
+      "children": []
+     },
+     {
+      "nodeId": "293",
+      "backendDOMNodeId": 293,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[34]/td[3]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "spinbutton",
+      "name": "Available for Drip Bags Guatemala Antigua x10",
+      "value": "15",
+      "attributes": {
+       "class": "qty",
+       "type": "number",
+       "min": "0",
+       "step": "1",
+       "name": "available-KC-DRP-GUA",
+       "value": "15",
+       "aria-label": "Available for Drip Bags Guatemala Antigua x10"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "296",
+      "backendDOMNodeId": 296,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[35]/td[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "KC-DRP-HSE",
+      "children": []
+     },
+     {
+      "nodeId": "298",
+      "backendDOMNodeId": 298,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[35]/td[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Drip Bags House Blend x10",
+      "children": []
+     },
+     {
+      "nodeId": "300",
+      "backendDOMNodeId": 300,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[35]/td[3]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "spinbutton",
+      "name": "Available for Drip Bags House Blend x10",
+      "value": "48",
+      "attributes": {
+       "class": "qty",
+       "type": "number",
+       "min": "0",
+       "step": "1",
+       "name": "available-KC-DRP-HSE",
+       "value": "48",
+       "aria-label": "Available for Drip Bags House Blend x10"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "303",
+      "backendDOMNodeId": 303,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[36]/td[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "KC-DRP-DEC",
+      "children": []
+     },
+     {
+      "nodeId": "305",
+      "backendDOMNodeId": 305,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[36]/td[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Drip Bags Decaf Colombia x10",
+      "children": []
+     },
+     {
+      "nodeId": "307",
+      "backendDOMNodeId": 307,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[36]/td[3]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "spinbutton",
+      "name": "Available for Drip Bags Decaf Colombia x10",
+      "value": "10",
+      "attributes": {
+       "class": "qty",
+       "type": "number",
+       "min": "0",
+       "step": "1",
+       "name": "available-KC-DRP-DEC",
+       "value": "10",
+       "aria-label": "Available for Drip Bags Decaf Colombia x10"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "310",
+      "backendDOMNodeId": 310,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[37]/td[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "KC-GDS-FLT",
+      "children": []
+     },
+     {
+      "nodeId": "312",
+      "backendDOMNodeId": 312,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[37]/td[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Paper Filters x100",
+      "children": []
+     },
+     {
+      "nodeId": "314",
+      "backendDOMNodeId": 314,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[37]/td[3]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "spinbutton",
+      "name": "Available for Paper Filters x100",
+      "value": "45",
+      "attributes": {
+       "class": "qty",
+       "type": "number",
+       "min": "0",
+       "step": "1",
+       "name": "available-KC-GDS-FLT",
+       "value": "45",
+       "aria-label": "Available for Paper Filters x100"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "317",
+      "backendDOMNodeId": 317,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[38]/td[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "KC-GDS-DRP",
+      "children": []
+     },
+     {
+      "nodeId": "319",
+      "backendDOMNodeId": 319,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[38]/td[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Ceramic Dripper",
+      "children": []
+     },
+     {
+      "nodeId": "321",
+      "backendDOMNodeId": 321,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[38]/td[3]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "spinbutton",
+      "name": "Available for Ceramic Dripper",
+      "value": "9",
+      "attributes": {
+       "class": "qty",
+       "type": "number",
+       "min": "0",
+       "step": "1",
+       "name": "available-KC-GDS-DRP",
+       "value": "9",
+       "aria-label": "Available for Ceramic Dripper"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "324",
+      "backendDOMNodeId": 324,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[39]/td[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "KC-GDS-SRV",
+      "children": []
+     },
+     {
+      "nodeId": "326",
+      "backendDOMNodeId": 326,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[39]/td[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Glass Server 600ml",
+      "children": []
+     },
+     {
+      "nodeId": "328",
+      "backendDOMNodeId": 328,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[39]/td[3]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "spinbutton",
+      "name": "Available for Glass Server 600ml",
+      "value": "11",
+      "attributes": {
+       "class": "qty",
+       "type": "number",
+       "min": "0",
+       "step": "1",
+       "name": "available-KC-GDS-SRV",
+       "value": "11",
+       "aria-label": "Available for Glass Server 600ml"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "331",
+      "backendDOMNodeId": 331,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[40]/td[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "KC-GDS-GRN",
+      "children": []
+     },
+     {
+      "nodeId": "333",
+      "backendDOMNodeId": 333,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[40]/td[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Hand Grinder",
+      "children": []
+     },
+     {
+      "nodeId": "335",
+      "backendDOMNodeId": 335,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[40]/td[3]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "spinbutton",
+      "name": "Available for Hand Grinder",
+      "value": "3",
+      "attributes": {
+       "class": "qty",
+       "type": "number",
+       "min": "0",
+       "step": "1",
+       "name": "available-KC-GDS-GRN",
+       "value": "3",
+       "aria-label": "Available for Hand Grinder"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "338",
+      "backendDOMNodeId": 338,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[41]/td[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "KC-GDS-CAN",
+      "children": []
+     },
+     {
+      "nodeId": "340",
+      "backendDOMNodeId": 340,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[41]/td[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Storage Canister",
+      "children": []
+     },
+     {
+      "nodeId": "342",
+      "backendDOMNodeId": 342,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[41]/td[3]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "spinbutton",
+      "name": "Available for Storage Canister",
+      "value": "17",
+      "attributes": {
+       "class": "qty",
+       "type": "number",
+       "min": "0",
+       "step": "1",
+       "name": "available-KC-GDS-CAN",
+       "value": "17",
+       "aria-label": "Available for Storage Canister"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "345",
+      "backendDOMNodeId": 345,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[42]/td[1]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "KC-GDS-GFT",
+      "children": []
+     },
+     {
+      "nodeId": "347",
+      "backendDOMNodeId": 347,
+      "nodeName": "text",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[42]/td[2]/text()[1]",
+      "nodeType": 3,
+      "nodeValue": "Gift Box 2 x 200g",
+      "children": []
+     },
+     {
+      "nodeId": "349",
+      "backendDOMNodeId": 349,
+      "nodeName": "input",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/table[1]/tbody[1]/tr[42]/td[3]/input[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "spinbutton",
+      "name": "Available for Gift Box 2 x 200g",
+      "value": "8",
+      "attributes": {
+       "class": "qty",
+       "type": "number",
+       "min": "0",
+       "step": "1",
+       "name": "available-KC-GDS-GFT",
+       "value": "8",
+       "aria-label": "Available for Gift Box 2 x 200g"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "351",
+      "backendDOMNodeId": 351,
+      "nodeName": "a",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/div[1]/a[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "link",
+      "name": "Discard",
+      "attributes": {
+       "class": "discard",
+       "href": "/inventory"
+      },
+      "children": []
+     },
+     {
+      "nodeId": "353",
+      "backendDOMNodeId": 353,
+      "nodeName": "button",
+      "xpath": "/html[1]/body[1]/div[1]/main[1]/form[1]/div[1]/button[1]",
+      "nodeType": 1,
+      "isInteractive": true,
+      "role": "button",
+      "name": "Save changes",
+      "attributes": {
+       "class": "btn-save",
+       "type": "submit",
+       "name": "action",
+       "value": "save"
+      },
+      "children": []
+     }
+    ]
+   }
+  ]
+ },
+ "interactiveText": "22 RootWebArea 'Inventory - Kumo Coffee - Store Admin'\n 29 navigation 'Store'\n 39 [i] button 'Sign out'\n 42 heading 'Inventory'\n 49 columnheader 'SKU'\n 51 columnheader 'Product'\n 53 columnheader 'Available'\n 62 [i] spinbutton 'Available for Ethiopia Guji 200g' value='18'\n 69 [i] spinbutton 'Available for Ethiopia Guji 500g' value='12'\n 76 [i] spinbutton 'Available for Ethiopia Yirgacheffe 200g' value='20'\n 83 [i] spinbutton 'Available for Ethiopia Yirgacheffe 500g' value='7'\n 90 [i] spinbutton 'Available for Colombia Huila 200g' value='0'\n 97 [i] spinbutton 'Available for Colombia Huila 500g' value='10'\n 104 [i] spinbutton 'Available for Kenya Nyeri 200g' value='9'\n 111 [i] spinbutton 'Available for Kenya Nyeri 500g' value='5'\n 118 [i] spinbutton 'Available for Guatemala Antigua 200g' value='22'\n 125 [i] spinbutton 'Available for Guatemala Antigua 500g' value='4'\n 132 [i] spinbutton 'Available for Brazil Cerrado 200g' value='35'\n 139 [i] spinbutton 'Available for Brazil Cerrado 500g' value='7'\n 146 [i] spinbutton 'Available for Costa Rica Tarrazu 200g' value='16'\n 153 [i] spinbutton 'Available for Costa Rica Tarrazu 500g' value='6'\n 160 [i] spinbutton 'Available for Peru Cajamarca 200g' value='19'\n 167 [i] spinbutton 'Available for Peru Cajamarca 500g' value='8'\n 174 [i] spinbutton 'Available for Sumatra Mandheling 200g' value='14'\n 181 [i] spinbutton 'Available for Sumatra Mandheling 500g' value='3'\n 188 [i] spinbutton 'Available for Rwanda Nyamasheke 200g' value='9'\n 195 [i] spinbutton 'Available for Rwanda Nyamasheke 500g' value='4'\n 202 [i] spinbutton 'Available for Honduras Marcala 200g' value='13'\n 209 [i] spinbutton 'Available for Honduras Marcala 500g' value='6'\n 216 [i] spinbutton 'Available for Panama Boquete 200g' value='2'\n 223 [i] spinbutton 'Available for Panama Boquete 500g' value='2'\n 230 [i] spinbutton 'Available for House Blend 200g' value='52'\n 237 [i] spinbutton 'Available for House Blend 500g' value='18'\n 244 [i] spinbutton 'Available for Espresso Blend 200g' value='30'\n 251 [i] spinbutton 'Available for Espresso Blend 500g' value='25'\n 258 [i] spinbutton 'Available for Decaf Colombia 200g' value='12'\n 265 [i] spinbutton 'Available for Decaf Colombia 500g' value='5'\n 272 [i] spinbutton 'Available for Drip Bags Ethiopia Guji x10' value='25'\n 279 [i] spinbutton 'Available for Drip Bags Colombia Huila x10' value='20'\n 286 [i] spinbutton 'Available for Drip Bags Kenya Nyeri x10' value='14'\n 293 [i] spinbutton 'Available for Drip Bags Guatemala Antigua x10' value='15'\n 300 [i] spinbutton 'Available for Drip Bags House Blend x10' value='48'\n 307 [i] spinbutton 'Available for Drip Bags Decaf Colombia x10' value='10'\n 314 [i] spinbutton 'Available for Paper Filters x100' value='45'\n 321 [i] spinbutton 'Available for Ceramic Dripper' value='9'\n 328 [i] spinbutton 'Available for Glass Server 600ml' value='11'\n 335 [i] spinbutton 'Available for Hand Grinder' value='3'\n 342 [i] spinbutton 'Available for Storage Canister' value='17'\n 349 [i] spinbutton 'Available for Gift Box 2 x 200g' value='8'\n 351 [i] link 'Discard'\n 353 [i] button 'Save changes'\n",
+ "html": "<!DOCTYPE html>\n<html lang=\"en\"><head>\n<meta charset=\"utf-8\">\n<title>Inventory - Kumo Coffee - Store Admin</title>\n<style>\nbody{margin:0;font-family:system-ui,-apple-system,\"Segoe UI\",Arial,sans-serif;font-size:13px;color:#1f2328;background:#fbfbfa}\n.shell{display:grid;grid-template-columns:180px minmax(0,1fr);min-height:100vh}\n.sidebar{background:#2b2b2b;color:#e8e8e8;padding:16px 12px;display:flex;flex-direction:column;gap:10px}\n.store-name{color:#fff;font-weight:700;font-size:15px}\n.nav{display:flex;flex-direction:column;gap:8px}\n.nav-current{color:#fff;font-weight:700}\n.signout{margin-top:auto;font:inherit;color:#e8e8e8;background:transparent;border:1px solid #666;border-radius:4px;padding:4px 8px;cursor:pointer}\n.main{padding:20px 24px;display:flex;flex-direction:column;gap:12px;max-width:820px}\n.page-title{margin:0;font-size:18px}\n.inventory-table{width:100%;border-collapse:collapse;background:#fff;border:1px solid #e3e3e3}\n.inventory-table th{background:#f6f6f6;text-align:left;padding:6px 8px;font-weight:600}\n.inventory-table td{padding:5px 8px;border-top:1px solid #eee}\n.qty{width:72px;font:inherit;padding:3px 5px;text-align:right;border:1px solid #c9c9c9;border-radius:3px}\n.save-bar{display:flex;gap:10px;align-items:center;padding:10px 0}\n.btn-save{font:inherit;font-weight:600;padding:6px 16px;border-radius:4px;border:1px solid #2f6fb0;background:#2f6fb0;color:#fff;cursor:pointer}\n.btn-other{font:inherit;font-weight:600;padding:6px 16px;border-radius:4px;border:1px solid #2f6fb0;background:#fff;color:#2f6fb0;cursor:pointer}\n.discard{color:#57606a}\n.notice{margin:0;padding:8px 10px;border-radius:4px;background:#e7f4ea;border:1px solid #9fd1ab;color:#1e5b2c}\n.error{margin:0;padding:8px 10px;border-radius:4px;background:#fdecea;border:1px solid #e0a39e;color:#8a1c14}\n.login-page{min-height:100vh;display:flex;align-items:center;justify-content:center}\n.login-box{display:flex;flex-direction:column;gap:12px;width:300px;padding:24px;background:#fff;border:1px solid #e3e3e3;border-radius:6px}\n.field{display:flex;flex-direction:column;gap:4px}\n.field input{font:inherit;padding:6px;border:1px solid #c9c9c9;border-radius:3px}\n.hint{margin:0;color:#57606a}\n</style>\n</head>\n<body>\n<div class=\"shell\">\n<aside class=\"sidebar\">\n<span class=\"store-name\">Kumo Coffee</span>\n<nav class=\"nav\" aria-label=\"Store\"><span>Orders</span><span>Products</span><span class=\"nav-current\" aria-current=\"page\">Inventory</span><span>Customers</span></nav>\n<form method=\"post\" action=\"/logout\"><button class=\"signout\">Sign out</button></form>\n</aside>\n<main class=\"main\">\n<h1 class=\"page-title\">Inventory</h1>\n<p class=\"hint\">Available counts all locations: Warehouse and Daikanyama shop.</p>\n\n<form method=\"post\" action=\"/inventory\">\n<table class=\"inventory-table\">\n<thead><tr><th>SKU</th><th>Product</th><th>Available</th></tr></thead>\n<tbody>\n<tr data-sku=\"KC-ETH-200\"><td>KC-ETH-200</td><td>Ethiopia Guji 200g</td><td><input class=\"qty\" type=\"number\" min=\"0\" step=\"1\" name=\"available-KC-ETH-200\" value=\"18\" aria-label=\"Available for Ethiopia Guji 200g\"></td></tr>\n<tr data-sku=\"KC-ETH-500\"><td>KC-ETH-500</td><td>Ethiopia Guji 500g</td><td><input class=\"qty\" type=\"number\" min=\"0\" step=\"1\" name=\"available-KC-ETH-500\" value=\"12\" aria-label=\"Available for Ethiopia Guji 500g\"></td></tr>\n<tr data-sku=\"KC-YIR-200\"><td>KC-YIR-200</td><td>Ethiopia Yirgacheffe 200g</td><td><input class=\"qty\" type=\"number\" min=\"0\" step=\"1\" name=\"available-KC-YIR-200\" value=\"20\" aria-label=\"Available for Ethiopia Yirgacheffe 200g\"></td></tr>\n<tr data-sku=\"KC-YIR-500\"><td>KC-YIR-500</td><td>Ethiopia Yirgacheffe 500g</td><td><input class=\"qty\" type=\"number\" min=\"0\" step=\"1\" name=\"available-KC-YIR-500\" value=\"7\" aria-label=\"Available for Ethiopia Yirgacheffe 500g\"></td></tr>\n<tr data-sku=\"KC-COL-200\"><td>KC-COL-200</td><td>Colombia Huila 200g</td><td><input class=\"qty\" type=\"number\" min=\"0\" step=\"1\" name=\"available-KC-COL-200\" value=\"0\" aria-label=\"Available for Colombia Huila 200g\"></td></tr>\n<tr data-sku=\"KC-COL-500\"><td>KC-COL-500</td><td>Colombia Huila 500g</td><td><input class=\"qty\" type=\"number\" min=\"0\" step=\"1\" name=\"available-KC-COL-500\" value=\"10\" aria-label=\"Available for Colombia Huila 500g\"></td></tr>\n<tr data-sku=\"KC-KEN-200\"><td>KC-KEN-200</td><td>Kenya Nyeri 200g</td><td><input class=\"qty\" type=\"number\" min=\"0\" step=\"1\" name=\"available-KC-KEN-200\" value=\"9\" aria-label=\"Available for Kenya Nyeri 200g\"></td></tr>\n<tr data-sku=\"KC-KEN-500\"><td>KC-KEN-500</td><td>Kenya Nyeri 500g</td><td><input class=\"qty\" type=\"number\" min=\"0\" step=\"1\" name=\"available-KC-KEN-500\" value=\"5\" aria-label=\"Available for Kenya Nyeri 500g\"></td></tr>\n<tr data-sku=\"KC-GUA-200\"><td>KC-GUA-200</td><td>Guatemala Antigua 200g</td><td><input class=\"qty\" type=\"number\" min=\"0\" step=\"1\" name=\"available-KC-GUA-200\" value=\"22\" aria-label=\"Available for Guatemala Antigua 200g\"></td></tr>\n<tr data-sku=\"KC-GUA-500\"><td>KC-GUA-500</td><td>Guatemala Antigua 500g</td><td><input class=\"qty\" type=\"number\" min=\"0\" step=\"1\" name=\"available-KC-GUA-500\" value=\"4\" aria-label=\"Available for Guatemala Antigua 500g\"></td></tr>\n<tr data-sku=\"KC-BRA-200\"><td>KC-BRA-200</td><td>Brazil Cerrado 200g</td><td><input class=\"qty\" type=\"number\" min=\"0\" step=\"1\" name=\"available-KC-BRA-200\" value=\"35\" aria-label=\"Available for Brazil Cerrado 200g\"></td></tr>\n<tr data-sku=\"KC-BRA-500\"><td>KC-BRA-500</td><td>Brazil Cerrado 500g</td><td><input class=\"qty\" type=\"number\" min=\"0\" step=\"1\" name=\"available-KC-BRA-500\" value=\"7\" aria-label=\"Available for Brazil Cerrado 500g\"></td></tr>\n<tr data-sku=\"KC-CRI-200\"><td>KC-CRI-200</td><td>Costa Rica Tarrazu 200g</td><td><input class=\"qty\" type=\"number\" min=\"0\" step=\"1\" name=\"available-KC-CRI-200\" value=\"16\" aria-label=\"Available for Costa Rica Tarrazu 200g\"></td></tr>\n<tr data-sku=\"KC-CRI-500\"><td>KC-CRI-500</td><td>Costa Rica Tarrazu 500g</td><td><input class=\"qty\" type=\"number\" min=\"0\" step=\"1\" name=\"available-KC-CRI-500\" value=\"6\" aria-label=\"Available for Costa Rica Tarrazu 500g\"></td></tr>\n<tr data-sku=\"KC-PER-200\"><td>KC-PER-200</td><td>Peru Cajamarca 200g</td><td><input class=\"qty\" type=\"number\" min=\"0\" step=\"1\" name=\"available-KC-PER-200\" value=\"19\" aria-label=\"Available for Peru Cajamarca 200g\"></td></tr>\n<tr data-sku=\"KC-PER-500\"><td>KC-PER-500</td><td>Peru Cajamarca 500g</td><td><input class=\"qty\" type=\"number\" min=\"0\" step=\"1\" name=\"available-KC-PER-500\" value=\"8\" aria-label=\"Available for Peru Cajamarca 500g\"></td></tr>\n<tr data-sku=\"KC-SUM-200\"><td>KC-SUM-200</td><td>Sumatra Mandheling 200g</td><td><input class=\"qty\" type=\"number\" min=\"0\" step=\"1\" name=\"available-KC-SUM-200\" value=\"14\" aria-label=\"Available for Sumatra Mandheling 200g\"></td></tr>\n<tr data-sku=\"KC-SUM-500\"><td>KC-SUM-500</td><td>Sumatra Mandheling 500g</td><td><input class=\"qty\" type=\"number\" min=\"0\" step=\"1\" name=\"available-KC-SUM-500\" value=\"3\" aria-label=\"Available for Sumatra Mandheling 500g\"></td></tr>\n<tr data-sku=\"KC-RWA-200\"><td>KC-RWA-200</td><td>Rwanda Nyamasheke 200g</td><td><input class=\"qty\" type=\"number\" min=\"0\" step=\"1\" name=\"available-KC-RWA-200\" value=\"9\" aria-label=\"Available for Rwanda Nyamasheke 200g\"></td></tr>\n<tr data-sku=\"KC-RWA-500\"><td>KC-RWA-500</td><td>Rwanda Nyamasheke 500g</td><td><input class=\"qty\" type=\"number\" min=\"0\" step=\"1\" name=\"available-KC-RWA-500\" value=\"4\" aria-label=\"Available for Rwanda Nyamasheke 500g\"></td></tr>\n<tr data-sku=\"KC-HON-200\"><td>KC-HON-200</td><td>Honduras Marcala 200g</td><td><input class=\"qty\" type=\"number\" min=\"0\" step=\"1\" name=\"available-KC-HON-200\" value=\"13\" aria-label=\"Available for Honduras Marcala 200g\"></td></tr>\n<tr data-sku=\"KC-HON-500\"><td>KC-HON-500</td><td>Honduras Marcala 500g</td><td><input class=\"qty\" type=\"number\" min=\"0\" step=\"1\" name=\"available-KC-HON-500\" value=\"6\" aria-label=\"Available for Honduras Marcala 500g\"></td></tr>\n<tr data-sku=\"KC-PAN-200\"><td>KC-PAN-200</td><td>Panama Boquete 200g</td><td><input class=\"qty\" type=\"number\" min=\"0\" step=\"1\" name=\"available-KC-PAN-200\" value=\"2\" aria-label=\"Available for Panama Boquete 200g\"></td></tr>\n<tr data-sku=\"KC-PAN-500\"><td>KC-PAN-500</td><td>Panama Boquete 500g</td><td><input class=\"qty\" type=\"number\" min=\"0\" step=\"1\" name=\"available-KC-PAN-500\" value=\"2\" aria-label=\"Available for Panama Boquete 500g\"></td></tr>\n<tr data-sku=\"KC-HSE-200\"><td>KC-HSE-200</td><td>House Blend 200g</td><td><input class=\"qty\" type=\"number\" min=\"0\" step=\"1\" name=\"available-KC-HSE-200\" value=\"52\" aria-label=\"Available for House Blend 200g\"></td></tr>\n<tr data-sku=\"KC-HSE-500\"><td>KC-HSE-500</td><td>House Blend 500g</td><td><input class=\"qty\" type=\"number\" min=\"0\" step=\"1\" name=\"available-KC-HSE-500\" value=\"18\" aria-label=\"Available for House Blend 500g\"></td></tr>\n<tr data-sku=\"KC-ESP-200\"><td>KC-ESP-200</td><td>Espresso Blend 200g</td><td><input class=\"qty\" type=\"number\" min=\"0\" step=\"1\" name=\"available-KC-ESP-200\" value=\"30\" aria-label=\"Available for Espresso Blend 200g\"></td></tr>\n<tr data-sku=\"KC-ESP-500\"><td>KC-ESP-500</td><td>Espresso Blend 500g</td><td><input class=\"qty\" type=\"number\" min=\"0\" step=\"1\" name=\"available-KC-ESP-500\" value=\"25\" aria-label=\"Available for Espresso Blend 500g\"></td></tr>\n<tr data-sku=\"KC-DEC-200\"><td>KC-DEC-200</td><td>Decaf Colombia 200g</td><td><input class=\"qty\" type=\"number\" min=\"0\" step=\"1\" name=\"available-KC-DEC-200\" value=\"12\" aria-label=\"Available for Decaf Colombia 200g\"></td></tr>\n<tr data-sku=\"KC-DEC-500\"><td>KC-DEC-500</td><td>Decaf Colombia 500g</td><td><input class=\"qty\" type=\"number\" min=\"0\" step=\"1\" name=\"available-KC-DEC-500\" value=\"5\" aria-label=\"Available for Decaf Colombia 500g\"></td></tr>\n<tr data-sku=\"KC-DRP-ETH\"><td>KC-DRP-ETH</td><td>Drip Bags Ethiopia Guji x10</td><td><input class=\"qty\" type=\"number\" min=\"0\" step=\"1\" name=\"available-KC-DRP-ETH\" value=\"25\" aria-label=\"Available for Drip Bags Ethiopia Guji x10\"></td></tr>\n<tr data-sku=\"KC-DRP-COL\"><td>KC-DRP-COL</td><td>Drip Bags Colombia Huila x10</td><td><input class=\"qty\" type=\"number\" min=\"0\" step=\"1\" name=\"available-KC-DRP-COL\" value=\"20\" aria-label=\"Available for Drip Bags Colombia Huila x10\"></td></tr>\n<tr data-sku=\"KC-DRP-KEN\"><td>KC-DRP-KEN</td><td>Drip Bags Kenya Nyeri x10</td><td><input class=\"qty\" type=\"number\" min=\"0\" step=\"1\" name=\"available-KC-DRP-KEN\" value=\"14\" aria-label=\"Available for Drip Bags Kenya Nyeri x10\"></td></tr>\n<tr data-sku=\"KC-DRP-GUA\"><td>KC-DRP-GUA</td><td>Drip Bags Guatemala Antigua x10</td><td><input class=\"qty\" type=\"number\" min=\"0\" step=\"1\" name=\"available-KC-DRP-GUA\" value=\"15\" aria-label=\"Available for Drip Bags Guatemala Antigua x10\"></td></tr>\n<tr data-sku=\"KC-DRP-HSE\"><td>KC-DRP-HSE</td><td>Drip Bags House Blend x10</td><td><input class=\"qty\" type=\"number\" min=\"0\" step=\"1\" name=\"available-KC-DRP-HSE\" value=\"48\" aria-label=\"Available for Drip Bags House Blend x10\"></td></tr>\n<tr data-sku=\"KC-DRP-DEC\"><td>KC-DRP-DEC</td><td>Drip Bags Decaf Colombia x10</td><td><input class=\"qty\" type=\"number\" min=\"0\" step=\"1\" name=\"available-KC-DRP-DEC\" value=\"10\" aria-label=\"Available for Drip Bags Decaf Colombia x10\"></td></tr>\n<tr data-sku=\"KC-GDS-FLT\"><td>KC-GDS-FLT</td><td>Paper Filters x100</td><td><input class=\"qty\" type=\"number\" min=\"0\" step=\"1\" name=\"available-KC-GDS-FLT\" value=\"45\" aria-label=\"Available for Paper Filters x100\"></td></tr>\n<tr data-sku=\"KC-GDS-DRP\"><td>KC-GDS-DRP</td><td>Ceramic Dripper</td><td><input class=\"qty\" type=\"number\" min=\"0\" step=\"1\" name=\"available-KC-GDS-DRP\" value=\"9\" aria-label=\"Available for Ceramic Dripper\"></td></tr>\n<tr data-sku=\"KC-GDS-SRV\"><td>KC-GDS-SRV</td><td>Glass Server 600ml</td><td><input class=\"qty\" type=\"number\" min=\"0\" step=\"1\" name=\"available-KC-GDS-SRV\" value=\"11\" aria-label=\"Available for Glass Server 600ml\"></td></tr>\n<tr data-sku=\"KC-GDS-GRN\"><td>KC-GDS-GRN</td><td>Hand Grinder</td><td><input class=\"qty\" type=\"number\" min=\"0\" step=\"1\" name=\"available-KC-GDS-GRN\" value=\"3\" aria-label=\"Available for Hand Grinder\"></td></tr>\n<tr data-sku=\"KC-GDS-CAN\"><td>KC-GDS-CAN</td><td>Storage Canister</td><td><input class=\"qty\" type=\"number\" min=\"0\" step=\"1\" name=\"available-KC-GDS-CAN\" value=\"17\" aria-label=\"Available for Storage Canister\"></td></tr>\n<tr data-sku=\"KC-GDS-GFT\"><td>KC-GDS-GFT</td><td>Gift Box 2 x 200g</td><td><input class=\"qty\" type=\"number\" min=\"0\" step=\"1\" name=\"available-KC-GDS-GFT\" value=\"8\" aria-label=\"Available for Gift Box 2 x 200g\"></td></tr>\n</tbody>\n</table>\n<div class=\"save-bar\"><a class=\"discard\" href=\"/inventory\">Discard</a> <button class=\"btn-save\" type=\"submit\" name=\"action\" value=\"save\">Save changes</button></div>\n</form>\n</main>\n</div>\n\n\n</body></html>"
+}
